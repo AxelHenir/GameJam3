@@ -9,8 +9,8 @@ namespace DescantRuntime
 {
     public class DescantConversationUI : MonoBehaviour
     {
-        [Header("Data")]
-        [Tooltip("The Descant Graph that will be played")] public TextAsset descantGraph;
+        //[Header("Data")]
+        //[Tooltip("The Descant Graph that will be played")] public TextAsset descantGraph;
         
         [Header("UI")]
         [SerializeField, Tooltip("The NPC response text")] TMP_Text response;
@@ -56,24 +56,24 @@ namespace DescantRuntime
                 Destroy(choices.GetChild(i).gameObject);
             
             List<string> temp = conversationController.Next(choiceIndex);
-            if (temp == null){
+            if (temp == null || temp.Count == 1){
                 conversationDone.Invoke();
                 return; // Stopping if there are no more nodes
             }
     
             // Displaying the ResponseNodes...
-            if (temp.Count == 1)
+            if (temp[0] == "Response")
             {
                 isResponseType = true;
-                response.text = temp[0];
+                response.text = temp[1];
                 // Once the response text has been shown, we skip ahead to show the player's possible choices
                 DisplayNode();
             }
             // Displaying the ChoiceNodes...
-            else
+            else if (temp[0] == "Choice")
             {
                 isResponseType = false;
-                for (int j = 0; j < temp.Count; j++)
+                for (int j = 1; j < temp.Count; j++)
                 {
                     // Instantiating the player choices in teh player choice parent
                     GameObject tempChoice = Instantiate(choice, choices);
@@ -83,7 +83,7 @@ namespace DescantRuntime
                     
                     // Copying the current index to a copy variable so that it can be used in the listener below
                     // (absolutely no idea why this must be done, but it must)
-                    var copy = j;
+                    var copy = j - 1;
                     
                     // Adding a listener to the player choice's button to display the next node when clicked
                     tempChoice.GetComponentInChildren<Button>().onClick.AddListener(() =>

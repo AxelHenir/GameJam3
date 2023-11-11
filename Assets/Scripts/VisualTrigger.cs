@@ -12,7 +12,8 @@ public class VisualTrigger : MonoBehaviour
 
     private FirstPersonController playerController;
 
-    [SerializeField] GameObject ui; //holds descant script
+    [SerializeField] GameObject ui; //holds descant script'
+    [SerializeField] TextAsset thisScript;
     private DescantConversationUI descantUIScript;
 
     //Make sure the sphere collider to this object is in a big enough range, and is isTrigger
@@ -91,7 +92,8 @@ public class VisualTrigger : MonoBehaviour
 
                         //initialize interaction!
 
-                        descantUIScript.InitializeDialogue(descantUIScript.descantGraph); //text asset for this object / person
+                        //descantUIScript.InitializeDialogue(descantUIScript.descantGraph); //text asset for this object / person
+                        descantUIScript.InitializeDialogue(thisScript); //text asset for this object / person
                         Debug.Log("dialogue shown");
                         ShowUI();
 

@@ -48,8 +48,12 @@ namespace DescantRuntime
         /// <param name="graph">The JSON graph to be loaded</param>
         public void Initialize(TextAsset graph)
         {
+            nodes = new List<RuntimeNode>();
+
             GenerateActors();
             GenerateRuntimeNodes(graph);
+
+            Debug.Log(Current.Data.Type);
         }
 
         void FixedUpdate()
@@ -135,10 +139,11 @@ namespace DescantRuntime
         public List<string> Next(int choiceIndex = 0)
         {
             if (Current.Next == null || Current.Next.Count == 0) return null; // Stopping if there are no more nodes
-            
+
             Current = Current.Next[choiceIndex];
 
             List<string> currentText = new List<string>();
+            currentText.Add(Current.Data.Type.ToString());
             
             switch (Current.Data.Type)
             {
@@ -159,7 +164,7 @@ namespace DescantRuntime
                     if (j is IInvokedDescantComponent component)
                         component.Invoke();
 
-            return currentText.Count == 0 ? null : currentText; // Stopping if there are no choices
+            return currentText.Count <= 1 ? null : currentText; // Stopping if there are no choices
         }
     }
 }

@@ -1,0 +1,119 @@
+{
+	"Name": "TutorialPerson",
+	"Path": "/DescantDialogues/TutorialPerson.desc.json",
+	"Autosave": false,
+	"ChoiceNodeID": 3,
+	"ResponseNodeID": 3,
+	"EndNodeID": 1,
+	"GroupID": 0,
+	"ChoiceNodes": [
+		{
+			"Name": "ChoiceNode",
+			"Type": "Choice",
+			"ID": 2,
+			"Position": {
+				"x": 768.0,
+				"y": -64.0
+			},
+			"NodeComponents": [
+				
+			],
+			"Choices": [
+				"clickme"
+			]
+		}
+	],
+	"ResponseNodes": [
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 0,
+			"Position": {
+				"x": 250.0,
+				"y": -64.0
+			},
+			"NodeComponents": [
+				
+			],
+			"Response": "Hi there! "
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 2,
+			"Position": {
+				"x": 1295.0,
+				"y": -91.0
+			},
+			"NodeComponents": [
+				
+			],
+			"Response": "goodbye"
+		}
+	],
+	"StartNode": {
+		"Name": "StartNode",
+		"Type": "Start",
+		"ID": 0,
+		"Position": {
+			"x": 0.0,
+			"y": 0.0
+		},
+		"NodeComponents": [
+			
+		]
+	},
+	"EndNodes": [
+		{
+			"Name": "EndNode",
+			"Type": "End",
+			"ID": 0,
+			"Position": {
+				"x": 2011.0,
+				"y": -24.0
+			},
+			"NodeComponents": [
+				
+			]
+		}
+	],
+	"Groups": [
+		
+	],
+	"Connections": [
+		{
+			"From": "Response",
+			"FromID": 0,
+			"To": "Choice",
+			"ToID": 2,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Choice",
+			"FromID": 2,
+			"To": "Response",
+			"ToID": 2,
+			"ChoiceIndex": 1
+		},
+		{
+			"From": "Start",
+			"FromID": 0,
+			"To": "Response",
+			"ToID": 0,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 2,
+			"To": "End",
+			"ToID": 0,
+			"ChoiceIndex": 0
+		}
+	],
+	"references": {
+		"version": 2,
+		"RefIds": [
+			
+		]
+	}
+}
