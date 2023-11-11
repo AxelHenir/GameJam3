@@ -155,7 +155,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.Game-Jam-3
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -673,8 +674,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Game Jam 3
-  metroPackageVersion: 
+  metroPackageName: GameJam3
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -682,7 +683,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Game Jam 3
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Game Jam 3
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
