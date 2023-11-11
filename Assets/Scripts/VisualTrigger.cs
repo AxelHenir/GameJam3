@@ -1,3 +1,4 @@
+using DescantRuntime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,11 +10,59 @@ public class VisualTrigger : MonoBehaviour
     [SerializeField]
     private GameObject visualCue; //holds all of the visual cue content
 
+    private FirstPersonController playerController;
+
+    [SerializeField] GameObject ui; //holds descant script
+    private DescantConversationUI descantUIScript;
+
     //Make sure the sphere collider to this object is in a big enough range, and is isTrigger
     void Awake()
     {
+        descantUIScript = ui.GetComponent<DescantConversationUI>();
+
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
+
+
+
+
+        CheckHideUI();
+
+        descantUIScript.conversationDone += CheckHideUI;
 
         isPlayerInRange = false;
+    }
+
+
+
+    void CheckHideUI()
+    {
+        if(descantUIScript.isResponseType)
+        {
+            Invoke(nameof(HideUI), 2f);
+        }
+        else
+        {
+            HideUI();
+        }
+    }
+
+    void HideUI()
+    {
+        ui.SetActive(false);
+        playerController.playerCanMove = true;
+        //playerController.lockCursor = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        playerController.cameraCanMove = true;
+    }
+
+    void ShowUI()
+    {
+        
+        playerController.playerCanMove = false;
+        playerController.cameraCanMove = false;
+        //playerController.lockCursor = false;
+        Cursor.lockState = CursorLockMode.None;
+        ui.SetActive(true);
     }
 
     private void Start()
@@ -41,6 +90,10 @@ public class VisualTrigger : MonoBehaviour
                         isPlayerInRange = false;
 
                         //initialize interaction!
+
+                        descantUIScript.InitializeDialogue(descantUIScript.descantGraph); //text asset for this object / person
+                        Debug.Log("dialogue shown");
+                        ShowUI();
 
                         //example:
                         //AnimalMechanic gamemanager = GameObject.Find("FirstPersonController").GetComponent<AnimalMechanic>();
