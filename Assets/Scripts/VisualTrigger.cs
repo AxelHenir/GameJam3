@@ -7,7 +7,6 @@ public class VisualTrigger : MonoBehaviour
 {
     bool isPlayerInRange; //keep track of whether the player is in range
 
-    [SerializeField]
     private GameObject visualCue; //holds all of the visual cue content
 
     private FirstPersonController playerController;
@@ -23,7 +22,7 @@ public class VisualTrigger : MonoBehaviour
 
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
 
-
+        visualCue = this.transform.GetChild(0).gameObject;
 
 
         CheckHideUI();
@@ -120,6 +119,19 @@ public class VisualTrigger : MonoBehaviour
             isPlayerInRange = true;
             //Debug.Log("IN RANGE");
 
+            if (visualCue != null)
+            {
+                //show visual cue if player is in range
+                visualCue.SetActive(true);
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            isPlayerInRange = true;
             if (visualCue != null)
             {
                 //show visual cue if player is in range

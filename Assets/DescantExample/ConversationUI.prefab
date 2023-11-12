@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 0}
-  m_SizeDelta: {x: 250, y: 150}
+  m_AnchoredPosition: {x: 207.14459, y: 0}
+  m_SizeDelta: {x: 364.2891, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5628343223537909010
 CanvasRenderer:
@@ -327,7 +327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e205aa21f6c4083b2a8fe358009f9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descantGraph: {fileID: 4900000, guid: 7bc4b99b43b667d449b3c7314873c83e, type: 3}
   response: {fileID: 8923065324965620364}
   choices: {fileID: 7604508217178840665}
   choice: {fileID: 5535320327982640812, guid: 98c10a36003227b42aebc2bd1a79423b, type: 3}

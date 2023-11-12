@@ -555,7 +555,7 @@ PrefabInstance:
     - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: thisScript
       value: 
-      objectReference: {fileID: 4900000, guid: ad1a4b2e57c355644ab825d548ac31e8, type: 3}
+      objectReference: {fileID: 4900000, guid: c740ce7038d10304b96d3ec22192484c, type: 3}
     - target: {fileID: 9069927557997567086, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Name
       value: VisualTrigger
