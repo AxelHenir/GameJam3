@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/TutorialP2.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 3,
-	"ResponseNodeID": 6,
+	"ResponseNodeID": 7,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -13,7 +13,7 @@
 			"ID": 1,
 			"Position": {
 				"x": 2094.0,
-				"y": 59.0
+				"y": 58.666664123535159
 			},
 			"NodeComponents": [
 				
@@ -28,8 +28,8 @@
 			"Type": "Choice",
 			"ID": 2,
 			"Position": {
-				"x": 3189.0,
-				"y": 29.0
+				"x": 3188.666748046875,
+				"y": 28.66666603088379
 			},
 			"NodeComponents": [
 				
@@ -47,8 +47,8 @@
 			"Type": "Response",
 			"ID": 0,
 			"Position": {
-				"x": 303.0,
-				"y": -41.0
+				"x": 302.6666564941406,
+				"y": -41.333335876464847
 			},
 			"NodeComponents": [
 				
@@ -60,21 +60,21 @@
 			"Type": "Response",
 			"ID": 1,
 			"Position": {
-				"x": 1471.0,
-				"y": -14.0
+				"x": 1474.0,
+				"y": -41.333335876464847
 			},
 			"NodeComponents": [
 				
 			],
-			"Response": "This subject is named X and has decided to upload her memories with us. Your job is to explore her memories and come back to answer three key questions in order to upload this memory."
+			"Response": "Your job is to explore her memories and come back to answer three key questions in order to upload this memory."
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 2,
 			"Position": {
-				"x": 2657.0,
-				"y": 15.0
+				"x": 2656.666748046875,
+				"y": 14.666666030883789
 			},
 			"NodeComponents": [
 				
@@ -86,8 +86,8 @@
 			"Type": "Response",
 			"ID": 3,
 			"Position": {
-				"x": 2611.0,
-				"y": 341.0
+				"x": 2610.666748046875,
+				"y": 340.6666564941406
 			},
 			"NodeComponents": [
 				
@@ -100,7 +100,7 @@
 			"ID": 4,
 			"Position": {
 				"x": 3756.0,
-				"y": -59.0
+				"y": -59.333335876464847
 			},
 			"NodeComponents": [
 				
@@ -112,13 +112,26 @@
 			"Type": "Response",
 			"ID": 5,
 			"Position": {
-				"x": 3807.0,
-				"y": 242.0
+				"x": 3806.666748046875,
+				"y": 242.00001525878907
 			},
 			"NodeComponents": [
 				
 			],
 			"Response": "Unfortunately, these answers and our data from our subject don't line up. "
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 6,
+			"Position": {
+				"x": 896.6666870117188,
+				"y": -41.333335876464847
+			},
+			"NodeComponents": [
+				
+			],
+			"Response": "This subject is named X and has decided to upload her memories with us. "
 		}
 	],
 	"StartNode": {
@@ -139,8 +152,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 4803.0,
-				"y": 305.0
+				"x": 4802.66650390625,
+				"y": 304.6666564941406
 			},
 			"NodeComponents": [
 				
@@ -209,9 +222,16 @@
 		},
 		{
 			"From": "Response",
-			"FromID": 0,
+			"FromID": 6,
 			"To": "Response",
 			"ToID": 1,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 0,
+			"To": "Response",
+			"ToID": 6,
 			"ChoiceIndex": 0
 		},
 		{
