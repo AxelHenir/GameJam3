@@ -163,7 +163,7 @@ namespace DescantEditor
                 if (startPort == port) return;
                 if (startPort.node == port.node) return;
                 if (startPort.direction == port.direction) return;
-                if (startPort.name == port.name) return;
+                if (startPort.name == port.name && startPort.name != "Response") return;
                 
                 compatiblePorts.Add(port);
             });

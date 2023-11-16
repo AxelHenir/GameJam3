@@ -24,6 +24,8 @@ namespace DescantRuntime
         public ConversationDone conversationDone;
 
         [HideInInspector] public bool isResponseType;
+
+        bool clicktoSkip;
     
         void Awake()
         {
@@ -34,6 +36,12 @@ namespace DescantRuntime
         void Start()
         {
             //DisplayNode();
+        }
+
+        void Update()
+        {
+            if (clicktoSkip && Input.GetButtonDown("Fire1"))
+                DisplayNode();
         }
 
         public void InitializeDialogue(TextAsset dialogueFile)
@@ -51,6 +59,9 @@ namespace DescantRuntime
         /// </param>
         void DisplayNode(int choiceIndex = 0)
         {
+            clicktoSkip = false;
+            response.transform.GetChild(0).gameObject.SetActive(false);
+            
             // Destroying all the old choices
             for (int i = 0; i < choices.childCount; i++)
                 Destroy(choices.GetChild(i).gameObject);
@@ -66,8 +77,17 @@ namespace DescantRuntime
             {
                 isResponseType = true;
                 response.text = temp[1];
-                // Once the response text has been shown, we skip ahead to show the player's possible choices
-                DisplayNode();
+
+                if (conversationController.Current.Next[0].Data.Type == "Response")
+                {
+                    clicktoSkip = true;
+                    response.transform.GetChild(0).gameObject.SetActive(true);
+                }
+                else
+                {
+                    // Once the response text has been shown, we skip ahead to show the player's possible choices
+                    DisplayNode();   
+                }
             }
             // Displaying the ChoiceNodes...
             else if (temp[0] == "Choice")

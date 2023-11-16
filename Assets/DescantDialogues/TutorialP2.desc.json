@@ -10,21 +10,6 @@
 		{
 			"Name": "ChoiceNode",
 			"Type": "Choice",
-			"ID": 0,
-			"Position": {
-				"x": 890.0,
-				"y": -14.0
-			},
-			"NodeComponents": [
-				
-			],
-			"Choices": [
-				"Continue"
-			]
-		},
-		{
-			"Name": "ChoiceNode",
-			"Type": "Choice",
 			"ID": 1,
 			"Position": {
 				"x": 2094.0,
@@ -168,20 +153,6 @@
 	"Connections": [
 		{
 			"From": "Response",
-			"FromID": 0,
-			"To": "Choice",
-			"ToID": 0,
-			"ChoiceIndex": 0
-		},
-		{
-			"From": "Choice",
-			"FromID": 0,
-			"To": "Response",
-			"ToID": 1,
-			"ChoiceIndex": 1
-		},
-		{
-			"From": "Response",
 			"FromID": 1,
 			"To": "Choice",
 			"ToID": 1,
@@ -234,6 +205,13 @@
 			"FromID": 0,
 			"To": "Response",
 			"ToID": 0,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 0,
+			"To": "Response",
+			"ToID": 1,
 			"ChoiceIndex": 0
 		},
 		{
