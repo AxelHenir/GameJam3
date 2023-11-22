@@ -1,31 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LedgerController : MonoBehaviour
 {
     //Stores the ledger list where all the labelling happens
     public List<LabelModel> LedgerLabelList;
 
-    // Canvas which houses the Ledger UI
+    // GameObject which houses the Ledger UI
     public GameObject ledgerUI;
 
-    // The various tabs (gameObjects) for the UI
-    public GameObject namesTab, relationshipsTab, mysteryRolesTab;
+    // GameObjects which house the content of each tab
+    public GameObject namesTabContent;
+    public GameObject relationshipsTabContent;
+    public GameObject mysteryRolesTabContent;
 
-    // Booleans which track which tab is active and if the ledger UI is active
-    public bool ledgerUIActive = false;
-    public bool namesTabActive, realationshipsTabActive, rolesTabActive = false;
+    // Buttons which active a given tab
+    public Button namesTabButton;
+    public Button relationshipsTabButton;
+    public Button mysteryRolesTabButton;
+    public Button exitButton;
     
     void Start()
     {
         // Ledger begins closed
+        ledgerUI.SetActive(false);
 
-        // All tabs begin closed
+        // Assign the onClick events for each tab button
+        // namesTabButton.onClick.AddListener(() => ShowTab(namesTabContent));
+        // relationshipsTabButton.onClick.AddListener(() => ShowTab(relationshipsTabContent));
+        // mysteryRolesTabButton.onClick.AddListener(() => ShowTab(mysteryRolesTabContent));
+        // exitButton.onClick.AddListener(() => closeLedgerUI());
 
     }
 
-    
     void Update()
     {
         // Check if the TAB key is pressed
@@ -54,79 +63,41 @@ public class LedgerController : MonoBehaviour
     // Opens the ledger
     public void openLedgerUI()
     {
-        // Disable the player's controls
+        // Disable the player's movement controls
+
+        // Enable the cursor to move freely
+        Cursor.lockState = CursorLockMode.None;
 
         // Set the UI to active
-        if (ledgerUI != null)
-            {
-                ledgerUI.SetActive(true);
-            }
+        ledgerUI.SetActive(true);
         
-        // Set the default active tab- "Names" for now
-        namesTabActive = true;
-        realationshipsTabActive = false;
-        rolesTabActive = false;
-            
-        // Call the method which populates the list in the name tab
-        loadNamesTab();
+        // Set the starting tab (Names for now)
+        ShowTab(namesTabContent);
     }
 
     // Closes the ledger
     public void closeLedgerUI()
     {
 
-        // Set all tabs to inactive
-        namesTabActive = false;
-        realationshipsTabActive = false;
-        rolesTabActive = false;
-
         // Set the UI to inactive
-        if (ledgerUI != null)
-            {
-                ledgerUI.SetActive(false);
-            }
-        
-        // Enable the player's controls
+        ledgerUI.SetActive(false);
+            
+        // Set player's cursor to locked
+        Cursor.lockState = CursorLockMode.Locked;
+
+        // Enable the player's movement controls
       
     }
 
-    // Loads all items in names tab
-    public void loadNamesTab()
+    // Opens the given tab, disabling other tabs
+    public void ShowTab(GameObject tabContent)
     {
+        // Disable all tab content panels
+        namesTabContent.SetActive(false);
+        relationshipsTabContent.SetActive(false);
+        mysteryRolesTabContent.SetActive(false);
 
-        // Disable other tab(s)
-        realationshipsTabActive = false;
-        rolesTabActive = false;
-
-        // Enable tab
-        namesTabActive = true;
-
-        // populate tab
-    }
-
-    public void loadRelationshipsTab()
-    {
-
-        // Disable other tab(s)
-        namesTabActive = false;
-        rolesTabActive = false;
-
-        // Enable tab
-        realationshipsTabActive = true;
-
-        // populate tab
-    }
-
-    public void loadMysteryRolesTab()
-    {
-
-        // Disable other tab(s)
-        namesTabActive = false;
-        realationshipsTabActive = false;
-
-        // Enable tab
-        rolesTabActive = true;
-
-        // populate tab
+        // Enable the selected tab content panel
+        tabContent.SetActive(true);
     }
 }

@@ -6,7 +6,7 @@ public class LabelModel : MonoBehaviour
 {
     //Holds the information needed to store one row from the ledger.
 
-    public string pictureName { get; private set; } //name of the person the picture belongs to
+    public string pictureName { get; private set; } // name of the person the picture belongs to
     Sprite pictureSprite;
 
     string personName;
