@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameplayManager : MonoBehaviour
 {    
     //Holds all important information we would like to know about the game at all times
-
+    public bool playerHasFoundItemA;
 
     // Start is called before the first frame update
     void Start()
