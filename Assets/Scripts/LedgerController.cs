@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class LedgerController : MonoBehaviour
 {
-    //Stores the ledger list where all the labelling happens
+    // Stores the ledger list where all the labelling happens
     public List<LabelModel> LedgerLabelList;
+
+    // Stores the player's character
+    public FirstPersonController playerController;
 
     // GameObject which houses the Ledger UI
     public GameObject ledgerUI;
@@ -63,7 +66,9 @@ public class LedgerController : MonoBehaviour
     // Opens the ledger
     public void openLedgerUI()
     {
-        // Disable the player's movement controls
+        // Disable the player's movement & camera controls
+        playerController.playerCanMove = false;
+        playerController.cameraCanMove = false;
 
         // Enable the cursor to move freely
         Cursor.lockState = CursorLockMode.None;
@@ -86,6 +91,8 @@ public class LedgerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         // Enable the player's movement controls
+        playerController.playerCanMove = true;
+        playerController.cameraCanMove = true;
       
     }
 
