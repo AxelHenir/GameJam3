@@ -5,36 +5,21 @@ using UnityEngine.UI;
 
 public class LedgerController : MonoBehaviour
 {
-    // Stores the ledger list where all the labelling happens
-    public List<LabelModel> LedgerLabelList;
-
     // Stores the player's character
     public FirstPersonController playerController;
 
     // GameObject which houses the Ledger UI
     public GameObject ledgerUI;
 
-    // GameObjects which house the content of each tab
-    public GameObject namesTabContent;
-    public GameObject relationshipsTabContent;
-    public GameObject mysteryRolesTabContent;
-
-    // Buttons which active a given tab
-    public Button namesTabButton;
-    public Button relationshipsTabButton;
-    public Button mysteryRolesTabButton;
+    // Buttons
     public Button exitButton;
+    public Button submitAnswersButton;
+  
     
     void Start()
     {
         // Ledger begins closed
         ledgerUI.SetActive(false);
-
-        // Assign the onClick events for each tab button
-        // namesTabButton.onClick.AddListener(() => ShowTab(namesTabContent));
-        // relationshipsTabButton.onClick.AddListener(() => ShowTab(relationshipsTabContent));
-        // mysteryRolesTabButton.onClick.AddListener(() => ShowTab(mysteryRolesTabContent));
-        // exitButton.onClick.AddListener(() => closeLedgerUI());
 
     }
 
@@ -76,8 +61,6 @@ public class LedgerController : MonoBehaviour
         // Set the UI to active
         ledgerUI.SetActive(true);
         
-        // Set the starting tab (Names for now)
-        ShowTab(namesTabContent);
     }
 
     // Closes the ledger
@@ -96,15 +79,4 @@ public class LedgerController : MonoBehaviour
       
     }
 
-    // Opens the given tab, disabling other tabs
-    public void ShowTab(GameObject tabContent)
-    {
-        // Disable all tab content panels
-        namesTabContent.SetActive(false);
-        relationshipsTabContent.SetActive(false);
-        mysteryRolesTabContent.SetActive(false);
-
-        // Enable the selected tab content panel
-        tabContent.SetActive(true);
-    }
 }

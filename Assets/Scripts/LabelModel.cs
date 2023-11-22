@@ -20,7 +20,7 @@ public class LabelModel : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // Update is called once per framew  
     void Update()
     {
         
