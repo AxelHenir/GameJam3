@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/TutorialP2.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 3,
-	"ResponseNodeID": 7,
+	"ResponseNodeID": 13,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -28,8 +28,8 @@
 			"Type": "Choice",
 			"ID": 2,
 			"Position": {
-				"x": 3188.666748046875,
-				"y": 28.66666603088379
+				"x": 2934.666748046875,
+				"y": 56.666664123535159
 			},
 			"NodeComponents": [
 				
@@ -53,7 +53,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Hi there! Are you getting your bearings? You might still be adjusting to the short-term memory loss, so remember you are in our ReCall virtual space."
+			"Response": "Hello there! First day, eh? Your first assignment is sort of a big one, I'm not going to lie to you.\r"
 		},
 		{
 			"Name": "ResponseNode",
@@ -66,20 +66,20 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Your job is to explore her memories and come back to answer three key questions in order to upload this memory."
+			"Response": "Their memories are an invaluable contribution to us here at the Museum of Neurodiversity. You see, this might be before your time, but at one point people didn't welcome neurodiversity as much as they do today. "
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 2,
 			"Position": {
-				"x": 2656.666748046875,
-				"y": 14.666666030883789
+				"x": 250.0,
+				"y": 344.6666564941406
 			},
 			"NodeComponents": [
 				
 			],
-			"Response": "Alright here is the first question!"
+			"Response": "There used to be lots of prejudice, and a good deal of our senior neurodiverse population was greatly wounded by how they were treated in their youth."
 		},
 		{
 			"Name": "ResponseNode",
@@ -99,26 +99,26 @@
 			"Type": "Response",
 			"ID": 4,
 			"Position": {
-				"x": 3756.0,
-				"y": -59.333335876464847
+				"x": 938.6666870117188,
+				"y": 336.6666564941406
 			},
 			"NodeComponents": [
 				
 			],
-			"Response": "Correct! You've successfully uploaded the memory!"
+			"Response": "Your job is to make a record of the donor's memories. This will allow us to display an accurate history of neurodiversity to our visitors, so that nobody has to go through what they went through."
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 5,
 			"Position": {
-				"x": 3806.666748046875,
-				"y": 242.00001525878907
+				"x": 1668.0,
+				"y": 336.6666564941406
 			},
 			"NodeComponents": [
 				
 			],
-			"Response": "Unfortunately, these answers and our data from our subject don't line up. "
+			"Response": "Because these are repressed memories, some of the information from the events have become lost. You need to go through the memories to figure out what has happened."
 		},
 		{
 			"Name": "ResponseNode",
@@ -131,7 +131,85 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "This subject is named X and has decided to upload her memories with us. "
+			"Response": "We have recently received a very generous donation from a member of the community, so we need you to go in and deal with it. "
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 7,
+			"Position": {
+				"x": 2320.666748046875,
+				"y": 336.6666564941406
+			},
+			"NodeComponents": [
+				
+			],
+			"Response": "Pressing TAB will open up your ledger; use this to keep track of any information you uncover from the memories.\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 8,
+			"Position": {
+				"x": 2958.0,
+				"y": 336.6666564941406
+			},
+			"NodeComponents": [
+				
+			],
+			"Response": "Press E to interact with objects and characters like me!"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 9,
+			"Position": {
+				"x": 500.0,
+				"y": 896.6666870117188
+			},
+			"NodeComponents": [
+				
+			],
+			"Response": "It's going to be a bit different from your training. Being repressed, these memories have a high corruption rate."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 10,
+			"Position": {
+				"x": 1146.6666259765625,
+				"y": 867.3333740234375
+			},
+			"NodeComponents": [
+				
+			],
+			"Response": "Be careful not to try accessing too much too soon—if you tread too much on the memories, you'll be sent back to the beginning."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 11,
+			"Position": {
+				"x": 1862.6666259765625,
+				"y": 867.3333740234375
+			},
+			"NodeComponents": [
+				
+			],
+			"Response": " But don't worry—all the information you've collected will be retained! Still, it might be helpful sometimes to allow corruption to take over, as you might end up uncovering something important."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 12,
+			"Position": {
+				"x": 2492.0,
+				"y": 896.6666870117188
+			},
+			"NodeComponents": [
+				
+			],
+			"Response": "Well, that's my speech. It's all a bit overwhelming, isn't it? You'll get the hang of it in no time."
 		}
 	],
 	"StartNode": {
@@ -152,8 +230,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 4802.66650390625,
-				"y": 304.6666564941406
+				"x": 3076.0,
+				"y": 956.6666870117188
 			},
 			"NodeComponents": [
 				
@@ -164,55 +242,6 @@
 		
 	],
 	"Connections": [
-		{
-			"From": "Response",
-			"FromID": 1,
-			"To": "Choice",
-			"ToID": 1,
-			"ChoiceIndex": 0
-		},
-		{
-			"From": "Choice",
-			"FromID": 1,
-			"To": "Response",
-			"ToID": 2,
-			"ChoiceIndex": 1
-		},
-		{
-			"From": "Choice",
-			"FromID": 1,
-			"To": "Response",
-			"ToID": 3,
-			"ChoiceIndex": 2
-		},
-		{
-			"From": "Response",
-			"FromID": 2,
-			"To": "Choice",
-			"ToID": 2,
-			"ChoiceIndex": 0
-		},
-		{
-			"From": "Choice",
-			"FromID": 2,
-			"To": "Response",
-			"ToID": 4,
-			"ChoiceIndex": 1
-		},
-		{
-			"From": "Choice",
-			"FromID": 2,
-			"To": "Response",
-			"ToID": 5,
-			"ChoiceIndex": 2
-		},
-		{
-			"From": "Choice",
-			"FromID": 2,
-			"To": "Response",
-			"ToID": 5,
-			"ChoiceIndex": 3
-		},
 		{
 			"From": "Start",
 			"FromID": 0,
@@ -229,6 +258,27 @@
 		},
 		{
 			"From": "Response",
+			"FromID": 1,
+			"To": "Response",
+			"ToID": 2,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 2,
+			"To": "Response",
+			"ToID": 4,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 4,
+			"To": "Response",
+			"ToID": 5,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
 			"FromID": 0,
 			"To": "Response",
 			"ToID": 6,
@@ -236,21 +286,49 @@
 		},
 		{
 			"From": "Response",
-			"FromID": 3,
-			"To": "End",
-			"ToID": 0,
-			"ChoiceIndex": 0
-		},
-		{
-			"From": "Response",
-			"FromID": 4,
-			"To": "End",
-			"ToID": 0,
-			"ChoiceIndex": 0
-		},
-		{
-			"From": "Response",
 			"FromID": 5,
+			"To": "Response",
+			"ToID": 7,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 7,
+			"To": "Response",
+			"ToID": 8,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 8,
+			"To": "Response",
+			"ToID": 9,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 9,
+			"To": "Response",
+			"ToID": 10,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 10,
+			"To": "Response",
+			"ToID": 11,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 11,
+			"To": "Response",
+			"ToID": 12,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 12,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0
