@@ -36,6 +36,8 @@ public class VisualTrigger : MonoBehaviour
 
         //get the parent object of Visual Trigger:
         ObjectThatIsInteractedWith = this.transform.parent.gameObject;
+
+        isCorrupted = false;
     }
 
 

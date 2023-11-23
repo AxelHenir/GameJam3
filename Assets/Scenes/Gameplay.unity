@@ -2091,6 +2091,7 @@ MonoBehaviour:
   FuneralMemory: {fileID: 1642789590}
   AuntsHouseMemory: {fileID: 308522085}
   corruptionLevel: 0
+  corruptionSpeed: 0
   statusBar: {fileID: 601949056}
 --- !u!4 &126332856
 Transform:

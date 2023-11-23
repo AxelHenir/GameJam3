@@ -18,42 +18,35 @@ public class CorruptionHospital : MonoBehaviour
         
     }
 
-    //Anything inside this object is not corrupted
+    /*
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("VisualTrigger"))
+        if (other.CompareTag("HospitalInteractable"))
         {
-            if(other.transform.transform.IsChildOf(HospitalMemory.transform))
-            {
-                //if the object is a child of the hospital memory, remove corruption
-                other.gameObject.GetComponent<VisualTrigger>().isCorrupted = false;
-            }            
+            other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = false;
+          
+            //Debug.Log("No corruption");
         }
     }
-
+    */
+    //Anything inside this object is not corrupted
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("VisualTrigger"))
-        {
-            if (other.transform.transform.IsChildOf(HospitalMemory.transform))
-            {
-                //if the object is a child of the hospital memory, remove corruption
-                other.gameObject.GetComponent<VisualTrigger>().isCorrupted = false;
-            }
+        if (other.CompareTag("HospitalInteractable"))
+        {            
+            other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = false;
+            //Debug.Log("No corruption");
         }
     }
 
     //Anything outside this object is corrupted
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("VisualTrigger"))
+        if (other.CompareTag("HospitalInteractable"))
         {
-            if (other.transform.transform.IsChildOf(HospitalMemory.transform))
-            {
-                //if the object is a child of the hospital memory, add corruption
-                other.gameObject.GetComponent<VisualTrigger>().isCorrupted = true;
-                Debug.Log("Start corruption");
-            }
+            other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = true;
+            Debug.Log("Start corruption");
+
         }
     }
 }
