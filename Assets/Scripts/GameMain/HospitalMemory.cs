@@ -19,14 +19,14 @@ public class HospitalMemory : MonoBehaviour
     {
         
     }
-
+    /*
     private void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("Player"))
         {
             //Debug.Log("We are in the hospital memory");
         }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {

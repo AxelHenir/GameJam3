@@ -39,6 +39,8 @@ public class CorruptionController : MonoBehaviour
     //The current level of corruption
     public float corruptionLevel;
 
+    public float corruptionSpeed;
+
     //Reference to the Slider component of the status bar
     [SerializeField] Slider statusBar;
 
@@ -49,6 +51,7 @@ public class CorruptionController : MonoBehaviour
     {
         CorruptionMaterial = corruptionHospitalObj.GetComponent<Renderer>().material;
         statusBar.value = 0;
+        corruptionSpeed = 0;
         //isResetting = false;
     }
 
@@ -99,7 +102,7 @@ public class CorruptionController : MonoBehaviour
             }
 
             //Calculates the current corruption 
-            corruptionLevel = firstPersonController.distanceTraveled / corruptionThreshold;
+            corruptionLevel = firstPersonController.distanceTraveled / corruptionThreshold + corruptionSpeed;
                 
             //Debug.Log("during lvl: " + corruptionLevel + " statusBar: " + statusBar.value + " dist: "+ firstPersonController.distanceTraveled);
             

@@ -5249,6 +5249,7 @@ GameObject:
   - component: {fileID: 5403075050174896130}
   - component: {fileID: 443860999291326043}
   - component: {fileID: 4477719232492728677}
+  - component: {fileID: 3317259749457840849}
   m_Layer: 0
   m_Name: CorruptionHospital
   m_TagString: Untagged
@@ -5344,6 +5345,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &3317259749457840849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7692419633612868431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d9f2937fd62334fb5313b2e96bc130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7730938857036685057
 GameObject:
   m_ObjectHideFlags: 0
@@ -6780,6 +6793,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: thisScript
+      value: 
+      objectReference: {fileID: 4900000, guid: 9f966558b0b768a49b6cf9c397982f38, type: 3}
     - target: {fileID: 6991192914667389506, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: outlineWidth
       value: 10
@@ -7046,6 +7063,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: thisScript
+      value: 
+      objectReference: {fileID: 4900000, guid: 875e118b13769c64294c30296db2e1fe, type: 3}
     - target: {fileID: 6991192914667389506, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: outlineWidth
       value: 10

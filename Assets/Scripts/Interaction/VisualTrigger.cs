@@ -16,6 +16,8 @@ public class VisualTrigger : MonoBehaviour
     [SerializeField] TextAsset thisScript;
     private DescantConversationUI descantUIScript;
 
+    public bool isCorrupted;
+
     //Make sure the sphere collider to this object is in a big enough range, and is isTrigger
     void Awake()
     {
@@ -80,7 +82,7 @@ public class VisualTrigger : MonoBehaviour
         if (visualCue != null)
         {
 
-            if (isPlayerInRange)
+            if (isPlayerInRange && !isCorrupted) //don't display visual cue and prevent interaction if the corruption is true
             {
                 //show visual cue if player is in range
                 visualCue.SetActive(true);

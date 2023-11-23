@@ -19,14 +19,14 @@ public class FuneralMemory : MonoBehaviour
     {
 
     }
-
+    /*
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             //Debug.Log("We are in the funeral memory");
         }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {

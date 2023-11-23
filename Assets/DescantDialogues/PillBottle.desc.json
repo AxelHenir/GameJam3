@@ -1,9 +1,9 @@
 {
-	"Name": "Card",
-	"Path": "/DescantDialogues/Card.desc.json",
+	"Name": "New Descant Graph",
+	"Path": "/DescantDialogues/New Descant Graph.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 2,
+	"ResponseNodeID": 1,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -15,26 +15,13 @@
 			"Type": "Response",
 			"ID": 0,
 			"Position": {
-				"x": 306.0,
-				"y": -26.0
+				"x": 320.6666564941406,
+				"y": 45.33332824707031
 			},
 			"NodeComponents": [
 				
 			],
-			"Response": "I am card"
-		},
-		{
-			"Name": "ResponseNode",
-			"Type": "Response",
-			"ID": 1,
-			"Position": {
-				"x": 853.3333129882813,
-				"y": -26.0
-			},
-			"NodeComponents": [
-				
-			],
-			"Response": "Here's a second text !"
+			"Response": "I am pill bottle"
 		}
 	],
 	"StartNode": {
@@ -42,8 +29,8 @@
 		"Type": "Start",
 		"ID": 0,
 		"Position": {
-			"x": 0.0,
-			"y": 0.0
+			"x": 50.0,
+			"y": 70.0
 		},
 		"NodeComponents": [
 			
@@ -55,8 +42,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 1422.0,
-				"y": 78.0
+				"x": 433.3333435058594,
+				"y": 322.0
 			},
 			"NodeComponents": [
 				
@@ -77,13 +64,6 @@
 		{
 			"From": "Response",
 			"FromID": 0,
-			"To": "Response",
-			"ToID": 1,
-			"ChoiceIndex": 0
-		},
-		{
-			"From": "Response",
-			"FromID": 1,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

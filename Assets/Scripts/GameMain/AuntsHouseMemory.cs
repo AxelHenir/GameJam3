@@ -19,14 +19,14 @@ public class AuntsHouseMemory : MonoBehaviour
     {
 
     }
-
+    /*
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             //Debug.Log("We are in the aunt's house memory");
         }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
