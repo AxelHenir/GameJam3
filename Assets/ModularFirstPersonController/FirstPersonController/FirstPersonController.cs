@@ -61,7 +61,7 @@ public class FirstPersonController : MonoBehaviour
 
     //Variable to keep track of the distance traveled by the player every frame
     public float distanceTraveled = 0.0f;
-    private Vector3 lastPosition;
+    public Vector3 lastPosition;
 
     // Internal Variables
     private bool isWalking = false;

@@ -22,7 +22,24 @@ public class GameplayManager : MonoBehaviour
 
     public GameObject parentOfCharacterEntries;
 
-    public void verifyPlayerGuesses(){
+
+
+    private Vector3 PlayerStartingPosition = new Vector3(0, 1.5f, 0);
+    private int numberOfReboots;
+    
+    void Start()
+    {
+        numberOfReboots = 0;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void verifyPlayerGuesses()
+    {
 
         // Get all the CharacterEntry components from the children of the parentObject
         CharacterEntry[] characterEntries = parentOfCharacterEntries.GetComponentsInChildren<CharacterEntry>();
@@ -45,19 +62,11 @@ public class GameplayManager : MonoBehaviour
 
         }
     }
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
-    void Update()
+    public void ResetGame()
     {
-        
-    }
-
-    void ResetGame()
-    {
+        numberOfReboots++;
+        Debug.Log("Resetting corruption");
 
     }
 

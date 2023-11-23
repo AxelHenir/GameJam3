@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CorruptionController : MonoBehaviour
 {
     //Gets the info from the GameManager for what's currently happening, how many 
+    [SerializeField] GameplayManager gameManager;
     //Updates the memories with corruption or not
 
     //Need the center of the memory as point of reference to add corruption to everything outside a radius distance
@@ -13,6 +14,7 @@ public class CorruptionController : MonoBehaviour
 
     // Reference to the FirstPersonController script
     public FirstPersonController firstPersonController;
+    private Vector3 PlayerStartingPosition = new Vector3(0,1.5f,0);
     
     // The distance the player needs to travel for the scene to be corrupted
     public float corruptionThreshold = 100.0f;
@@ -22,11 +24,13 @@ public class CorruptionController : MonoBehaviour
 
     //cylinder object that determines where the corruption is
     [SerializeField] GameObject corruptionHospitalObj;
-    public Vector3 initialScale = new Vector3(50.0f,10.0f,50.0f); //starting scale
-    public Vector3 finalScale = new Vector3(10.0f,10.0f,10.0f); //ending scale
+    public Vector3 initialScale = new Vector3(50.0f,5.0f,50.0f); //starting scale
+    public Vector3 finalScale = new Vector3(10.0f,5.0f,10.0f); //ending scale
     private Material CorruptionMaterial;
 
-    public GameObject HospitalMemory;
+    [SerializeField] GameObject HospitalMemory;
+    [SerializeField] GameObject FuneralMemory;
+    [SerializeField] GameObject AuntsHouseMemory;
 
     // Reference to the CorruptionStatusBar script
     //public CorruptionStatusBar CorruptionStatusBar;
@@ -37,16 +41,35 @@ public class CorruptionController : MonoBehaviour
     //Reference to the Slider component of the status bar
     [SerializeField] Slider statusBar;
 
+    bool isResetting;
+
     // Start is called before the first frame update
     void Start()
     {
         CorruptionMaterial = corruptionHospitalObj.GetComponent<Renderer>().material;
         statusBar.value = 0;
+        isResetting = false;
     }
 
     void ResetCorruption()
     {
+        isResetting = true;
+        gameManager.ResetGame();    
+        //Debug.Log("before lvl: "+corruptionLevel+" statusBar: "+statusBar.value + " dist: " + firstPersonController.distanceTraveled);
 
+        //we can't set the distance travelled since it changes on Update, we have to set the starting position to the same as the player's last position
+        firstPersonController.GetComponent<Transform>().position = PlayerStartingPosition;
+        firstPersonController.lastPosition = PlayerStartingPosition; 
+
+        //reset values
+        corruptionLevel = 0.0f;
+        statusBar.value = 0.0f;
+        lastCorruptionDistance = 0.0f;
+
+        //reset corruption values
+        //CorruptionMaterial
+
+        isResetting = false;
     }
 
     // Update is called once per frame
@@ -59,19 +82,29 @@ public class CorruptionController : MonoBehaviour
             lastCorruptionDistance = firstPersonController.distanceTraveled;
 
             Debug.Log("The corruption bar is now full!!!");
-            
+
             //TODO: reboot the SCENE/system maybe? --> need to display visual feedback / warning beforehand
+            //ResetCorruption();
         }
 
-        //Calculates the current corruption 
-        corruptionLevel = firstPersonController.distanceTraveled / corruptionThreshold;
+        if(!isResetting)
+        {
+            //Calculates the current corruption 
+            corruptionLevel = firstPersonController.distanceTraveled / corruptionThreshold;
 
-        //Corrupt the scene
-        CorruptScene();
+            //Corrupt the scene
+            CorruptScene();
 
-        //Update the status bar & corruption object
-        UpdateCorruptionObject();
-        UpdateCorruptionSlider();
+            //Update the status bar & corruption object
+            UpdateCorruptionObject();
+            UpdateCorruptionSlider();
+            //Debug.Log("during lvl: " + corruptionLevel + " statusBar: " + statusBar.value + " dist: "+ firstPersonController.distanceTraveled);
+        }        
+
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            ResetCorruption();
+        }
     }
 
     void CorruptScene()
