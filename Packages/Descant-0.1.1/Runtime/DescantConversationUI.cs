@@ -29,7 +29,7 @@ namespace DescantRuntime
     
         void Awake()
         {
-            conversationController = gameObject.AddComponent<DescantConversationController>();
+            //conversationController = gameObject.AddComponent<DescantConversationController>();
             //conversationController.Initialize(descantGraph);
         }
         
@@ -46,6 +46,8 @@ namespace DescantRuntime
 
         public void InitializeDialogue(TextAsset dialogueFile)
         {
+            conversationController = gameObject.AddComponent<DescantConversationController>();
+            
             conversationController.Initialize(dialogueFile);
             DisplayNode();
         }
