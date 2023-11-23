@@ -96,10 +96,6 @@ public class VisualTrigger : MonoBehaviour
                         Debug.Log("dialogue shown");
                         ShowUI();
 
-                        //example:
-                        //AnimalMechanic gamemanager = GameObject.Find("FirstPersonController").GetComponent<AnimalMechanic>();
-
-                        //gamemanager.Pickup(this.gameObject, gameObject.transform.parent.gameObject);
                     }                
 
                 }

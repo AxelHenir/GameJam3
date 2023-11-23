@@ -59,6 +59,10 @@ public class FirstPersonController : MonoBehaviour
     public float walkSpeed = 5f;
     public float maxVelocityChange = 10f;
 
+    //Variable to keep track of the distance traveled by the player every frame
+    public float distanceTraveled = 0.0f;
+    private Vector3 lastPosition;
+
     // Internal Variables
     private bool isWalking = false;
 
@@ -165,6 +169,8 @@ public class FirstPersonController : MonoBehaviour
         {
             crosshairObject.gameObject.SetActive(false);
         }
+
+        lastPosition = transform.position; 
 
         #region Sprint Bar
 
@@ -362,6 +368,11 @@ public class FirstPersonController : MonoBehaviour
         {
             HeadBob();
         }
+
+        // Distance Travelling 
+        distanceTraveled += Vector3.Distance(transform.position, lastPosition);
+        lastPosition = transform.position;
+
     }
 
     void FixedUpdate()

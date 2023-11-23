@@ -9,6 +9,5 @@ public class itemDemo : MonoBehaviour, IInteractable
     {
         Debug.Log("You interacted with an object!");
         // Dialogue opens
-        // Info on this item is added to the player's ledger
     }
 }

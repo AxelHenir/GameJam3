@@ -1,0 +1,78 @@
+{
+	"Name": "Card",
+	"Path": "/DescantDialogues/Card.desc.json",
+	"Autosave": false,
+	"ChoiceNodeID": 0,
+	"ResponseNodeID": 1,
+	"EndNodeID": 1,
+	"GroupID": 0,
+	"ChoiceNodes": [
+		
+	],
+	"ResponseNodes": [
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 0,
+			"Position": {
+				"x": 306.0,
+				"y": -26.0
+			},
+			"NodeComponents": [
+				
+			],
+			"Response": "I am card"
+		}
+	],
+	"StartNode": {
+		"Name": "StartNode",
+		"Type": "Start",
+		"ID": 0,
+		"Position": {
+			"x": 0.0,
+			"y": 0.0
+		},
+		"NodeComponents": [
+			
+		]
+	},
+	"EndNodes": [
+		{
+			"Name": "EndNode",
+			"Type": "End",
+			"ID": 0,
+			"Position": {
+				"x": 910.6666870117188,
+				"y": 0.0
+			},
+			"NodeComponents": [
+				
+			]
+		}
+	],
+	"Groups": [
+		
+	],
+	"Connections": [
+		{
+			"From": "Start",
+			"FromID": 0,
+			"To": "Response",
+			"ToID": 0,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 0,
+			"To": "End",
+			"ToID": 0,
+			"ChoiceIndex": 0
+		}
+	],
+	"references": {
+		"version": 2,
+		"RefIds": [
+			
+		]
+	}
+}
