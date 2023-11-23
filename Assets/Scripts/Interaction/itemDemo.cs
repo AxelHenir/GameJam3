@@ -10,4 +10,6 @@ public class itemDemo : MonoBehaviour, IInteractable
         Debug.Log("You interacted with an object!");
         // Dialogue opens
     }
+
+
 }

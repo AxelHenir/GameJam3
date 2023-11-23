@@ -10,6 +10,7 @@ public class VisualTrigger : MonoBehaviour
     private GameObject visualCue; //holds all of the visual cue content
 
     private FirstPersonController playerController;
+    private GameObject ObjectThatIsInteractedWith;
 
     [SerializeField] GameObject ui; //holds descant script'
     [SerializeField] TextAsset thisScript;
@@ -30,6 +31,9 @@ public class VisualTrigger : MonoBehaviour
         descantUIScript.conversationDone += CheckHideUI;
 
         isPlayerInRange = false;
+
+        //get the parent object of Visual Trigger:
+        ObjectThatIsInteractedWith = this.transform.parent.gameObject;
     }
 
 
@@ -83,18 +87,25 @@ public class VisualTrigger : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E)) //interaction happens
                 {
-                    if (gameObject != null)
+                    Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+                    RaycastHit hit;
+
+                    if (gameObject != null && Physics.Raycast(ray, out hit))
                     {
-                        Debug.Log("VISUAL TRIGGER INTERACT");
-                        //remove visual cues
-                        isPlayerInRange = false;
+                        if(hit.transform.gameObject == ObjectThatIsInteractedWith) //if the ray hit object is the object that is being interacted with, then proceed with interaction
+                        {
+                            Debug.Log("VISUAL TRIGGER INTERACT WITH " + ObjectThatIsInteractedWith.name);
 
-                        //initialize interaction!
+                            //remove visual cues
+                            isPlayerInRange = false;
 
-                        //descantUIScript.InitializeDialogue(descantUIScript.descantGraph); //text asset for this object / person
-                        descantUIScript.InitializeDialogue(thisScript); //text asset for this object / person
-                        Debug.Log("dialogue shown");
-                        ShowUI();
+                            //initialize interaction!
+
+                            //descantUIScript.InitializeDialogue(descantUIScript.descantGraph); //text asset for this object / person
+                            descantUIScript.InitializeDialogue(thisScript); //text asset for this object / person
+                            Debug.Log("dialogue shown");
+                            ShowUI();
+                        }                       
 
                     }                
 

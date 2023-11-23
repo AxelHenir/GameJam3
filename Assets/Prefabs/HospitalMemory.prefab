@@ -4309,7 +4309,6 @@ GameObject:
   - component: {fileID: 4363924645392843342}
   - component: {fileID: 767857726660965784}
   - component: {fileID: 8779162414778023989}
-  - component: {fileID: 2239173859876558849}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -4404,18 +4403,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2239173859876558849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6698458584425991642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3826238f3482a1b458dfb6c9f9c9f8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6716987421652975379
 GameObject:
   m_ObjectHideFlags: 0
@@ -5805,7 +5792,6 @@ GameObject:
   - component: {fileID: 2457854733229883133}
   - component: {fileID: 3239594703655750193}
   - component: {fileID: 5013612269031762322}
-  - component: {fileID: 7672249953603895955}
   m_Layer: 0
   m_Name: Clipboard
   m_TagString: Untagged
@@ -5900,18 +5886,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7672249953603895955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8453548773851836186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3826238f3482a1b458dfb6c9f9c9f8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8481538197917512260
 GameObject:
   m_ObjectHideFlags: 0
