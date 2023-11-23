@@ -63,6 +63,8 @@ public class FirstPersonController : MonoBehaviour
     public float distanceTraveled = 0.0f;
     public Vector3 lastPosition;
 
+    public CorruptionController corruptionController;
+
     // Internal Variables
     private bool isWalking = false;
 
@@ -170,7 +172,8 @@ public class FirstPersonController : MonoBehaviour
             crosshairObject.gameObject.SetActive(false);
         }
 
-        lastPosition = transform.position; 
+        //lastPosition = transform.position;
+        corruptionController = GameObject.Find("CorruptionController").GetComponent<CorruptionController>();
 
         #region Sprint Bar
 
@@ -369,9 +372,14 @@ public class FirstPersonController : MonoBehaviour
             HeadBob();
         }
 
-        // Distance Travelling 
-        distanceTraveled += Vector3.Distance(transform.position, lastPosition);
-        lastPosition = transform.position;
+
+        //only calculate the distance traveling if the player is inside a memory
+        if(corruptionController.HospitalMemory.isInHospitalMemory || corruptionController.FuneralMemory.isInFuneralMemory || corruptionController.AuntsHouseMemory.isInAuntsHouseMemory)
+        {
+            // Distance Travelling (inside a memory)
+            distanceTraveled += Vector3.Distance(transform.position, lastPosition);
+            lastPosition = transform.position;
+        }        
 
     }
 

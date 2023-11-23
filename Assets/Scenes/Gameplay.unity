@@ -2087,9 +2087,9 @@ MonoBehaviour:
   corruptionHospitalObj: {fileID: 473215092}
   initialScale: {x: 50, y: 40, z: 50}
   finalScale: {x: 10, y: 40, z: 10}
-  HospitalMemory: {fileID: 2079820986}
-  FuneralMemory: {fileID: 498080482}
-  AuntsHouseMemory: {fileID: 3145884927587950405}
+  HospitalMemory: {fileID: 2048917301}
+  FuneralMemory: {fileID: 1642789590}
+  AuntsHouseMemory: {fileID: 308522085}
   corruptionLevel: 0
   statusBar: {fileID: 601949056}
 --- !u!4 &126332856
@@ -3328,6 +3328,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295525309}
   m_CullTransparentMesh: 1
+--- !u!114 &308522085 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2025950621315334792, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+  m_PrefabInstance: {fileID: 8936508088329412819}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f427e3d4c33d94aa7fb4424a592fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &308722925
 GameObject:
   m_ObjectHideFlags: 0
@@ -5149,11 +5160,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &498080482 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8583342437670573997, guid: 38fccb424ad2eda45ac0ab62da83091e, type: 3}
-  m_PrefabInstance: {fileID: 4184731260355780602}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &501459467
 GameObject:
   m_ObjectHideFlags: 0
@@ -17305,6 +17311,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!114 &1642789590 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4812817519871424566, guid: 38fccb424ad2eda45ac0ab62da83091e, type: 3}
+  m_PrefabInstance: {fileID: 4184731260355780602}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f557bd025be044d97988c7d0a0309c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1644977380
 GameObject:
   m_ObjectHideFlags: 0
@@ -22454,6 +22471,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: fov
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: sprintFOV
+      value: 143.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_Name
       value: FirstPersonController
@@ -22466,6 +22491,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 287345642}
   m_SourcePrefab: {fileID: 100100000, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+--- !u!114 &2048917301 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6120357486265159231, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+  m_PrefabInstance: {fileID: 952502779453776662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2643589d107833488519c70e299dbd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2056231411
 GameObject:
   m_ObjectHideFlags: 0
@@ -22750,11 +22786,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059526190}
   m_CullTransparentMesh: 1
---- !u!1 &2079820986 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7730938857036685057, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
-  m_PrefabInstance: {fileID: 952502779453776662}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2080791986
 GameObject:
   m_ObjectHideFlags: 0
@@ -23809,6 +23840,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 6120357486265159231, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: firstPersonController
+      value: 
+      objectReference: {fileID: 287345649}
     - target: {fileID: 7730938857036685057, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: m_Name
       value: HospitalMemory
@@ -23913,11 +23948,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &3145884927587950405 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6319072316093783772, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
-  m_PrefabInstance: {fileID: 8936508088329412819}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3523919029356718455
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23974,6 +24004,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4812817519871424566, guid: 38fccb424ad2eda45ac0ab62da83091e, type: 3}
+      propertyPath: firstPersonController
+      value: 
+      objectReference: {fileID: 287345649}
     - target: {fileID: 6189243308991634422, guid: 38fccb424ad2eda45ac0ab62da83091e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 94.97
@@ -24585,6 +24619,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2025950621315334792, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: firstPersonController
+      value: 
+      objectReference: {fileID: 287345649}
     - target: {fileID: 6319072316093783772, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: m_Name
       value: AuntsHouseMemory

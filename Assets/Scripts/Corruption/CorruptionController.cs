@@ -13,7 +13,7 @@ public class CorruptionController : MonoBehaviour
     //Corruption meter
 
     // Reference to the FirstPersonController script
-    public FirstPersonController firstPersonController;
+    [SerializeField] FirstPersonController firstPersonController;
     private Vector3 PlayerStartingPosition = new Vector3(0,1.5f,0);
     
     // The distance the player needs to travel for the scene to be corrupted
@@ -22,15 +22,16 @@ public class CorruptionController : MonoBehaviour
     // The total distance the player had traveled the last time the scene was corrupted
     private float lastCorruptionDistance = 0.0f;
 
-    //cylinder object that determines where the corruption is
+    // Cylinder object that determines where the corruption is
     [SerializeField] GameObject corruptionHospitalObj;
     public Vector3 initialScale = new Vector3(50.0f,5.0f,50.0f); //starting scale
     public Vector3 finalScale = new Vector3(10.0f,5.0f,10.0f); //ending scale
     private Material CorruptionMaterial;
 
-    [SerializeField] GameObject HospitalMemory;
-    [SerializeField] GameObject FuneralMemory;
-    [SerializeField] GameObject AuntsHouseMemory;
+    // Holds the Memory Perimeter 
+    [SerializeField] public HospitalMemory HospitalMemory;
+    [SerializeField] public FuneralMemory FuneralMemory;
+    [SerializeField] public AuntsHouseMemory AuntsHouseMemory;
 
     // Reference to the CorruptionStatusBar script
     //public CorruptionStatusBar CorruptionStatusBar;
@@ -41,25 +42,30 @@ public class CorruptionController : MonoBehaviour
     //Reference to the Slider component of the status bar
     [SerializeField] Slider statusBar;
 
-    bool isResetting;
+    //bool isResetting;
 
     // Start is called before the first frame update
     void Start()
     {
         CorruptionMaterial = corruptionHospitalObj.GetComponent<Renderer>().material;
         statusBar.value = 0;
-        isResetting = false;
+        //isResetting = false;
     }
 
-    void ResetCorruption()
+    public void ResetCorruption()
     {
-        isResetting = true;
-        gameManager.ResetGame();    
-        //Debug.Log("before lvl: "+corruptionLevel+" statusBar: "+statusBar.value + " dist: " + firstPersonController.distanceTraveled);
+        //isResetting = true;
+        HospitalMemory.isInHospitalMemory = false;
+        FuneralMemory.isInFuneralMemory = false;
+        AuntsHouseMemory.isInAuntsHouseMemory = false;
 
-        //we can't set the distance travelled since it changes on Update, we have to set the starting position to the same as the player's last position
+        gameManager.ResetGame();    
+
+        //Reset the player's position to the start
         firstPersonController.GetComponent<Transform>().position = PlayerStartingPosition;
-        firstPersonController.lastPosition = PlayerStartingPosition; 
+
+        //Reset the distance travelled by the player
+        firstPersonController.distanceTraveled = 0.0f;
 
         //reset values
         corruptionLevel = 0.0f;
@@ -69,39 +75,45 @@ public class CorruptionController : MonoBehaviour
         //reset corruption values
         //CorruptionMaterial
 
-        isResetting = false;
+        //isResetting = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Check if the player has reached the max corruption
-        if(firstPersonController.distanceTraveled - lastCorruptionDistance >= corruptionThreshold)
-        {
-            //Update the last corruption distance
-            lastCorruptionDistance = firstPersonController.distanceTraveled;
+        //Debug.Log("outside lvl: " + corruptionLevel + " statusBar: " + statusBar.value + " dist: " + firstPersonController.distanceTraveled);
 
-            Debug.Log("The corruption bar is now full!!!");
+        //If the Player is in one of the memories, continue the corruption counter
+        if (HospitalMemory.isInHospitalMemory || FuneralMemory.isInFuneralMemory || AuntsHouseMemory.isInAuntsHouseMemory)
+        {        
+            //Check if the player has reached the max corruption
+            if(firstPersonController.distanceTraveled - lastCorruptionDistance >= corruptionThreshold)
+            {
+                //Update the last corruption distance
+                lastCorruptionDistance = firstPersonController.distanceTraveled;
 
-            //TODO: reboot the SCENE/system maybe? --> need to display visual feedback / warning beforehand
-            //ResetCorruption();
-        }
+                Debug.Log("The corruption bar is now full!!!");
 
-        if(!isResetting)
-        {
+                //TODO: reboot the SCENE/system maybe? --> need to display visual feedback / warning beforehand
+                //ResetCorruption();
+            }
+
             //Calculates the current corruption 
             corruptionLevel = firstPersonController.distanceTraveled / corruptionThreshold;
-
-            //Corrupt the scene
-            CorruptScene();
-
-            //Update the status bar & corruption object
-            UpdateCorruptionObject();
-            UpdateCorruptionSlider();
+                
             //Debug.Log("during lvl: " + corruptionLevel + " statusBar: " + statusBar.value + " dist: "+ firstPersonController.distanceTraveled);
-        }        
+            
+        }
 
-        if(Input.GetKeyDown(KeyCode.Q))
+        //Corrupt the scene
+        CorruptScene();
+
+        //Update the status bar & corruption object
+        UpdateCorruptionSlider();
+        UpdateCorruptionObject();
+
+        //When the player presses Q, reset the corruption
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             ResetCorruption();
         }
