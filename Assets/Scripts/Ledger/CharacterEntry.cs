@@ -14,12 +14,16 @@ public class CharacterEntry : MonoBehaviour
     // Hidden to the player, the "correct" answers:
     public String correctName, correctRel, correctRole;
 
+    [SerializeField] PlaqueController plaqueController;
+
     public void updateNameGuess(int index){
         switch (index){
             case 0: nameGuess = "Alex"; break;
             case 1: nameGuess = "Sarah"; break;
             case 2: nameGuess = "Siovan"; break;
         }
+        string personToUpdate = correctRel;
+        plaqueController.UpdateMuseumPlaque(personToUpdate, 0, nameGuess);
     }
 
     public void updateRelGuess(int index){
@@ -28,6 +32,8 @@ public class CharacterEntry : MonoBehaviour
             case 1: relGuess = "Sister"; break;
             case 2: relGuess = "Daughter"; break;
         }
+        string personToUpdate = correctRel;
+        plaqueController.UpdateMuseumPlaque(personToUpdate, 1, relGuess);
     }
 
     public void updateRoleGuess(int index){
@@ -36,6 +42,8 @@ public class CharacterEntry : MonoBehaviour
             case 1: roleGuess = "Murderer"; break;
             case 2: roleGuess = "Conspirator"; break;
         }
+        string personToUpdate = correctRel;
+        plaqueController.UpdateMuseumPlaque(personToUpdate, 2, roleGuess);
     }
 
     public bool verifyName(){
