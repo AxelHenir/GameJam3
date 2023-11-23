@@ -46,7 +46,8 @@ namespace DescantRuntime
 
         public void InitializeDialogue(TextAsset dialogueFile)
         {
-            conversationController = gameObject.AddComponent<DescantConversationController>();
+            if (conversationController == null)
+                conversationController = gameObject.AddComponent<DescantConversationController>();
             
             conversationController.Initialize(dialogueFile);
             DisplayNode();
