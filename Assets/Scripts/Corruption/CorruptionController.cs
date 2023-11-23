@@ -24,8 +24,10 @@ public class CorruptionController : MonoBehaviour
 
     // Cylinder object that determines where the corruption is
     [SerializeField] GameObject corruptionHospitalObj;
-    public Vector3 initialScale = new Vector3(50.0f,5.0f,50.0f); //starting scale
-    public Vector3 finalScale = new Vector3(10.0f,5.0f,10.0f); //ending scale
+    [SerializeField] GameObject corruptionFuneralObj;
+    [SerializeField] GameObject corruptionAuntsHouseObj;
+    private Vector3 initialScale = new Vector3(50.0f,5.0f,50.0f); //starting scale
+    private Vector3 finalScale = new Vector3(10.0f,5.0f,10.0f); //ending scale
     private Material CorruptionMaterial;
 
     // Holds the Memory Perimeter 
@@ -135,7 +137,9 @@ public class CorruptionController : MonoBehaviour
     void UpdateCorruptionObject()
     {
         //Update the scale of the sphere       
-        corruptionHospitalObj.transform.localScale = Vector3.Lerp(initialScale, finalScale, corruptionLevel);//+= new Vector3(-0.5f, 0, -0.5f);
+        corruptionHospitalObj.transform.localScale = Vector3.Lerp(initialScale, finalScale, corruptionLevel);
+        corruptionFuneralObj.transform.localScale = Vector3.Lerp(initialScale, finalScale, corruptionLevel);
+        corruptionAuntsHouseObj.transform.localScale = Vector3.Lerp(initialScale, finalScale, corruptionLevel);
 
         Color color = CorruptionMaterial.color;
         color.a = corruptionLevel;
