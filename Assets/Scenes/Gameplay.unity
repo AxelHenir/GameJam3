@@ -23565,6 +23565,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2590182437914861263, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: m_Name
+      value: PillBottleSibling
+      objectReference: {fileID: 0}
     - target: {fileID: 4738349501799494898, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: ui
       value: 
@@ -23737,10 +23741,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4812817519871424566, guid: 38fccb424ad2eda45ac0ab62da83091e, type: 3}
-      propertyPath: firstPersonController
+    - target: {fileID: 3002422717865071700, guid: 38fccb424ad2eda45ac0ab62da83091e, type: 3}
+      propertyPath: ui
       value: 
-      objectReference: {fileID: 287345649}
+      objectReference: {fileID: 3774978762690992812}
     - target: {fileID: 6189243308991634422, guid: 38fccb424ad2eda45ac0ab62da83091e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 94.97
@@ -24362,14 +24366,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2025950621315334792, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
-      propertyPath: firstPersonController
-      value: 
-      objectReference: {fileID: 287345649}
     - target: {fileID: 6319072316093783772, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: m_Name
       value: AuntsHouseMemory
       objectReference: {fileID: 0}
+    - target: {fileID: 8668288240221748805, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 3774978762690992812}
     - target: {fileID: 8993215719420929150, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55.08
