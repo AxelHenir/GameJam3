@@ -105,10 +105,8 @@ public class VisualTrigger : MonoBehaviour
                             descantUIScript.InitializeDialogue(thisScript); //text asset for this object / person
                             Debug.Log("dialogue shown");
                             ShowUI();
-                        }                       
-
-                    }                
-
+                        }  
+                    }     
                 }
             }
             else
