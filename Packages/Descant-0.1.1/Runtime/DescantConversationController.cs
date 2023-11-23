@@ -107,7 +107,7 @@ namespace DescantRuntime
             foreach (var i in lst)
                 nodes.Add(new RuntimeNode(i));
 
-            return nodes[^1];
+            return nodes.Count == 0 ? null : nodes[^1];
         }
 
         /// <summary>
