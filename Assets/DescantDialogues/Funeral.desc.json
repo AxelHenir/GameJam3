@@ -1,0 +1,78 @@
+{
+	"Name": "Funeral",
+	"Path": "/DescantDialogues/Funeral.desc.json",
+	"Autosave": false,
+	"ChoiceNodeID": 0,
+	"ResponseNodeID": 1,
+	"EndNodeID": 1,
+	"GroupID": 0,
+	"ChoiceNodes": [
+		
+	],
+	"ResponseNodes": [
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 0,
+			"Position": {
+				"x": 59.33333206176758,
+				"y": 224.0
+			},
+			"NodeComponents": [
+				
+			],
+			"Response": "[funeral dialogue]"
+		}
+	],
+	"StartNode": {
+		"Name": "StartNode",
+		"Type": "Start",
+		"ID": 0,
+		"Position": {
+			"x": 50.0,
+			"y": 70.0
+		},
+		"NodeComponents": [
+			
+		]
+	},
+	"EndNodes": [
+		{
+			"Name": "EndNode",
+			"Type": "End",
+			"ID": 0,
+			"Position": {
+				"x": 474.0,
+				"y": 252.00001525878907
+			},
+			"NodeComponents": [
+				
+			]
+		}
+	],
+	"Groups": [
+		
+	],
+	"Connections": [
+		{
+			"From": "Start",
+			"FromID": 0,
+			"To": "Response",
+			"ToID": 0,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 0,
+			"To": "End",
+			"ToID": 0,
+			"ChoiceIndex": 0
+		}
+	],
+	"references": {
+		"version": 2,
+		"RefIds": [
+			
+		]
+	}
+}
