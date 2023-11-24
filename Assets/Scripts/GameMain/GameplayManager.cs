@@ -55,13 +55,13 @@ public class GameplayManager : MonoBehaviour
             if (characterEntry.verifyName())
             {
                 // Do something if the name is correct
-                Debug.Log(characterEntry.correctName + "'s name was correctly identified!");
+                //Debug.Log(characterEntry.correctName + "'s name was correctly identified!");
                 numberOfNamesGuessedCorrectly++;
             }
             else
             {
                 // Do something if the name is not correct
-                Debug.Log(characterEntry.correctName + "'s name is incorrect!");
+                //Debug.Log(characterEntry.correctName + "'s name is incorrect!");
             }
 
             // To verify the Relationship and Role, we call verifyRel() and verifyRole() as above ^
@@ -69,25 +69,25 @@ public class GameplayManager : MonoBehaviour
             if (characterEntry.verifyRel())
             {
                 // Do something if the name is correct
-                Debug.Log(characterEntry.correctRel + "'s relationship was correctly identified!");
+                //Debug.Log(characterEntry.correctRel + "'s relationship was correctly identified!");
                 numberOfRelsGuessedCorrectly++;
             }
             else
             {
                 // Do something if the name is not correct
-                Debug.Log(characterEntry.correctRel + "'s relationship is incorrect!");
+                //Debug.Log(characterEntry.correctRel + "'s relationship is incorrect!");
             }
 
             if (characterEntry.verifyRole())
             {
                 // Do something if the name is correct
-                Debug.Log(characterEntry.correctRole + "'s role was correctly identified!");
+                //Debug.Log(characterEntry.correctRole + "'s role was correctly identified!");
                 numberOfRolesGuessedCorrectly++;
             }
             else
             {
                 // Do something if the name is not correct
-                Debug.Log(characterEntry.correctRole + "'s role is incorrect!");
+                //Debug.Log(characterEntry.correctRole + "'s role is incorrect!");
             }
         }
 
