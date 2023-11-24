@@ -2,12 +2,26 @@
 	"Name": "Card",
 	"Path": "/DescantDialogues/Card.desc.json",
 	"Autosave": false,
-	"ChoiceNodeID": 0,
+	"ChoiceNodeID": 1,
 	"ResponseNodeID": 2,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
-		
+		{
+			"Name": "ChoiceNode",
+			"Type": "Choice",
+			"ID": 0,
+			"Position": {
+				"x": 860.0,
+				"y": 34.666664123535159
+			},
+			"NodeComponents": [
+				
+			],
+			"Choices": [
+				"i am a choice"
+			]
+		}
 	],
 	"ResponseNodes": [
 		{
@@ -22,19 +36,6 @@
 				
 			],
 			"Response": "I am card"
-		},
-		{
-			"Name": "ResponseNode",
-			"Type": "Response",
-			"ID": 1,
-			"Position": {
-				"x": 853.3333129882813,
-				"y": -26.0
-			},
-			"NodeComponents": [
-				
-			],
-			"Response": "Here's a second text !"
 		}
 	],
 	"StartNode": {
@@ -77,13 +78,6 @@
 		{
 			"From": "Response",
 			"FromID": 0,
-			"To": "Response",
-			"ToID": 1,
-			"ChoiceIndex": 0
-		},
-		{
-			"From": "Response",
-			"FromID": 1,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0
