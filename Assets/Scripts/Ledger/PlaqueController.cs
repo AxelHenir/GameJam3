@@ -15,17 +15,21 @@ public class PlaqueController : MonoBehaviour
 
     GameObject CurrentMuseumPlaque;
     TMP_Text CurrentPlaqueText;
-
+    List<GameObject> allMuseumPlaques;
     // Start is called before the first frame update
     void Start()
     {
-        
+        allMuseumPlaques = new List<GameObject>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //makes all plaques face player at all times
+        if(allMuseumPlaques.Count != 0)
+        {
+            RotateAllPlaquesTowardsPlayer();
+        }
     }
 
     public void UpdateMuseumPlaque(string personToUpdate, int columnToUpdate, string guess)
@@ -47,13 +51,17 @@ public class PlaqueController : MonoBehaviour
 
         
         List<GameObject> listofMuseumPlaques = GetMuseumPlaqueList(listToModify);
+        foreach(GameObject obj in listofMuseumPlaques)
+        {
+            allMuseumPlaques.Add(obj); //ISSUE: keeps adding even if exceeds the number of existing plaques
+        }
+        
 
         //use columnToUpdate to update the right text field
         //use guess for the new guess to change
         UpdateTextField(listofMuseumPlaques, columnToUpdate, guess);
 
-
-
+        
     }
 
     //spawn as a child of each game object in the list
@@ -66,14 +74,7 @@ public class PlaqueController : MonoBehaviour
             //spawn the museum plaque & pedestal
             CurrentMuseumPlaque = GameObject.Instantiate(MuseumPlaquePrefab, pedestalPosition, Quaternion.identity, parentObj.transform);
 
-            //get reference to the player to get the rotation
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-
-            //rotate museum plaque towards player
-            Vector3 lookPos = player.transform.position - CurrentMuseumPlaque.transform.position;
-            lookPos.y = 0;
-            Quaternion rotation = Quaternion.LookRotation(lookPos);
-            CurrentMuseumPlaque.transform.rotation = rotation;
+            RotatePlaqueTowardsPlayer();
 
             //add the pedestal height to the character
             parentObj.transform.position += new Vector3(0, 0.25f, 0);
@@ -82,9 +83,11 @@ public class PlaqueController : MonoBehaviour
 
     void UpdateTextField( List<GameObject> listofMuseumPlaques, int columnToUpdate, string guess)
     {
+
         Debug.Log("Guess to add: "+guess);
         foreach (GameObject museumPlaque in listofMuseumPlaques)
         {
+            RotatePlaqueTowardsPlayer();
             if (columnToUpdate == 0)
             {
                 CurrentPlaqueText = museumPlaque.transform.Find("Plaque").transform.Find("PlaqueTextName").GetComponent<TMP_Text>();
@@ -180,5 +183,32 @@ public class PlaqueController : MonoBehaviour
         }
 
         return listOfPlaques;
+    }
+
+    void RotatePlaqueTowardsPlayer()
+    {
+        //get reference to the player to get the rotation
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        //rotate museum plaque towards player
+        Vector3 lookPos = player.transform.position - CurrentMuseumPlaque.transform.position;
+        lookPos.y = 0;
+        Quaternion rotation = Quaternion.LookRotation(lookPos);
+        CurrentMuseumPlaque.transform.rotation = rotation;
+    }
+    void RotateAllPlaquesTowardsPlayer()
+    {
+        foreach (GameObject obj in allMuseumPlaques)
+        {
+            //get reference to the player to get the rotation
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+            //rotate museum plaque towards player
+            Vector3 lookPos = player.transform.position - obj.transform.position;
+            lookPos.y = 0;
+            Quaternion rotation = Quaternion.LookRotation(lookPos);
+            obj.transform.rotation = rotation;
+        }
+        
     }
 }
