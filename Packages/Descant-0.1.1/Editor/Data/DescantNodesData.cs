@@ -14,16 +14,18 @@ namespace DescantEditor
         public string Type;
         public int ID;
         public Vector2 Position;
+        public string ActorName;
         
         [SerializeReference] public List<DescantNodeComponent> NodeComponents;
 
-        protected DescantNodeData(string name, string type, int id, Vector2 position)
+        protected DescantNodeData(string name, string type, int id, Vector2 position, string actorName)
         {
             Name = name;
             Type = type;
             ID = id;
             Position = position;
             NodeComponents = new List<DescantNodeComponent>();
+            ActorName = actorName;
         }
 
         public override bool Equals(object other)
@@ -38,13 +40,14 @@ namespace DescantEditor
                 Name == other.Name &&
                 ID == other.ID &&
                 Position == other.Position &&
-                DescantEditorUtilities.AreListsEqual(NodeComponents, other.NodeComponents);
+                DescantEditorUtilities.AreListsEqual(NodeComponents, other.NodeComponents) &&
+                ActorName == other.ActorName;
         }
 #endif
 
         public override string ToString()
         {
-            return GetType() + " (" + ID + Name + " " + Position + ")";
+            return GetType() + " (" + ID + Name + " " + Position + " " + ActorName + ")";
         }
     }
 
@@ -56,8 +59,8 @@ namespace DescantEditor
     {
         public List<string> Choices = new List<string>();
 
-        public DescantChoiceNodeData(string name, string type, int id, Vector2 position, List<string> choices)
-            : base(name, type, id, position)
+        public DescantChoiceNodeData(string name, string type, int id, Vector2 position, string actorName, List<string> choices)
+            : base(name, type, id, position, actorName)
         {
             Choices = choices;
         }
@@ -95,8 +98,8 @@ namespace DescantEditor
     {
         public string Response;
         
-        public DescantResponseNodeData(string name, string type, int id, Vector2 position, string response)
-            : base(name, type, id, position)
+        public DescantResponseNodeData(string name, string type, int id, Vector2 position, string actorName, string response)
+            : base(name, type, id, position, actorName)
         {
             Response = response;
         }
@@ -125,8 +128,8 @@ namespace DescantEditor
     [Serializable]
     public class DescantStartNodeData : DescantNodeData
     {
-        public DescantStartNodeData(string name, string type, Vector2 position)
-            : base(name, type, 0, position) { }
+        public DescantStartNodeData(string name, string type, Vector2 position, string actorName)
+            : base(name, type, 0, position, actorName) { }
     }
     
     /// <summary>
@@ -135,7 +138,7 @@ namespace DescantEditor
     [Serializable]
     public class DescantEndNodeData : DescantNodeData
     {
-        public DescantEndNodeData(string name, string type, int id, Vector2 position)
-            : base(name, type, id, position) { }
+        public DescantEndNodeData(string name, string type, int id, Vector2 position, string actorName)
+            : base(name, type, id, position, actorName) { }
     }
 }

@@ -105,6 +105,10 @@ namespace DescantEditor
                 }));
             }
 
+            TextField actorName = new TextField("Actor name:");
+            extensionContainer.Add(actorName);
+            RefreshExpandedState();
+
             /*
             List<Type> nodeComponents = DescantComponentUtilities.GetAllNodeComponentTypes();
             
