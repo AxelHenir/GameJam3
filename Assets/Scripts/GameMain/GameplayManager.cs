@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameplayManager : MonoBehaviour
 {    
@@ -22,11 +23,15 @@ public class GameplayManager : MonoBehaviour
 
     public GameObject parentOfCharacterEntries;
 
-
-
-    private Vector3 PlayerStartingPosition = new Vector3(0, 1.5f, 0);
     private int numberOfReboots;
-    
+
+    //Tracking player guesses:
+    int TotalNumberOfLabels = 15;
+    int numberOfNamesGuessedCorrectly = 0;
+    int numberOfRelsGuessedCorrectly = 0;
+    int numberOfRolesGuessedCorrectly = 0;
+
+
     void Start()
     {
         numberOfReboots = 0;
@@ -51,6 +56,7 @@ public class GameplayManager : MonoBehaviour
             {
                 // Do something if the name is correct
                 Debug.Log(characterEntry.correctName + "'s name was correctly identified!");
+                numberOfNamesGuessedCorrectly++;
             }
             else
             {
@@ -60,7 +66,33 @@ public class GameplayManager : MonoBehaviour
 
             // To verify the Relationship and Role, we call verifyRel() and verifyRole() as above ^
 
+            if (characterEntry.verifyRel())
+            {
+                // Do something if the name is correct
+                Debug.Log(characterEntry.correctRel + "'s relationship was correctly identified!");
+                numberOfRelsGuessedCorrectly++;
+            }
+            else
+            {
+                // Do something if the name is not correct
+                Debug.Log(characterEntry.correctRel + "'s relationship is incorrect!");
+            }
+
+            if (characterEntry.verifyRole())
+            {
+                // Do something if the name is correct
+                Debug.Log(characterEntry.correctRole + "'s role was correctly identified!");
+                numberOfRolesGuessedCorrectly++;
+            }
+            else
+            {
+                // Do something if the name is not correct
+                Debug.Log(characterEntry.correctRole + "'s role is incorrect!");
+            }
         }
+
+        SetPlayersGuesses();
+        LoadEnding();
     }
 
     public void ResetGame()
@@ -70,4 +102,16 @@ public class GameplayManager : MonoBehaviour
 
     }
 
+    public void LoadEnding()
+    {
+        SceneManager.LoadScene("Ending");
+    }
+
+    public void SetPlayersGuesses()
+    {
+        GlobalSManager.SetTotalNumberOfLabels(TotalNumberOfLabels);
+        GlobalSManager.SetnumberOfNamesGuessedCorrectly(numberOfNamesGuessedCorrectly);
+        GlobalSManager.SetnumberOfRelsGuessedCorrectly(numberOfRelsGuessedCorrectly);
+        GlobalSManager.SetnumberOfRolesGuessedCorrectly(numberOfRolesGuessedCorrectly);
+    }
 }

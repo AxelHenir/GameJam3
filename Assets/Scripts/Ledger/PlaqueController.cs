@@ -89,19 +89,19 @@ public class PlaqueController : MonoBehaviour
             {
                 CurrentPlaqueText = museumPlaque.transform.Find("Plaque").transform.Find("PlaqueTextName").GetComponent<TMP_Text>();
                 CurrentPlaqueText.text = ""+guess+".";
-                Debug.Log("Guess to add to Name: " + guess);
+                //Debug.Log("Guess to add to Name: " + guess);
             }
             else if (columnToUpdate == 1)
             {
                 CurrentPlaqueText = museumPlaque.transform.Find("Plaque").transform.Find("PlaqueTextRelationship").GetComponent<TMP_Text>();
                 CurrentPlaqueText.text = "\n\n"+guess+".";
-                Debug.Log("Guess to add to Relationship: " + guess);
+                //Debug.Log("Guess to add to Relationship: " + guess);
             }
             else if (columnToUpdate == 2)
             {
                 CurrentPlaqueText = museumPlaque.transform.Find("Plaque").transform.Find("PlaqueTextRole").GetComponent<TMP_Text>();
                 CurrentPlaqueText.text = "\n\n\n" + guess + ".";
-                Debug.Log("Guess to add to Role: " + guess);
+                //Debug.Log("Guess to add to Role: " + guess);
             }
         }
         /*
