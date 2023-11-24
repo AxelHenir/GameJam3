@@ -254,12 +254,15 @@ namespace DescantEditor
                     }
                 }
 
+                TextField[] fields = DescantEditorUtilities.FindAllElements<TextField>(i).ToArray();
+
                 // Creating the actual DescantChoiceNodeData object
                 temp.ChoiceNodes.Add(new DescantChoiceNodeData(
-                    DescantEditorUtilities.FindFirstElement<TextField>(i).value,
+                    fields[0].value,
                     i.Type.ToString(),
                     i.ID,
                     i.GetPosition().position,
+                    fields[^1].value,
                     choices
                 ));
             }
@@ -302,6 +305,7 @@ namespace DescantEditor
                     j.Type.ToString(),
                     j.ID,
                     j.GetPosition().position,
+                    fields[2].value,
                     fields[1].value
                 ));
             }
@@ -324,11 +328,14 @@ namespace DescantEditor
                     ));
                 }
                 
+                TextField[] fields = DescantEditorUtilities.FindAllElements<TextField>(graphView.StartNode).ToArray();
+                
                 // Creating the actual DescantStartNodeData object
                 temp.StartNode = new DescantStartNodeData(
-                    DescantEditorUtilities.FindFirstElement<TextField>(graphView.StartNode).value,
+                    fields[0].value,
                     graphView.StartNode.Type.ToString(),
-                    graphView.StartNode.GetPosition().position
+                    graphView.StartNode.GetPosition().position,
+                    fields[1].value
                 );
             }
 
@@ -350,12 +357,15 @@ namespace DescantEditor
                     ));
                 }
                 
+                TextField[] fields = DescantEditorUtilities.FindAllElements<TextField>(k).ToArray();
+                
                 // Creating the actual DescantEndNodeData object
                 temp.EndNodes.Add(new DescantEndNodeData(
-                    DescantEditorUtilities.FindFirstElement<TextField>(k).value,
+                    fields[0].value,
                     k.Type.ToString(),
                     k.ID,
-                    k.GetPosition().position
+                    k.GetPosition().position,
+                    fields[1].value
                 ));
             }
 

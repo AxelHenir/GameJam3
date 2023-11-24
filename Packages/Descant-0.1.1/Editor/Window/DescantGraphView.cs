@@ -88,6 +88,8 @@ namespace DescantEditor
 
                 foreach (var ii in i.Choices)
                     temp.AddChoice(ii);
+
+                DescantEditorUtilities.FindAllElements<TextField>(temp)[^1].value = i.ActorName;
                 
                 AddElement(temp);
             }
@@ -96,25 +98,42 @@ namespace DescantEditor
             foreach (var j in data.ResponseNodes)
             {
                 var temp = CreateResponseNode(j.Position, j.Name, j.ID);
-                DescantEditorUtilities.FindAllElements<TextField>(temp)[1].value = j.Response;
+
+                TextField[] fields = DescantEditorUtilities.FindAllElements<TextField>(temp).ToArray();
+                fields[1].value = j.Response;
+                fields[2].value = j.ActorName;
                 
                 AddElement(temp);
             }
 
             // Generating the DescantStartNode (creating a new one if there isn't one present in the file)
             if (data.StartNode != null)
-                AddElement(CreateStartNode(
+            {
+                var temp = CreateStartNode(
                     data.StartNode.Position,
                     data.StartNode.Name,
                     data.StartNode.ID
-                ));
+                );
+                
+                TextField[] fields = DescantEditorUtilities.FindAllElements<TextField>(temp).ToArray();
+                fields[1].value = data.StartNode.ActorName;
+                
+                AddElement(temp);
+            }
             else AddElement(CreateStartNode(new Vector2(50, 70)));
             
             this.RemoveManipulator(startNodeManipulator);
             
             // Generating the DescantEndNodes
             foreach (var k in data.EndNodes)
-                AddElement(CreateEndNode(k.Position, k.Name, k.ID));
+            {
+                var temp = CreateEndNode(k.Position, k.Name, k.ID);
+                
+                TextField[] fields = DescantEditorUtilities.FindAllElements<TextField>(temp).ToArray();
+                fields[1].value = k.ActorName;
+                
+                AddElement(temp);
+            }
             
             // Generating the DescantNodeGroups
             foreach (var l in data.Groups)

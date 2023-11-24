@@ -16,6 +16,12 @@ namespace DescantRuntime
         [SerializeField, Tooltip("The NPC response text")] TMP_Text response;
         [SerializeField, Tooltip("The parent UI object for the player's choices (ideally a LayoutGroup)")] Transform choices;
         [SerializeField, Tooltip("The player choice prefab to be spawned with the choice text")] GameObject choice;
+
+        [Header("Actors")]
+        [SerializeField] Image choiceActor;
+        [SerializeField] Image responseActor;
+        [SerializeField] string[] actorNames;
+        [SerializeField] Sprite[] actorSprites;
         
         DescantConversationController conversationController;
 
@@ -49,6 +55,9 @@ namespace DescantRuntime
             if (conversationController == null)
                 conversationController = gameObject.AddComponent<DescantConversationController>();
             
+            choiceActor.gameObject.SetActive(false);
+            responseActor.gameObject.SetActive(false);
+            
             conversationController.Initialize(dialogueFile);
             DisplayNode();
         }
@@ -74,10 +83,19 @@ namespace DescantRuntime
                 conversationDone.Invoke();
                 return; // Stopping if there are no more nodes
             }
+
+            Sprite currentSprite = GetActorSpriteFromName(conversationController.Current.Data.ActorName);
     
             // Displaying the ResponseNodes...
             if (temp[0] == "Response")
             {
+                if (currentSprite != null)
+                {
+                    responseActor.gameObject.SetActive(true);
+                    responseActor.sprite = currentSprite;
+                }
+                else responseActor.gameObject.SetActive(false);
+                
                 isResponseType = true;
                 response.text = temp[1];
 
@@ -95,6 +113,13 @@ namespace DescantRuntime
             // Displaying the ChoiceNodes...
             else if (temp[0] == "Choice")
             {
+                if (currentSprite != null)
+                {
+                    choiceActor.gameObject.SetActive(true);
+                    choiceActor.sprite = currentSprite;
+                }
+                else choiceActor.gameObject.SetActive(false);
+                
                 isResponseType = false;
                 for (int j = 1; j < temp.Count; j++)
                 {
@@ -115,6 +140,17 @@ namespace DescantRuntime
                     });
                 }
             }
+        }
+
+        Sprite GetActorSpriteFromName(string actorName)
+        {
+            if (actorName.Trim() == "") return null;
+            
+            for (int i = 0; i < actorNames.Length; i++)
+                if (actorNames[i] == actorName)
+                    return actorSprites[i];
+
+            return null;
         }
     }
 }
