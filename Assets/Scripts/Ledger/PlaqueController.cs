@@ -82,23 +82,26 @@ public class PlaqueController : MonoBehaviour
 
     void UpdateTextField( List<GameObject> listofMuseumPlaques, int columnToUpdate, string guess)
     {
-        
+        Debug.Log("Guess to add: "+guess);
         foreach (GameObject museumPlaque in listofMuseumPlaques)
         {
             if (columnToUpdate == 0)
             {
                 CurrentPlaqueText = museumPlaque.transform.Find("Plaque").transform.Find("PlaqueTextName").GetComponent<TMP_Text>();
-                CurrentPlaqueText.text = guess+".";
+                CurrentPlaqueText.text = ""+guess+".";
+                Debug.Log("Guess to add to Name: " + guess);
             }
             else if (columnToUpdate == 1)
             {
                 CurrentPlaqueText = museumPlaque.transform.Find("Plaque").transform.Find("PlaqueTextRelationship").GetComponent<TMP_Text>();
                 CurrentPlaqueText.text = "\n\n"+guess+".";
+                Debug.Log("Guess to add to Relationship: " + guess);
             }
             else if (columnToUpdate == 2)
             {
                 CurrentPlaqueText = museumPlaque.transform.Find("Plaque").transform.Find("PlaqueTextRole").GetComponent<TMP_Text>();
                 CurrentPlaqueText.text = "\n\n\n" + guess + ".";
+                Debug.Log("Guess to add to Role: " + guess);
             }
         }
         /*

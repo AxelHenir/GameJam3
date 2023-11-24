@@ -21,6 +21,8 @@ public class CharacterEntry : MonoBehaviour
             case 0: nameGuess = "Alex"; break;
             case 1: nameGuess = "Sarah"; break;
             case 2: nameGuess = "Siovan"; break;
+            case 3: nameGuess = "Olivia"; break;
+            case 4: nameGuess = "Julian"; break;
         }
         string personToUpdate = correctRel;
         plaqueController.UpdateMuseumPlaque(personToUpdate, 0, nameGuess);
@@ -44,6 +46,7 @@ public class CharacterEntry : MonoBehaviour
             case 1: roleGuess = "Murderer"; break;
             case 2: roleGuess = "Conspirator"; break;
             case 3: roleGuess = "Survivor"; break;
+            case 4: roleGuess = "Committed Suicide"; break;
         }
         string personToUpdate = correctRel;
         plaqueController.UpdateMuseumPlaque(personToUpdate, 2, roleGuess);
