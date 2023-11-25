@@ -7,9 +7,10 @@ public static class GlobalSManager
     private static string lastScene = "";
 
     private static int TotalNumberOfLabels; 
-    private static int numberOfNamesGuessedCorrectly;
-    private static int numberOfRelsGuessedCorrectly;
-    private static int numberOfRolesGuessedCorrectly;
+    private static int NumberOfNamesGuessedCorrectly;
+    private static int NumberOfRelsGuessedCorrectly;
+    private static int NumberOfRolesGuessedCorrectly;
+    private static List<CharacterEntry> CorrectlyGuessedEntries;
 
     public static string GetLastScene()
     {
@@ -20,29 +21,29 @@ public static class GlobalSManager
         lastScene = scene;
     }
 
-    public static int GetnumberOfNamesGuessedCorrectly()
+    public static int GetNumberOfNamesGuessedCorrectly()
     {
-         return numberOfNamesGuessedCorrectly; 
+         return NumberOfNamesGuessedCorrectly; 
     }
-    public static void SetnumberOfNamesGuessedCorrectly(int value)
+    public static void SetNumberOfNamesGuessedCorrectly(int value)
     {
-        numberOfNamesGuessedCorrectly = value;
+        NumberOfNamesGuessedCorrectly = value;
     }
-    public static int GetnumberOfRelsGuessedCorrectly()
+    public static int GetNumberOfRelsGuessedCorrectly()
     {
-        return numberOfRelsGuessedCorrectly;
+        return NumberOfRelsGuessedCorrectly;
     }
-    public static void SetnumberOfRelsGuessedCorrectly(int value)
+    public static void SetNumberOfRelsGuessedCorrectly(int value)
     {
-        numberOfRelsGuessedCorrectly = value;
+        NumberOfRelsGuessedCorrectly = value;
     }
-    public static int GetnumberOfRolesGuessedCorrectly()
+    public static int GetNumberOfRolesGuessedCorrectly()
     {
-        return numberOfRolesGuessedCorrectly;
+        return NumberOfRolesGuessedCorrectly;
     }
-    public static void SetnumberOfRolesGuessedCorrectly(int value)
+    public static void SetNumberOfRolesGuessedCorrectly(int value)
     {
-        numberOfRolesGuessedCorrectly = value;
+        NumberOfRolesGuessedCorrectly = value;
     }
 
     public static int GetTotalNumberOfLabels()
@@ -52,6 +53,15 @@ public static class GlobalSManager
     public static void SetTotalNumberOfLabels(int value)
     {
         TotalNumberOfLabels = value;
+    }
+
+    public static List<CharacterEntry> GetCorrectlyGuessedEntries()
+    {
+        return CorrectlyGuessedEntries;
+    }
+    public static void SetCorrectlyGuessedEntries(List<CharacterEntry> value)
+    {
+        CorrectlyGuessedEntries = value;
     }
 }
     public class GlobalSceneManager : MonoBehaviour

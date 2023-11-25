@@ -37,7 +37,7 @@ public class PlaqueController : MonoBehaviour
         //use personToUpdate to get the correct list of game objects to update the plaques for
         List<GameObject> listToModify = VariableValueFromName(personToUpdate);
 
-        Debug.Log("Person to update: "+personToUpdate);
+        //Debug.Log("Person to update: "+personToUpdate);
         
         if(listToModify[0].transform.Find("MuseumPlaque(Clone)") != null)
         {
@@ -84,7 +84,7 @@ public class PlaqueController : MonoBehaviour
     void UpdateTextField( List<GameObject> listofMuseumPlaques, int columnToUpdate, string guess)
     {
 
-        Debug.Log("Guess to add: "+guess);
+        //Debug.Log("Guess to add: "+guess);
         foreach (GameObject museumPlaque in listofMuseumPlaques)
         {
             RotatePlaqueTowardsPlayer();
@@ -146,7 +146,7 @@ public class PlaqueController : MonoBehaviour
 
     List<GameObject> VariableValueFromName(string name)
     {
-        Debug.Log("Found "+name);
+        //Debug.Log("Found "+name);
         if(name == "Subject")
         {
             return listSubjectObjects;

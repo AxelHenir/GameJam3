@@ -12,18 +12,26 @@ public class EndingController : MonoBehaviour
     int numberOfNamesGuessedCorrectly = 0;
     int numberOfRelsGuessedCorrectly = 0;
     int numberOfRolesGuessedCorrectly = 0;
+    List<CharacterEntry> CorrectlyGuessedEntries;
 
     // Start is called before the first frame update
     void Start()
     {
         TotalNumberOfLabels = GlobalSManager.GetTotalNumberOfLabels();
-        numberOfNamesGuessedCorrectly = GlobalSManager.GetnumberOfNamesGuessedCorrectly();
-        numberOfRelsGuessedCorrectly = GlobalSManager.GetnumberOfRelsGuessedCorrectly();
-        numberOfRolesGuessedCorrectly = GlobalSManager.GetnumberOfRolesGuessedCorrectly();
+        numberOfNamesGuessedCorrectly = GlobalSManager.GetNumberOfNamesGuessedCorrectly();
+        numberOfRelsGuessedCorrectly = GlobalSManager.GetNumberOfRelsGuessedCorrectly();
+        numberOfRolesGuessedCorrectly = GlobalSManager.GetNumberOfRolesGuessedCorrectly();
+        CorrectlyGuessedEntries = GlobalSManager.GetCorrectlyGuessedEntries();
 
         Debug.Log(numberOfNamesGuessedCorrectly+"/5 correct name guesses");
         Debug.Log(numberOfRelsGuessedCorrectly + "/5 correct rel guesses");
         Debug.Log(numberOfRolesGuessedCorrectly + "/5 correct role guesses");
+
+        // can print the names of the correctly guessed characters
+        foreach (CharacterEntry correctEntry in CorrectlyGuessedEntries)
+        {
+            Debug.Log(correctEntry.correctName + " was guessed correctly!");
+        }
     }
 
     // Update is called once per frame

@@ -30,6 +30,7 @@ public class GameplayManager : MonoBehaviour
     int numberOfNamesGuessedCorrectly = 0;
     int numberOfRelsGuessedCorrectly = 0;
     int numberOfRolesGuessedCorrectly = 0;
+    List<CharacterEntry> CorrectlyGuessedEntries;
 
 
     void Start()
@@ -45,6 +46,8 @@ public class GameplayManager : MonoBehaviour
 
     public void verifyPlayerGuesses()
     {
+        // Create a new list to store the correctly guessed CharacterEntries
+        CorrectlyGuessedEntries = new List<CharacterEntry>();
 
         // Get all the CharacterEntry components from the children of the parentObject
         CharacterEntry[] characterEntries = parentOfCharacterEntries.GetComponentsInChildren<CharacterEntry>();
@@ -52,7 +55,11 @@ public class GameplayManager : MonoBehaviour
         // Iterate through each CharacterEntry and call the verifyName method
         foreach (CharacterEntry characterEntry in characterEntries)
         {
-            if (characterEntry.verifyName())
+            bool isNameCorrect = characterEntry.verifyName();
+            bool isRelCorrect = characterEntry.verifyRel();
+            bool isRoleCorrect = characterEntry.verifyRole();
+
+            if (isNameCorrect)
             {
                 // Do something if the name is correct
                 //Debug.Log(characterEntry.correctName + "'s name was correctly identified!");
@@ -66,7 +73,7 @@ public class GameplayManager : MonoBehaviour
 
             // To verify the Relationship and Role, we call verifyRel() and verifyRole() as above ^
 
-            if (characterEntry.verifyRel())
+            if (isRelCorrect)
             {
                 // Do something if the name is correct
                 //Debug.Log(characterEntry.correctRel + "'s relationship was correctly identified!");
@@ -78,7 +85,7 @@ public class GameplayManager : MonoBehaviour
                 //Debug.Log(characterEntry.correctRel + "'s relationship is incorrect!");
             }
 
-            if (characterEntry.verifyRole())
+            if (isRoleCorrect)
             {
                 // Do something if the name is correct
                 //Debug.Log(characterEntry.correctRole + "'s role was correctly identified!");
@@ -88,6 +95,12 @@ public class GameplayManager : MonoBehaviour
             {
                 // Do something if the name is not correct
                 //Debug.Log(characterEntry.correctRole + "'s role is incorrect!");
+            }
+
+            // If all verifications are true, add the CharacterEntry to the CorrectlyGuessedEntries list
+            if (isNameCorrect && isRelCorrect && isRoleCorrect)
+            {
+                CorrectlyGuessedEntries.Add(characterEntry);
             }
         }
 
@@ -110,8 +123,9 @@ public class GameplayManager : MonoBehaviour
     public void SetPlayersGuesses()
     {
         GlobalSManager.SetTotalNumberOfLabels(TotalNumberOfLabels);
-        GlobalSManager.SetnumberOfNamesGuessedCorrectly(numberOfNamesGuessedCorrectly);
-        GlobalSManager.SetnumberOfRelsGuessedCorrectly(numberOfRelsGuessedCorrectly);
-        GlobalSManager.SetnumberOfRolesGuessedCorrectly(numberOfRolesGuessedCorrectly);
+        GlobalSManager.SetNumberOfNamesGuessedCorrectly(numberOfNamesGuessedCorrectly);
+        GlobalSManager.SetNumberOfRelsGuessedCorrectly(numberOfRelsGuessedCorrectly);
+        GlobalSManager.SetNumberOfRolesGuessedCorrectly(numberOfRolesGuessedCorrectly);
+        GlobalSManager.SetCorrectlyGuessedEntries(CorrectlyGuessedEntries);
     }
 }
