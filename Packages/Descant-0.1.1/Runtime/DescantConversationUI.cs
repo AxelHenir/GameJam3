@@ -46,7 +46,7 @@ namespace DescantRuntime
 
         void Update()
         {
-            if (clicktoSkip && Input.GetButtonDown("Fire1"))
+            if (clicktoSkip && (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.E)))
                 DisplayNode();
         }
 

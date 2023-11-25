@@ -1,6 +1,6 @@
 {
-	"Name": "New Descant Graph",
-	"Path": "DescantDialogues/New Descant Graph.desc.json",
+	"Name": "Newspaper",
+	"Path": "/DescantDialogues/Newspaper.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
 	"ResponseNodeID": 1,
@@ -18,6 +18,10 @@
 				"x": 331.3333435058594,
 				"y": -16.0
 			},
+			"ActorName": "",
+			"SoundClip": {
+				"instanceID": 0
+			},
 			"NodeComponents": [
 				
 			],
@@ -32,6 +36,10 @@
 			"x": 50.0,
 			"y": 70.0
 		},
+		"ActorName": "",
+		"SoundClip": {
+			"instanceID": 0
+		},
 		"NodeComponents": [
 			
 		]
@@ -44,6 +52,10 @@
 			"Position": {
 				"x": 476.0,
 				"y": 342.6666564941406
+			},
+			"ActorName": "",
+			"SoundClip": {
+				"instanceID": 0
 			},
 			"NodeComponents": [
 				

@@ -13,7 +13,8 @@ public class VisualTrigger : MonoBehaviour
     private GameObject ObjectThatIsInteractedWith;
 
     [SerializeField] GameObject ui; //holds descant script'
-    [SerializeField] TextAsset thisScript;
+    [SerializeField] TextAsset thisDialogueScript;
+    public AudioClip soundToPlay;
     private DescantConversationUI descantUIScript;
 
     public bool isCorrupted;
@@ -106,7 +107,7 @@ public class VisualTrigger : MonoBehaviour
                             //initialize interaction!
 
                             //descantUIScript.InitializeDialogue(descantUIScript.descantGraph); //text asset for this object / person
-                            descantUIScript.InitializeDialogue(thisScript); //text asset for this object / person
+                            descantUIScript.InitializeDialogue(thisDialogueScript); //text asset for this object / person
                             Debug.Log("dialogue shown");
                             ShowUI();
                         }  
