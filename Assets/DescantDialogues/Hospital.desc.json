@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Hospital.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 1,
+	"ResponseNodeID": 3,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -15,13 +15,42 @@
 			"Type": "Response",
 			"ID": 0,
 			"Position": {
-				"x": 59.33333206176758,
-				"y": 224.0
+				"x": 351.3333435058594,
+				"y": 14.666666030883789
 			},
+			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "[hospital dialogue]"
+			"Response": "Door shuts. P1, P2, A, S, B are in the room.\r\n\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 1,
+			"Position": {
+				"x": 878.0,
+				"y": 1.3333320617675782
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": "P1 Looking at P2.\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 2,
+			"Position": {
+				"x": 386.6666564941406,
+				"y": 32.666664123535159
+			},
+			"ActorName": "P1",
+			"NodeComponents": [
+				
+			],
+			"Response": "We shouldn't have left."
 		}
 	],
 	"StartNode": {
@@ -32,6 +61,7 @@
 			"x": 50.0,
 			"y": 70.0
 		},
+		"ActorName": "",
 		"NodeComponents": [
 			
 		]
@@ -42,9 +72,10 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 474.0,
-				"y": 252.00001525878907
+				"x": 946.0,
+				"y": 70.0
 			},
+			"ActorName": "",
 			"NodeComponents": [
 				
 			]
@@ -58,12 +89,12 @@
 			"From": "Start",
 			"FromID": 0,
 			"To": "Response",
-			"ToID": 0,
+			"ToID": 2,
 			"ChoiceIndex": 0
 		},
 		{
 			"From": "Response",
-			"FromID": 0,
+			"FromID": 2,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

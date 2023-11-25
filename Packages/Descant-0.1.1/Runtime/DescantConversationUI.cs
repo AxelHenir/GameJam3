@@ -92,6 +92,7 @@ namespace DescantRuntime
                 if (currentSprite != null)
                 {
                     responseActor.gameObject.SetActive(true);
+                    responseActor.color = new Color( 0/255.0f, 0/255.0f, 0/255.0f); //EXAMPLE, change to different colors per actor later, and even later have this implemented for the editor
                     responseActor.sprite = currentSprite;
                 }
                 else responseActor.gameObject.SetActive(false);
