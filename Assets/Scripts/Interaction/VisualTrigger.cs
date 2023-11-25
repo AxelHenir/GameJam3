@@ -164,4 +164,9 @@ public class VisualTrigger : MonoBehaviour
             }
         }
     }
+
+    public void SetThisDialogueScript(TextAsset script)
+    {
+        thisDialogueScript = script;
+    }
 }

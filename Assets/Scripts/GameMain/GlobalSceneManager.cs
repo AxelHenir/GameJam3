@@ -57,7 +57,15 @@ public static class GlobalSManager
 
     public static List<CharacterEntry> GetCorrectlyGuessedEntries()
     {
-        return CorrectlyGuessedEntries;
+        if(CorrectlyGuessedEntries != null)
+        {
+            return CorrectlyGuessedEntries;
+        }
+        else
+        {
+            return new List<CharacterEntry>();
+        }
+        
     }
     public static void SetCorrectlyGuessedEntries(List<CharacterEntry> value)
     {

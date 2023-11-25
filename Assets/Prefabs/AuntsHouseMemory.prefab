@@ -1332,6 +1332,10 @@ PrefabInstance:
       propertyPath: thisScript
       value: 
       objectReference: {fileID: 4900000, guid: 822033fd05376e64782efcd3bd9b830e, type: 3}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: thisDialogueScript
+      value: 
+      objectReference: {fileID: 4900000, guid: 822033fd05376e64782efcd3bd9b830e, type: 3}
     - target: {fileID: 6991192914667389506, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: outlineWidth
       value: 10

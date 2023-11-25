@@ -1326,8 +1326,8 @@ Transform:
   m_GameObject: {fileID: 1626104262332585919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0511, y: 3.1141, z: 69.5828}
-  m_LocalScale: {x: 19.233168, y: 6.502098, z: 36.966022}
+  m_LocalPosition: {x: 3.6203, y: 3.1141, z: 69.5828}
+  m_LocalScale: {x: 22.37202, y: 6.502098, z: 36.966022}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1417311341834682071}
@@ -2027,8 +2027,8 @@ Transform:
   m_GameObject: {fileID: 3106251947536205120}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8592, y: -0, z: 69.2083}
-  m_LocalScale: {x: 19.264322, y: 1, z: 36.87596}
+  m_LocalPosition: {x: 3.5845, y: 0, z: 69.2083}
+  m_LocalScale: {x: 22.714563, y: 1, z: 36.87596}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 304655712941696773}
@@ -6820,6 +6820,10 @@ PrefabInstance:
       propertyPath: thisScript
       value: 
       objectReference: {fileID: 4900000, guid: bd41999685abd49408b18da18c615ed3, type: 3}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: thisDialogueScript
+      value: 
+      objectReference: {fileID: 4900000, guid: bd41999685abd49408b18da18c615ed3, type: 3}
     - target: {fileID: 6991192914667389506, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: outlineWidth
       value: 10
@@ -6958,6 +6962,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: thisScript
+      value: 
+      objectReference: {fileID: 4900000, guid: 9f966558b0b768a49b6cf9c397982f38, type: 3}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: thisDialogueScript
       value: 
       objectReference: {fileID: 4900000, guid: 9f966558b0b768a49b6cf9c397982f38, type: 3}
     - target: {fileID: 6991192914667389506, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
@@ -7099,6 +7107,10 @@ PrefabInstance:
       propertyPath: thisScript
       value: 
       objectReference: {fileID: 4900000, guid: dcf53999ff6773b44b8a25fe83afbd52, type: 3}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: thisDialogueScript
+      value: 
+      objectReference: {fileID: 4900000, guid: dcf53999ff6773b44b8a25fe83afbd52, type: 3}
     - target: {fileID: 6991192914667389506, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: outlineWidth
       value: 10
@@ -7236,6 +7248,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: thisScript
+      value: 
+      objectReference: {fileID: 4900000, guid: 875e118b13769c64294c30296db2e1fe, type: 3}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: thisDialogueScript
       value: 
       objectReference: {fileID: 4900000, guid: 875e118b13769c64294c30296db2e1fe, type: 3}
     - target: {fileID: 6991192914667389506, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}

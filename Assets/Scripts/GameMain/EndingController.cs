@@ -14,6 +14,9 @@ public class EndingController : MonoBehaviour
     int numberOfRolesGuessedCorrectly = 0;
     List<CharacterEntry> CorrectlyGuessedEntries;
 
+    [SerializeField] GameObject Letter;
+    [SerializeField] List<TextAsset> EndingScripts;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +35,32 @@ public class EndingController : MonoBehaviour
         {
             Debug.Log(correctEntry.correctName + " was guessed correctly!");
         }
+
+        VisualTrigger LetterVisualTrigger = Letter.transform.GetChild(0).GetComponent<VisualTrigger>();
+
+        //Pick the ending based on the guesses:
+
+        //If the correct number of guessed entries is 0, 1 or 2
+        if (CorrectlyGuessedEntries.Count <= 2) 
+        {
+            //Set the dialogue script to the bad one
+            LetterVisualTrigger.SetThisDialogueScript(EndingScripts[0]); //0 is bad ending
+        }
+        //If the correct number of guessed entries is 3 or 4
+        else if (CorrectlyGuessedEntries.Count <= 4)
+        {
+            //Set the dialogue script to the okay one
+            LetterVisualTrigger.SetThisDialogueScript(EndingScripts[1]); //1 is okay ending
+        }
+        //If the correct number of guessed entries is 5
+        else if (CorrectlyGuessedEntries.Count == 5)
+        {
+            //Set the dialogue script to the amazing one
+            LetterVisualTrigger.SetThisDialogueScript(EndingScripts[2]); //2 is amazing ending
+        }
+
+        //Spawn the letter
+        //SpawnTheLetter(3.0f);
     }
 
     // Update is called once per frame
@@ -39,4 +68,17 @@ public class EndingController : MonoBehaviour
     {
         
     }
+
+    void SpawnTheLetter(float timeToWait)
+    {
+        //StartCoroutine(WaitBeforeDisplayingLetter(timeToWait));
+        Letter.SetActive(true);
+    }
+    /*
+    IEnumerator WaitBeforeDisplayingLetter(float timeToWait)
+    {
+        yield return new WaitForSecondsRealtime(timeToWait);
+
+        
+    }*/
 }

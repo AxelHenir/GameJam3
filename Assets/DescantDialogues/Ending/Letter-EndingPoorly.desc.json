@@ -1,0 +1,81 @@
+{
+	"Name": "Letter-EndingPoorly",
+	"Path": "/DescantDialogues/Ending/Letter-EndingPoorly.desc.json",
+	"Autosave": false,
+	"ChoiceNodeID": 0,
+	"ResponseNodeID": 1,
+	"EndNodeID": 1,
+	"GroupID": 0,
+	"ChoiceNodes": [
+		
+	],
+	"ResponseNodes": [
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 0,
+			"Position": {
+				"x": 305.33331298828127,
+				"y": 276.6666564941406
+			},
+			"ActorName": "S",
+			"NodeComponents": [
+				
+			],
+			"Response": "This is the version of the letter if the player does poorly."
+		}
+	],
+	"StartNode": {
+		"Name": "StartNode",
+		"Type": "Start",
+		"ID": 0,
+		"Position": {
+			"x": 50.0,
+			"y": 70.0
+		},
+		"ActorName": "",
+		"NodeComponents": [
+			
+		]
+	},
+	"EndNodes": [
+		{
+			"Name": "EndNode",
+			"Type": "End",
+			"ID": 0,
+			"Position": {
+				"x": 897.3333740234375,
+				"y": 510.6666564941406
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			]
+		}
+	],
+	"Groups": [
+		
+	],
+	"Connections": [
+		{
+			"From": "Start",
+			"FromID": 0,
+			"To": "Response",
+			"ToID": 0,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 0,
+			"To": "End",
+			"ToID": 0,
+			"ChoiceIndex": 0
+		}
+	],
+	"references": {
+		"version": 2,
+		"RefIds": [
+			
+		]
+	}
+}
