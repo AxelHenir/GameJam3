@@ -92,7 +92,29 @@ namespace DescantRuntime
                 if (currentSprite != null)
                 {
                     responseActor.gameObject.SetActive(true);
-                    responseActor.color = new Color( 0/255.0f, 0/255.0f, 0/255.0f); //EXAMPLE, change to different colors per actor later, and even later have this implemented for the editor
+                    // change the sprite color base on the actor - later have this implemented for the editor
+                    //blue, pink, orange, green, yellow
+                    switch (conversationController.Current.Data.ActorName)
+                    {
+                        case "B":
+                            responseActor.color = new Color(185 / 255.0f, 104 / 255.0f, 79 / 255.0f); //orange
+                            break;
+                        case "S":
+                            responseActor.color = new Color(210 / 255.0f, 168 / 255.0f, 101 / 255.0f); //yellow
+                            break;
+                        case "P1":
+                            responseActor.color = new Color(117 / 255.0f, 161 / 255.0f, 101 / 255.0f); //green
+                            break;
+                        case "P2":
+                            responseActor.color = new Color(190 / 255.0f, 122 / 255.0f, 128 / 255.0f); //pink
+                            break;
+                        case "A":                            
+                            responseActor.color = new Color(133 / 255.0f, 167 / 255.0f, 182 / 255.0f); //blue
+                            break;
+                        case "T":
+                            responseActor.color = new Color(87 / 255.0f, 87 / 255.0f, 119 / 255.0f); //dark blue  /// responseActor.color = new Color(77 / 255.0f, 57 / 255.0f, 86 / 255.0f); //dark purple 
+                            break;
+                    }
                     responseActor.sprite = currentSprite;
                 }
                 else responseActor.gameObject.SetActive(false);
@@ -145,11 +167,14 @@ namespace DescantRuntime
 
         Sprite GetActorSpriteFromName(string actorName)
         {
-            if (actorName.Trim() == "") return null;
-            
-            for (int i = 0; i < actorNames.Length; i++)
-                if (actorNames[i] == actorName)
-                    return actorSprites[i];
+            if(actorName != null)
+            {
+                if (actorName.Trim() == "") return null;
+
+                for (int i = 0; i < actorNames.Length; i++)
+                    if (actorNames[i] == actorName)
+                        return actorSprites[i];
+            }
 
             return null;
         }

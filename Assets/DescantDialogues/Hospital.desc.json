@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Hospital.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 3,
+	"ResponseNodeID": 7,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -15,8 +15,8 @@
 			"Type": "Response",
 			"ID": 0,
 			"Position": {
-				"x": 351.3333435058594,
-				"y": 14.666666030883789
+				"x": 386.6666564941406,
+				"y": -402.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -29,8 +29,8 @@
 			"Type": "Response",
 			"ID": 1,
 			"Position": {
-				"x": 878.0,
-				"y": 1.3333320617675782
+				"x": 996.6666870117188,
+				"y": -535.3333129882813
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -51,6 +51,62 @@
 				
 			],
 			"Response": "We shouldn't have left."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 3,
+			"Position": {
+				"x": 935.3333129882813,
+				"y": 32.666664123535159
+			},
+			"ActorName": "P2",
+			"NodeComponents": [
+				
+			],
+			"Response": "When? Last night or...?"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 4,
+			"Position": {
+				"x": 1470.6666259765625,
+				"y": 17.33333396911621
+			},
+			"ActorName": "P1",
+			"NodeComponents": [
+				
+			],
+			"Response": "Both. \r\n\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 5,
+			"Position": {
+				"x": 2023.3333740234375,
+				"y": 17.33333396911621
+			},
+			"ActorName": "P2",
+			"NodeComponents": [
+				
+			],
+			"Response": "The hospital was supposed to be safe for God's sake. It's not our fault.\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 6,
+			"Position": {
+				"x": 2558.666748046875,
+				"y": 17.33333396911621
+			},
+			"ActorName": "A",
+			"NodeComponents": [
+				
+			],
+			"Response": "P2 is right, there's nothing you could have done. And I told you that his meds were bad for him."
 		}
 	],
 	"StartNode": {
@@ -72,8 +128,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 946.0,
-				"y": 70.0
+				"x": 2779.333251953125,
+				"y": 520.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -95,6 +151,34 @@
 		{
 			"From": "Response",
 			"FromID": 2,
+			"To": "Response",
+			"ToID": 3,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 3,
+			"To": "Response",
+			"ToID": 4,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 4,
+			"To": "Response",
+			"ToID": 5,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 5,
+			"To": "Response",
+			"ToID": 6,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 6,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0
