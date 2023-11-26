@@ -17,7 +17,7 @@ public class CorruptionController : MonoBehaviour
     private Vector3 PlayerStartingPosition = new Vector3(0,1.5f,0);
     
     // The distance the player needs to travel for the scene to be corrupted
-    public float corruptionThreshold = 100.0f;
+    public float corruptionThreshold = 60.0f; //100
 
     // The total distance the player had traveled the last time the scene was corrupted
     private float lastCorruptionDistance = 0.0f;
@@ -43,6 +43,9 @@ public class CorruptionController : MonoBehaviour
 
     public float corruptionSpeed;
 
+    [SerializeField] Material UncorruptedMaterial;
+    [SerializeField] Material CorruptedMaterial;
+
     //Reference to the Slider component of the status bar
     [SerializeField] Slider statusBar;
 
@@ -53,7 +56,8 @@ public class CorruptionController : MonoBehaviour
     {
         CorruptionMaterial = corruptionHospitalObj.GetComponent<Renderer>().material;
         statusBar.value = 0;
-        corruptionSpeed = 0;
+        //corruptionSpeed = 2;
+
         //isResetting = false;
     }
 
@@ -104,7 +108,7 @@ public class CorruptionController : MonoBehaviour
             }
 
             //Calculates the current corruption 
-            corruptionLevel = firstPersonController.distanceTraveled / corruptionThreshold + corruptionSpeed;
+            corruptionLevel = firstPersonController.distanceTraveled / corruptionThreshold; // + corruptionSpeed;
                 
             //Debug.Log("during lvl: " + corruptionLevel + " statusBar: " + statusBar.value + " dist: "+ firstPersonController.distanceTraveled);
             
@@ -127,11 +131,10 @@ public class CorruptionController : MonoBehaviour
     void CorruptScene()
     {
         //Debug.Log("corrupting...");
-        
+
         //corruption logic here
 
-        //make certain items not inside the cylinder corruption inaccessible
-
+        //SetCorruptionMaterials();
     }
 
     void UpdateCorruptionObject()
@@ -150,5 +153,14 @@ public class CorruptionController : MonoBehaviour
     {
         //Update the status bar to the corruption level
         statusBar.value = corruptionLevel;
+    }
+
+    public void SetOneCorruptionMaterial(GameObject obj)
+    {
+        obj.GetComponent<Renderer>().material = CorruptedMaterial;
+    }
+    public void SetOneUncorruptionMaterial(GameObject obj)
+    {
+        obj.GetComponent<Renderer>().material = UncorruptedMaterial;
     }
 }

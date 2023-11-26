@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CorruptionAuntsHouse : MonoBehaviour
 {
+    [SerializeField] CorruptionController CorruptionController;
     /// <summary>
     /// Determines when objects should or shouldn't be interactable depending on where they are according to the corruption
     /// </summary>
@@ -37,7 +38,9 @@ public class CorruptionAuntsHouse : MonoBehaviour
     {
         if (other.CompareTag("AuntsHouseInteractable"))
         {
-            other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = false;
+            if (other.transform.GetChild(0).GetComponent<VisualTrigger>() != null)
+                other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = false;
+            CorruptionController.SetOneUncorruptionMaterial(other.gameObject);
             //Debug.Log("No corruption");
         }
     }
@@ -47,7 +50,9 @@ public class CorruptionAuntsHouse : MonoBehaviour
     {
         if (other.CompareTag("AuntsHouseInteractable"))
         {
-            other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = true;
+            if (other.transform.GetChild(0).GetComponent<VisualTrigger>() != null)
+                other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = true;
+            CorruptionController.SetOneCorruptionMaterial(other.gameObject);
             Debug.Log("Start corruption");
 
         }

@@ -32,6 +32,7 @@ public class GameplayManager : MonoBehaviour
     int numberOfRolesGuessedCorrectly = 0;
     List<CharacterEntry> CorrectlyGuessedEntries;
 
+    [SerializeField] CorruptionController corruptionController;
 
     void Start()
     {
@@ -113,6 +114,10 @@ public class GameplayManager : MonoBehaviour
         numberOfReboots++;
         Debug.Log("Resetting corruption");
 
+        if(numberOfReboots >= 1)
+        {
+            corruptionController.corruptionThreshold = 65.0f; 
+        }
     }
 
     public void LoadEnding()

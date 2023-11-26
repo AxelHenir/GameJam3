@@ -173,6 +173,8 @@ MonoBehaviour:
   AuntsHouseMemory: {fileID: 308522085}
   corruptionLevel: 0
   corruptionSpeed: 0
+  UncorruptedMaterial: {fileID: 2100000, guid: c9caf7cb0eb844b42ae54e7a4dc6c8b8, type: 2}
+  CorruptedMaterial: {fileID: 2100000, guid: e9277a5fb37ee2c4e98136892887e6d1, type: 2}
   statusBar: {fileID: 601949056}
 --- !u!4 &126332856
 Transform:
@@ -1455,6 +1457,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 443860999291326043, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1417311341834682071, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.8
@@ -1507,6 +1513,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 7509998742603913805, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: CorruptionController
+      value: 
+      objectReference: {fileID: 126332855}
     - target: {fileID: 7730938857036685057, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: m_Name
       value: HospitalMemory
@@ -1634,6 +1644,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 5630839108438457437, guid: 38fccb424ad2eda45ac0ab62da83091e, type: 3}
+      propertyPath: CorruptionController
+      value: 
+      objectReference: {fileID: 126332855}
     - target: {fileID: 6189243308991634422, guid: 38fccb424ad2eda45ac0ab62da83091e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 94.97
@@ -1862,6 +1876,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5290386535438574139, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: CorruptionController
+      value: 
+      objectReference: {fileID: 126332855}
     - target: {fileID: 6319072316093783772, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: m_Name
       value: AuntsHouseMemory

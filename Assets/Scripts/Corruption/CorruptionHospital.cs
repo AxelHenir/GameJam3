@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CorruptionHospital : MonoBehaviour
 {
+    [SerializeField] CorruptionController CorruptionController;
     /// <summary>
     /// Determines when objects should or shouldn't be interactable depending on where they are according to the corruption
     /// </summary>
@@ -34,9 +35,11 @@ public class CorruptionHospital : MonoBehaviour
     //Anything inside this object is not corrupted
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("HospitalInteractable"))
+        if (other.CompareTag("HospitalInteractable")) //this tag is put on the parent of the visual trigger obj
         {            
-            other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = false;
+            if(other.transform.GetChild(0).GetComponent<VisualTrigger>() != null)
+                other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = false;
+            CorruptionController.SetOneUncorruptionMaterial(other.gameObject);
             //Debug.Log("No corruption");
         }
     }
@@ -44,10 +47,12 @@ public class CorruptionHospital : MonoBehaviour
     //Anything outside this object is corrupted
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("HospitalInteractable"))
+        if (other.CompareTag("HospitalInteractable")) //this tag is put on the parent of the visual trigger obj
         {
-            other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = true;
-            Debug.Log("Start corruption");
+            if (other.transform.GetChild(0).GetComponent<VisualTrigger>() != null)
+                other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = true; 
+            CorruptionController.SetOneCorruptionMaterial(other.gameObject);
+            Debug.Log("Start corruption on "+other.name);
 
         }
     }
