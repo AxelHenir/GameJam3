@@ -36,6 +36,27 @@ public class EndingController : MonoBehaviour
             Debug.Log(correctEntry.correctName + " was guessed correctly!");
         }
 
+        foreach(CharacterEntry correctEntry in CorrectlyGuessedEntries)
+        {
+
+            /*
+             * Murderer + Aunt
+             * Murderer + P1
+             * Murderer + P2
+             * Murderer + Brother
+             * 
+             * Murderer + Subject
+             * 
+             * Conspirator + P1
+             * 
+             * Victim + Brother
+            */
+
+        }
+
+
+
+
         VisualTrigger LetterVisualTrigger = Letter.transform.GetChild(0).GetComponent<VisualTrigger>();
 
         //Pick the ending based on the guesses:
@@ -44,7 +65,7 @@ public class EndingController : MonoBehaviour
         if (CorrectlyGuessedEntries.Count <= 2) 
         {
             //Set the dialogue script to the bad one
-            LetterVisualTrigger.SetThisDialogueScript(EndingScripts[0]); //0 is bad ending
+            LetterVisualTrigger.SetThisDialogueScript(EndingScripts[0]); //0 is bad ending          
         }
         //If the correct number of guessed entries is 3 or 4
         else if (CorrectlyGuessedEntries.Count <= 4)
