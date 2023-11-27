@@ -1255,6 +1255,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 635382928}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1403489727931041137, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: plaqueController
       value: 
@@ -1552,10 +1564,6 @@ PrefabInstance:
     - target: {fileID: 6965412547411206118, guid: 58d4efc8afc9b2e4392799f243d0f035, type: 3}
       propertyPath: m_Name
       value: ConversationUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965412547411206118, guid: 58d4efc8afc9b2e4392799f243d0f035, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7557580987282582878, guid: 58d4efc8afc9b2e4392799f243d0f035, type: 3}
       propertyPath: m_Pivot.x
