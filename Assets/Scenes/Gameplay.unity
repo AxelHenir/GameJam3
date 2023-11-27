@@ -600,6 +600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentOfCharacterEntries: {fileID: 463411815}
+  corruptionController: {fileID: 126332855}
 --- !u!4 &635382929
 Transform:
   m_ObjectHideFlags: 0

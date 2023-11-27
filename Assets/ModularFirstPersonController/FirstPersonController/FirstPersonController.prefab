@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 4459864851310106426}
-  fov: 65
+  fov: 62.5
   invertCamera: 0
   cameraCanMove: 1
   mouseSensitivity: 2
