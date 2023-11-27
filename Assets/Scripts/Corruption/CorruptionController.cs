@@ -26,6 +26,8 @@ public class CorruptionController : MonoBehaviour
     [SerializeField] GameObject corruptionHospitalObj;
     [SerializeField] GameObject corruptionFuneralObj;
     [SerializeField] GameObject corruptionAuntsHouseObj;
+    [SerializeField] GameObject HospitalTutorialText;
+    [SerializeField] GameObject AuntsHouseTutorialText;
     private Vector3 initialScale = new Vector3(50.0f,5.0f,50.0f); //starting scale
     private Vector3 finalScale = new Vector3(10.0f,5.0f,10.0f); //ending scale
     private Material CorruptionMaterial;
@@ -59,6 +61,9 @@ public class CorruptionController : MonoBehaviour
         //corruptionSpeed = 2;
 
         //isResetting = false;
+
+        HospitalTutorialText.SetActive(false);
+        AuntsHouseTutorialText.SetActive(false);
     }
 
     public void ResetCorruption()
@@ -85,6 +90,9 @@ public class CorruptionController : MonoBehaviour
         //CorruptionMaterial
 
         //isResetting = false;
+
+        HospitalTutorialText.SetActive(false);
+        AuntsHouseTutorialText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -102,6 +110,9 @@ public class CorruptionController : MonoBehaviour
                 lastCorruptionDistance = firstPersonController.distanceTraveled;
 
                 Debug.Log("The corruption bar is now full!!!");
+
+                HospitalTutorialText.SetActive(true);
+                AuntsHouseTutorialText.SetActive(true);
 
                 //TODO: reboot the SCENE/system maybe? --> need to display visual feedback / warning beforehand
                 //ResetCorruption();

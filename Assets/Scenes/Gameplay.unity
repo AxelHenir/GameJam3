@@ -168,6 +168,8 @@ MonoBehaviour:
   corruptionHospitalObj: {fileID: 473215092}
   corruptionFuneralObj: {fileID: 966865033}
   corruptionAuntsHouseObj: {fileID: 535801411}
+  HospitalTutorialText: {fileID: 952502779453776663}
+  AuntsHouseTutorialText: {fileID: 8936508088329412820}
   HospitalMemory: {fileID: 2048917301}
   FuneralMemory: {fileID: 1642789590}
   AuntsHouseMemory: {fileID: 308522085}
@@ -1529,8 +1531,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1244633291391178262, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+--- !u!1 &952502779453776663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1244633291391178262, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+  m_PrefabInstance: {fileID: 952502779453776662}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1997696742844548888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1706,10 +1716,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 652088252605704296, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 90e6f5b985bb7b246af70bc7324a14aa, type: 2}
+    - target: {fileID: 652088252605704296, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6662284726117796128, guid: 90e6f5b985bb7b246af70bc7324a14aa, type: 2}
+    - target: {fileID: 652088252605704296, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1742774870778058950, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
       propertyPath: m_Name
       value: TutorialRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 5498511076329597395, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -6662284726117796128, guid: 90e6f5b985bb7b246af70bc7324a14aa, type: 2}
     - target: {fileID: 5860266365767802420, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
       propertyPath: ui
       value: 
@@ -1757,7 +1783,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3497718571979587700, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
 --- !u!1 &6833894258079772168
 GameObject:
@@ -1877,6 +1906,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4163956449020610826, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: m_Name
+      value: CorruptionTutorial
+      objectReference: {fileID: 0}
     - target: {fileID: 5290386535438574139, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: CorruptionController
       value: 
@@ -1884,6 +1917,18 @@ PrefabInstance:
     - target: {fileID: 6319072316093783772, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: m_Name
       value: AuntsHouseMemory
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807798436220516001, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807798436220516001, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807798436220516001, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.334
       objectReference: {fileID: 0}
     - target: {fileID: 8668288240221748805, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: ui
@@ -1932,8 +1977,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4163956449020610826, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+--- !u!1 &8936508088329412820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4163956449020610826, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+  m_PrefabInstance: {fileID: 8936508088329412819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
