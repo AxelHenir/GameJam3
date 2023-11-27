@@ -1460,10 +1460,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 443860999291326043, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1417311341834682071, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.8
@@ -1716,26 +1712,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 652088252605704296, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 90e6f5b985bb7b246af70bc7324a14aa, type: 2}
-    - target: {fileID: 652088252605704296, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -6662284726117796128, guid: 90e6f5b985bb7b246af70bc7324a14aa, type: 2}
-    - target: {fileID: 652088252605704296, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1742774870778058950, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
       propertyPath: m_Name
       value: TutorialRoom
       objectReference: {fileID: 0}
-    - target: {fileID: 5498511076329597395, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: -6662284726117796128, guid: 90e6f5b985bb7b246af70bc7324a14aa, type: 2}
     - target: {fileID: 5860266365767802420, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
       propertyPath: ui
       value: 
@@ -1906,10 +1886,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4163956449020610826, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
-      propertyPath: m_Name
-      value: CorruptionTutorial
-      objectReference: {fileID: 0}
     - target: {fileID: 5290386535438574139, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: CorruptionController
       value: 
@@ -1917,18 +1893,6 @@ PrefabInstance:
     - target: {fileID: 6319072316093783772, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: m_Name
       value: AuntsHouseMemory
-      objectReference: {fileID: 0}
-    - target: {fileID: 7807798436220516001, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 7807798436220516001, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 7807798436220516001, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.334
       objectReference: {fileID: 0}
     - target: {fileID: 8668288240221748805, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: ui
