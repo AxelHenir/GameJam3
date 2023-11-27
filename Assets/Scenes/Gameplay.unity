@@ -1224,6 +1224,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 389489083137458904, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1518.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 389489083137458904, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.000018686194
       objectReference: {fileID: 0}
@@ -1339,6 +1343,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 287345649}
+    - target: {fileID: 7057231999963373713, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_ScrollSensitivity
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7120637808572093310, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
