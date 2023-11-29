@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/FamilyPhoto.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 15,
+	"ResponseNodeID": 16,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -50,7 +50,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "In the midst of the crowd, you see the subject, a young girl, sitting quietly in a corner. She’s watching her brother, the boy with the bright eyes and restless energy, as he flits around the room.\r"
+			"Response": "In the midst of the crowd, you see the subject, a young girl, sitting quietly in a corner. She's watching her brother, the boy with the bright eyes and restless energy, as he flits around the room.\r"
 		},
 		{
 			"Name": "ResponseNode",
@@ -78,7 +78,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Hey sis, are you gonna sit at the table all day?\r"
+			"Response": "Hey sib, are you gonna sit at the table all day?\r"
 		},
 		{
 			"Name": "ResponseNode",
@@ -219,6 +219,20 @@
 				
 			],
 			"Response": "There's no way you'll win. You'll see!\r"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 15,
+			"Position": {
+				"x": 3993.33349609375,
+				"y": 45.33332824707031
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
 		}
 	],
 	"StartNode": {
@@ -240,8 +254,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 4106.66650390625,
-				"y": 67.33332824707031
+				"x": 4518.0,
+				"y": 45.33332824707031
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -361,6 +375,13 @@
 		{
 			"From": "Response",
 			"FromID": 14,
+			"To": "Response",
+			"ToID": 15,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 15,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

@@ -22,7 +22,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Dear [Player Character],"
+			"Response": "Dear Evan, my sweet grandchild,"
 		},
 		{
 			"Name": "ResponseNode",
@@ -92,7 +92,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Thank you,\r\n\r\n[Grandmother’s Name]\r"
+			"Response": "Thank you,\r\n\r\nRobin\r"
 		}
 	],
 	"StartNode": {

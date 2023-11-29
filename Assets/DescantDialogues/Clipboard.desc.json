@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Clipboard.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 4,
+	"ResponseNodeID": 5,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -65,6 +65,20 @@
 				
 			],
 			"Response": "The memory fades, leaving behind a chilling echo of the tragic event that led to the boy’s hospitalization."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 4,
+			"Position": {
+				"x": 2582.0,
+				"y": 108.0
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
 		}
 	],
 	"StartNode": {
@@ -86,8 +100,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 2712.666748046875,
-				"y": 107.33332824707031
+				"x": 3112.0,
+				"y": 108.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -130,6 +144,13 @@
 		{
 			"From": "Response",
 			"FromID": 3,
+			"To": "Response",
+			"ToID": 4,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 4,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

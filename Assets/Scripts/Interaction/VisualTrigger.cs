@@ -47,7 +47,7 @@ public class VisualTrigger : MonoBehaviour
     {
         if(descantUIScript.isResponseType)
         {
-            Invoke(nameof(HideUI), 2f);
+            Invoke(nameof(HideUI), 0.5f);
         }
         else
         {

@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Card.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 2,
-	"ResponseNodeID": 5,
+	"ResponseNodeID": 6,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -51,7 +51,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The card is signed by many people - a few cousins, grandparents, and even some friends. Each signature is unique, a reflection of the person behind it. However, one signature is noticeably absent - the aunt's.\r\n\r\n\r\n"
+			"Response": "The card is signed by many people - a few cousins, grandparents, and even some friends. Each signature is unique, a reflection of the person behind it. However, one signature is noticeably absent - the Aunt's.\r\n\r\n\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -65,7 +65,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "As you hold the card, a memory surfaces. It's a sunny day, and the family is gathered in a park for a picnic. The boy is there, his face bright with laughter as he plays with his cousins. P1 and P2 are chatting with the grandparents, their faces relaxed and content. Even the aunt is there, her stern expression softened by the joyous occasion.\r\n\r\n"
+			"Response": "As you hold the card, a memory surfaces. It's a sunny day, and the family is gathered in a park for a picnic. The boy is there, his face bright with laughter as he plays with his cousins. Michelle and Ryan are chatting with the grandparents, their faces relaxed and content. Even Jesse is there, her stern expression softened by the joyous occasion.\r\n\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -80,6 +80,20 @@
 				
 			],
 			"Response": "The memory is filled with warmth and happiness, a stark contrast to the current situation. The memory fades, leaving behind a sense of longing for simpler times and a deeper understanding of the family dynamics."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 5,
+			"Position": {
+				"x": 2469.33349609375,
+				"y": 56.666664123535159
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
 		}
 	],
 	"StartNode": {
@@ -101,8 +115,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 2490.666748046875,
-				"y": 92.66666412353516
+				"x": 3020.666748046875,
+				"y": 78.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -145,6 +159,13 @@
 		{
 			"From": "Response",
 			"FromID": 4,
+			"To": "Response",
+			"ToID": 5,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 5,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

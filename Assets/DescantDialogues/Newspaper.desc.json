@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Newspaper.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 1,
+	"ResponseNodeID": 2,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -15,7 +15,7 @@
 			"Type": "Response",
 			"ID": 0,
 			"Position": {
-				"x": 331.3333435058594,
+				"x": 331.33331298828127,
 				"y": -16.0
 			},
 			"ActorName": "",
@@ -23,6 +23,20 @@
 				
 			],
 			"Response": "I am Newspaper"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 1,
+			"Position": {
+				"x": 865.3333740234375,
+				"y": -63.333335876464847
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
 		}
 	],
 	"StartNode": {
@@ -44,8 +58,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 476.0,
-				"y": 342.6666564941406
+				"x": 1428.6666259765625,
+				"y": -16.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -67,6 +81,13 @@
 		{
 			"From": "Response",
 			"FromID": 0,
+			"To": "Response",
+			"ToID": 1,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 1,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

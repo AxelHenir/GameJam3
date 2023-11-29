@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/TutorialP2.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 3,
-	"ResponseNodeID": 13,
+	"ResponseNodeID": 14,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -12,7 +12,7 @@
 			"Type": "Choice",
 			"ID": 1,
 			"Position": {
-				"x": 2277.333251953125,
+				"x": 2277.33349609375,
 				"y": -207.3333282470703
 			},
 			"ActorName": "",
@@ -225,6 +225,20 @@
 				
 			],
 			"Response": "Well, that's my speech. It's all a bit overwhelming, isn't it? You'll get the hang of it in no time."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 13,
+			"Position": {
+				"x": 3084.666748046875,
+				"y": 896.6666870117188
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
 		}
 	],
 	"StartNode": {
@@ -246,8 +260,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 3076.0,
-				"y": 956.6666870117188
+				"x": 3686.666748046875,
+				"y": 1029.333251953125
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -339,6 +353,13 @@
 		{
 			"From": "Response",
 			"FromID": 12,
+			"To": "Response",
+			"ToID": 13,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 13,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

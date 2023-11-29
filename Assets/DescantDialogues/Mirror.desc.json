@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Mirror.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 4,
+	"ResponseNodeID": 5,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -36,7 +36,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The mirror triggers a series of memories. You see a flash of a scene from the subject’s recent past. They’re at a social gathering, surrounded by laughter and chatter. But the subject is quiet, their smile forced."
+			"Response": "The mirror triggers a series of memories. You see a flash of a scene from the subject’s recent past. She's at a social gathering, surrounded by laughter and chatter. But the subject is quiet, their smile forced."
 		},
 		{
 			"Name": "ResponseNode",
@@ -65,6 +65,20 @@
 				
 			],
 			"Response": "The memory ends with the subject alone in their room, quietly sobbing.\r"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 4,
+			"Position": {
+				"x": 2398.0,
+				"y": 0.0
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
 		}
 	],
 	"StartNode": {
@@ -86,7 +100,7 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 2484.666748046875,
+				"x": 2982.0,
 				"y": 0.0
 			},
 			"ActorName": "",
@@ -130,6 +144,13 @@
 		{
 			"From": "Response",
 			"FromID": 3,
+			"To": "Response",
+			"ToID": 4,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 4,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Hospital.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 10,
+	"ResponseNodeID": 11,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -22,7 +22,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Door shuts. P1, P2, A, S, B are in the room.\r\n\r\n\r\n"
+			"Response": "Door shuts. Michelle, Ryan, Jesse, Robin, Noa are in the room."
 		},
 		{
 			"Name": "ResponseNode",
@@ -36,7 +36,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "P1 looks at P2.\r\n"
+			"Response": "Michelle looks at Ryan."
 		},
 		{
 			"Name": "ResponseNode",
@@ -106,7 +106,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "P2 is right, there's nothing you could have done. And I told you that his meds were bad for him."
+			"Response": "Ryan is right, there's nothing you could have done. And I told you that his meds were bad for him."
 		},
 		{
 			"Name": "ResponseNode",
@@ -149,6 +149,20 @@
 				
 			],
 			"Response": "I heard every damn word! The doctor said he was in a coma."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 10,
+			"Position": {
+				"x": 4712.66650390625,
+				"y": 17.33333396911621
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
 		}
 	],
 	"StartNode": {
@@ -170,8 +184,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 4740.66650390625,
-				"y": 17.33333396911621
+				"x": 5257.3330078125,
+				"y": 31.999998092651368
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -256,6 +270,13 @@
 		{
 			"From": "Response",
 			"FromID": 9,
+			"To": "Response",
+			"ToID": 10,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 10,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

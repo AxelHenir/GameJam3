@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Funeral.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 1,
+	"ResponseNodeID": 2,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -15,7 +15,7 @@
 			"Type": "Response",
 			"ID": 0,
 			"Position": {
-				"x": 59.33333206176758,
+				"x": 59.333335876464847,
 				"y": 224.0
 			},
 			"ActorName": "",
@@ -23,6 +23,20 @@
 				
 			],
 			"Response": "[funeral dialogue]"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 1,
+			"Position": {
+				"x": 624.6666870117188,
+				"y": 367.33331298828127
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
 		}
 	],
 	"StartNode": {
@@ -44,8 +58,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 474.0,
-				"y": 252.00001525878907
+				"x": 1218.6666259765625,
+				"y": 184.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -67,6 +81,13 @@
 		{
 			"From": "Response",
 			"FromID": 0,
+			"To": "Response",
+			"ToID": 1,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 1,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

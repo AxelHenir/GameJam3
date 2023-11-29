@@ -19,11 +19,11 @@ public class CharacterEntry : MonoBehaviour
     public void updateNameGuess(int index){
         switch (index){
             case 0: nameGuess = "Please select"; break;
-            case 1: nameGuess = "Alex"; break;
-            case 2: nameGuess = "Sarah"; break;
-            case 3: nameGuess = "Siovan"; break;
-            case 4: nameGuess = "Olivia"; break;
-            case 5: nameGuess = "Julian"; break;
+            case 1: nameGuess = "Michelle Park"; break;
+            case 2: nameGuess = "Noa Park"; break;
+            case 3: nameGuess = "Robin Park"; break;
+            case 4: nameGuess = "Ryan Park"; break;
+            case 5: nameGuess = "Jesse Richard"; break;
         }
         string personToUpdate = correctRel;
         plaqueController.UpdateMuseumPlaque(personToUpdate, 0, nameGuess);
@@ -32,11 +32,11 @@ public class CharacterEntry : MonoBehaviour
     public void updateRelGuess(int index){
         switch (index){
             case 0: relGuess = "Please select"; break;
-            case 1: relGuess = "Sibling"; break;
-            case 2: relGuess = "Subject"; break;
-            case 3: relGuess = "Aunt"; break;
-            case 4: relGuess = "Mother"; break;
-            case 5: relGuess = "Father"; break;
+            case 1: relGuess = "Aunt"; break;
+            case 2: relGuess = "Father"; break;
+            case 3: relGuess = "Mother"; break;
+            case 4: relGuess = "Sibling"; break;
+            case 5: relGuess = "Subject"; break;
         }
         string personToUpdate = correctRel;
         plaqueController.UpdateMuseumPlaque(personToUpdate, 1, relGuess);

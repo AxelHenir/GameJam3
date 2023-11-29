@@ -3,8 +3,8 @@
 	"Path": "/DescantDialogues/TutorialP3.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 7,
-	"EndNodeID": 1,
+	"ResponseNodeID": 8,
+	"EndNodeID": 2,
 	"GroupID": 0,
 	"ChoiceNodes": [
 		
@@ -15,21 +15,21 @@
 			"Type": "Response",
 			"ID": 0,
 			"Position": {
-				"x": 282.6666564941406,
+				"x": 284.6666564941406,
 				"y": -14.666667938232422
 			},
 			"ActorName": "T",
 			"NodeComponents": [
 				
 			],
-			"Response": "Welcome to the new exhibit.\r\n\r"
+			"Response": "Welcome to the new exhibit, Evan.\r\n\r"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 1,
 			"Position": {
-				"x": 841.3333129882813,
+				"x": 841.3333740234375,
 				"y": 110.66666412353516
 			},
 			"ActorName": "T",
@@ -64,7 +64,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The subject of our exhibit is a neurodivergent individual who lived in a time when society was less understanding. Our goal is to shed light on the mistreatment they and others like them faced.\r\n\r\n"
+			"Response": "The subject of our exhibit, Robin, is a neurodivergent individual who lived in a time when society was less understanding. Our goal is to shed light on the mistreatment they and others like them faced.\r\n\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -107,6 +107,20 @@
 				
 			],
 			"Response": "Here, this is your Memory Journal. Press TAB to view it. Use it to keep track of the individuals you encounter and their roles in the memories."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 7,
+			"Position": {
+				"x": 4133.3330078125,
+				"y": 101.33332824707031
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
 		}
 	],
 	"StartNode": {
@@ -128,8 +142,21 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 4140.66650390625,
-				"y": 130.6666717529297
+				"x": 4703.3330078125,
+				"y": 101.33332824707031
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			]
+		},
+		{
+			"Name": "EndNode",
+			"Type": "End",
+			"ID": 1,
+			"Position": {
+				"x": 402.6666564941406,
+				"y": 522.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -193,6 +220,13 @@
 		{
 			"From": "Response",
 			"FromID": 6,
+			"To": "Response",
+			"ToID": 7,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 7,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0
