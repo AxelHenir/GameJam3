@@ -1268,8 +1268,8 @@ MonoBehaviour:
   nameGuess: 
   relGuess: 
   roleGuess: 
-  correctName: Olivia
-  correctRel: Mother
+  correctName: Julian
+  correctRel: Father
   correctRole: Conspirator
   plaqueController: {fileID: 0}
 --- !u!1 &468322723027436099
@@ -1372,8 +1372,8 @@ MonoBehaviour:
   relGuess: 
   roleGuess: 
   correctName: Siovan
-  correctRel: Aunt
-  correctRole: Conspirator
+  correctRel: Subject
+  correctRole: Survivor
   plaqueController: {fileID: 0}
 --- !u!1 &520108327908935878
 GameObject:
@@ -5689,7 +5689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00012176665}
+  m_AnchoredPosition: {x: 0, y: -0.00006956804}
   m_SizeDelta: {x: 0, y: 1518.26}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1775746507903928706
@@ -7666,8 +7666,8 @@ MonoBehaviour:
   relGuess: 
   roleGuess: 
   correctName: Sarah
-  correctRel: Subject
-  correctRole: Survivor
+  correctRel: Aunt
+  correctRole: Murderer
   plaqueController: {fileID: 0}
 --- !u!1 &3113712126847074762
 GameObject:
@@ -8228,7 +8228,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3715053867281349777}
   m_HandleRect: {fileID: 7506311296829412579}
   m_Direction: 2
-  m_Value: 1.0000001
+  m_Value: 1
   m_Size: 0.538116
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -13439,8 +13439,8 @@ MonoBehaviour:
   nameGuess: 
   relGuess: 
   roleGuess: 
-  correctName: Julian
-  correctRel: Father
+  correctName: Olivia
+  correctRel: Mother
   correctRole: Conspirator
   plaqueController: {fileID: 0}
 --- !u!1 &5620206069530057982
@@ -16305,8 +16305,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 90e6f5b985bb7b246af70bc7324a14aa, type: 2}
-  m_sharedMaterial: {fileID: -6662284726117796128, guid: 90e6f5b985bb7b246af70bc7324a14aa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d0a179ff0f632ce47a0e668384fdbe37, type: 2}
+  m_sharedMaterial: {fileID: 2655608550427578746, guid: d0a179ff0f632ce47a0e668384fdbe37, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16790,7 +16790,7 @@ MonoBehaviour:
   roleGuess: 
   correctName: Alex
   correctRel: Sibling
-  correctRole: Murderer
+  correctRole: Victim
   plaqueController: {fileID: 0}
 --- !u!1 &6848589300879997790
 GameObject:
