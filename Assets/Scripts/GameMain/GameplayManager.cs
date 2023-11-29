@@ -116,7 +116,7 @@ public class GameplayManager : MonoBehaviour
 
         if(numberOfReboots >= 1)
         {
-            corruptionController.corruptionThreshold = 65.0f; 
+            corruptionController.corruptionThreshold = 60.0f; 
         }
     }
 

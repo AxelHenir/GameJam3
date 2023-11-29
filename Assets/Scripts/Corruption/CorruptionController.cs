@@ -29,7 +29,7 @@ public class CorruptionController : MonoBehaviour
     [SerializeField] GameObject HospitalTutorialText;
     [SerializeField] GameObject AuntsHouseTutorialText;
     private Vector3 initialScale = new Vector3(50.0f,5.0f,50.0f); //starting scale
-    private Vector3 finalScale = new Vector3(10.0f,5.0f,10.0f); //ending scale
+    private Vector3 finalScale = new Vector3(5.0f,5.0f,5.0f); //ending scale
     private Material CorruptionMaterial;
 
     // Holds the Memory Perimeter 
@@ -119,7 +119,7 @@ public class CorruptionController : MonoBehaviour
             }
 
             //Calculates the current corruption 
-            corruptionLevel = firstPersonController.distanceTraveled / corruptionThreshold; // + corruptionSpeed;
+            corruptionLevel = firstPersonController.distanceTraveled / corruptionThreshold;
                 
             //Debug.Log("during lvl: " + corruptionLevel + " statusBar: " + statusBar.value + " dist: "+ firstPersonController.distanceTraveled);
             
