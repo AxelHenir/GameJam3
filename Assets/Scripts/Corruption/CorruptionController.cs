@@ -169,9 +169,47 @@ public class CorruptionController : MonoBehaviour
     public void SetOneCorruptionMaterial(GameObject obj)
     {
         obj.GetComponent<Renderer>().material = CorruptedMaterial;
+
+        //if the object is a rigged one / has a skinned mesh:
+        if (obj.GetComponent<SkinnedMeshRenderer>() != null)
+        {
+            //obj.GetComponent<SkinnedMeshRenderer>().material = CorruptedMaterial;
+            SetSkinnedMaterial(obj, CorruptedMaterial);
+        }       
     }
     public void SetOneUncorruptionMaterial(GameObject obj)
     {
         obj.GetComponent<Renderer>().material = UncorruptedMaterial;
+
+        //if the object is a rigged one / has a skinned mesh:
+        if (obj.GetComponent<SkinnedMeshRenderer>() != null)
+        {
+            //obj.GetComponent<SkinnedMeshRenderer>().material = UncorruptedMaterial;
+            SetSkinnedMaterial(obj, UncorruptedMaterial);
+        }            
+    }
+
+    void SetSkinnedMaterial(GameObject obj, Material newMaterial)
+    {
+
+        SkinnedMeshRenderer renderer = obj.GetComponent<SkinnedMeshRenderer>();
+
+
+        if (renderer != null)
+        {
+            // Create a new array with the new material
+            Material[] materials = new Material[renderer.materials.Length];
+            for (int i = 0; i < materials.Length; i++)
+            {
+                materials[i] = newMaterial;
+            }
+
+            // Change the materials
+            renderer.materials = materials;
+        }
+        else
+        {
+            Debug.LogError("SkinnedMeshRenderer not found on the other GameObject.");
+        }
     }
 }

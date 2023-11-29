@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CorruptionShader
+  m_Name: OLD_CorruptionShader
   m_Shader: {fileID: 4800000, guid: 13389f301d4e19f458e62cdde673299e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0

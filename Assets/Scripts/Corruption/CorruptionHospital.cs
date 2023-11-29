@@ -38,7 +38,13 @@ public class CorruptionHospital : MonoBehaviour
         if (other.CompareTag("HospitalInteractable")) //this tag is put on the parent of the visual trigger obj
         {            
             if(other.transform.GetChild(0).GetComponent<VisualTrigger>() != null)
-                other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = false;
+                other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = false; //controls interaction
+            CorruptionController.SetOneUncorruptionMaterial(other.gameObject);
+            //Debug.Log("No corruption");
+        }
+
+        if (other.CompareTag("HospitalNonInteractable")) //this tag is put on every obj that can be corrupted - but not interactable
+        {
             CorruptionController.SetOneUncorruptionMaterial(other.gameObject);
             //Debug.Log("No corruption");
         }
@@ -50,10 +56,20 @@ public class CorruptionHospital : MonoBehaviour
         if (other.CompareTag("HospitalInteractable")) //this tag is put on the parent of the visual trigger obj
         {
             if (other.transform.GetChild(0).GetComponent<VisualTrigger>() != null)
-                other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = true; 
+                other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = true; //controls interaction
+
             CorruptionController.SetOneCorruptionMaterial(other.gameObject);
             Debug.Log("Start corruption on "+other.name);
 
         }
+
+        if (other.CompareTag("HospitalNonInteractable")) //this tag is put on every obj that can be corrupted - but not interactable
+        {
+            CorruptionController.SetOneCorruptionMaterial(other.gameObject);
+            Debug.Log("Start corruption on " + other.name);
+
+        }
     }
+
+
 }

@@ -8,6 +8,8 @@ TagManager:
   - HospitalInteractable
   - FuneralInteractable
   - AuntsHouseInteractable
+  - HospitalNonInteractable
+  - AuntsHouseNonInteractable
   layers:
   - Default
   - TransparentFX
