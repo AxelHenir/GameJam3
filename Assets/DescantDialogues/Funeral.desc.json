@@ -18,6 +18,7 @@
 				"x": 59.33333206176758,
 				"y": 224.0
 			},
+			"ActorName": "",
 			"NodeComponents": [
 				
 			],
@@ -32,6 +33,7 @@
 			"x": 50.0,
 			"y": 70.0
 		},
+		"ActorName": "",
 		"NodeComponents": [
 			
 		]
@@ -45,6 +47,7 @@
 				"x": 474.0,
 				"y": 252.00001525878907
 			},
+			"ActorName": "",
 			"NodeComponents": [
 				
 			]

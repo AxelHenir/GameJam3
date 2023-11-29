@@ -1,9 +1,9 @@
 {
-	"Name": "New Descant Graph",
-	"Path": "/DescantDialogues/New Descant Graph.desc.json",
+	"Name": "PillBottle",
+	"Path": "/DescantDialogues/PillBottle.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 1,
+	"ResponseNodeID": 19,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -18,10 +18,263 @@
 				"x": 320.6666564941406,
 				"y": 45.33332824707031
 			},
+			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "I am pill bottle"
+			"Response": "P1, P2, S, and B are in their living room. P1 is scrambling to get B ready for school while S is ready, sitting and playing with her hair. \r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 1,
+			"Position": {
+				"x": 7887.33349609375,
+				"y": -422.66668701171877
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 2,
+			"Position": {
+				"x": 7915.33349609375,
+				"y": -421.3333435058594
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 3,
+			"Position": {
+				"x": 9094.0,
+				"y": 40.0
+			},
+			"ActorName": "S",
+			"NodeComponents": [
+				
+			],
+			"Response": "I don't. I hate them, not you."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 4,
+			"Position": {
+				"x": 8506.0,
+				"y": 50.666664123535159
+			},
+			"ActorName": "B",
+			"NodeComponents": [
+				
+			],
+			"Response": "Ugh, you must hate me for all this."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 5,
+			"Position": {
+				"x": 7990.0,
+				"y": 76.66666412353516
+			},
+			"ActorName": "B",
+			"NodeComponents": [
+				
+			],
+			"Response": "…Okay, give them. \r"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 6,
+			"Position": {
+				"x": 7458.0,
+				"y": 76.66666412353516
+			},
+			"ActorName": "S",
+			"NodeComponents": [
+				
+			],
+			"Response": "Mom won't tell me much either. I think I only heard about how it should help you pay better attention in class.\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 7,
+			"Position": {
+				"x": 6946.0,
+				"y": 76.66666412353516
+			},
+			"ActorName": "B",
+			"NodeComponents": [
+				
+			],
+			"Response": "I-I don't know, maybe. Why do I need them? What does it do to me? Why can't anyone tell me the truth?"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 8,
+			"Position": {
+				"x": 6424.0,
+				"y": 76.66666412353516
+			},
+			"ActorName": "S",
+			"NodeComponents": [
+				
+			],
+			"Response": "What makes you not want the pills? Is it the swallowing? Is it the taste? Something else?"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 9,
+			"Position": {
+				"x": 5887.3330078125,
+				"y": 76.66666412353516
+			},
+			"ActorName": "B",
+			"NodeComponents": [
+				
+			],
+			"Response": "N-no.\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 10,
+			"Position": {
+				"x": 5356.66650390625,
+				"y": 103.33332824707031
+			},
+			"ActorName": "S",
+			"NodeComponents": [
+				
+			],
+			"Response": "It is too early for me to ask a question?\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 11,
+			"Position": {
+				"x": 4838.66650390625,
+				"y": 123.33333587646485
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": "Eventually, B stops wailing and sniffles while S sits up.\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 12,
+			"Position": {
+				"x": 4292.0,
+				"y": 135.33334350585938
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": "S doesn't say a word as she gently sits on the bed, and starts rubbing B's back. She lays on the bed where B would hit to catch his hand before it hits her.\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 13,
+			"Position": {
+				"x": 3750.666748046875,
+				"y": 153.33334350585938
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": "S slowly open's B's door to be greeted with B in the middle of a meltdown on his bed. He's wailing, hitting the bed and cries harder when S slides in the room with her hand behind her back.\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 14,
+			"Position": {
+				"x": 2652.0,
+				"y": 197.33334350585938
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": "After a moment weighing her options, S gets the pills and heads to B's room.\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 15,
+			"Position": {
+				"x": 3210.666748046875,
+				"y": 164.0
+			},
+			"ActorName": "P1",
+			"NodeComponents": [
+				
+			],
+			"Response": "Why can't he take more after his sister? She's so quiet and obedient.\r\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 16,
+			"Position": {
+				"x": 2087.33349609375,
+				"y": 230.6666717529297
+			},
+			"ActorName": "P1",
+			"NodeComponents": [
+				
+			],
+			"Response": "I am not chasing after him this time. S, be a good sister and get him to take his pills. Here.\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 17,
+			"Position": {
+				"x": 1485.333251953125,
+				"y": 153.33334350585938
+			},
+			"ActorName": "B",
+			"NodeComponents": [
+				
+			],
+			"Response": "NO! No no no!!!\r\n\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 18,
+			"Position": {
+				"x": 862.6666870117188,
+				"y": 164.0
+			},
+			"ActorName": "P1",
+			"NodeComponents": [
+				
+			],
+			"Response": "Now, are you okay with taking these today or are you going to be insufferable?\r\n\r\n"
 		}
 	],
 	"StartNode": {
@@ -32,6 +285,7 @@
 			"x": 50.0,
 			"y": 70.0
 		},
+		"ActorName": "",
 		"NodeComponents": [
 			
 		]
@@ -42,9 +296,10 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 433.3333435058594,
-				"y": 322.0
+				"x": 9611.333984375,
+				"y": 50.666664123535159
 			},
+			"ActorName": "",
 			"NodeComponents": [
 				
 			]
@@ -63,7 +318,119 @@
 		},
 		{
 			"From": "Response",
+			"FromID": 4,
+			"To": "Response",
+			"ToID": 3,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 5,
+			"To": "Response",
+			"ToID": 4,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 6,
+			"To": "Response",
+			"ToID": 5,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 7,
+			"To": "Response",
+			"ToID": 6,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 8,
+			"To": "Response",
+			"ToID": 7,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 9,
+			"To": "Response",
+			"ToID": 8,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 10,
+			"To": "Response",
+			"ToID": 9,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 11,
+			"To": "Response",
+			"ToID": 10,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 12,
+			"To": "Response",
+			"ToID": 11,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 13,
+			"To": "Response",
+			"ToID": 12,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 15,
+			"To": "Response",
+			"ToID": 13,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 16,
+			"To": "Response",
+			"ToID": 14,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 14,
+			"To": "Response",
+			"ToID": 15,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 17,
+			"To": "Response",
+			"ToID": 16,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 18,
+			"To": "Response",
+			"ToID": 17,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
 			"FromID": 0,
+			"To": "Response",
+			"ToID": 18,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 3,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

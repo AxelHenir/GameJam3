@@ -19,9 +19,6 @@
 				"y": -16.0
 			},
 			"ActorName": "",
-			"SoundClip": {
-				"instanceID": 0
-			},
 			"NodeComponents": [
 				
 			],
@@ -37,9 +34,6 @@
 			"y": 70.0
 		},
 		"ActorName": "",
-		"SoundClip": {
-			"instanceID": 0
-		},
 		"NodeComponents": [
 			
 		]
@@ -54,9 +48,6 @@
 				"y": 342.6666564941406
 			},
 			"ActorName": "",
-			"SoundClip": {
-				"instanceID": 0
-			},
 			"NodeComponents": [
 				
 			]

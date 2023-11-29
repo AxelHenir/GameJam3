@@ -1,0 +1,207 @@
+{
+	"Name": "TutorialP3",
+	"Path": "/DescantDialogues/TutorialP3.desc.json",
+	"Autosave": false,
+	"ChoiceNodeID": 0,
+	"ResponseNodeID": 7,
+	"EndNodeID": 1,
+	"GroupID": 0,
+	"ChoiceNodes": [
+		
+	],
+	"ResponseNodes": [
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 0,
+			"Position": {
+				"x": 282.6666564941406,
+				"y": -14.666667938232422
+			},
+			"ActorName": "T",
+			"NodeComponents": [
+				
+			],
+			"Response": "Welcome to the new exhibit.\r\n\r"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 1,
+			"Position": {
+				"x": 841.3333129882813,
+				"y": 110.66666412353516
+			},
+			"ActorName": "T",
+			"NodeComponents": [
+				
+			],
+			"Response": "I am the head curator of the Museum of Neurodiversity. Thank you for volunteering. Now let's go over the details of the exhibit.\r\n\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 2,
+			"Position": {
+				"x": 1390.0,
+				"y": 142.6666717529297
+			},
+			"ActorName": "T",
+			"NodeComponents": [
+				
+			],
+			"Response": "We're using groundbreaking technology in order to bring this experiment to life. It's called Memory Mapping, and it allows us to upload and explore the memories of a person.\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 3,
+			"Position": {
+				"x": 1922.6666259765625,
+				"y": 175.33334350585938
+			},
+			"ActorName": "T",
+			"NodeComponents": [
+				
+			],
+			"Response": "The subject of our exhibit is a neurodivergent individual who lived in a time when society was less understanding. Our goal is to shed light on the mistreatment they and others like them faced.\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 4,
+			"Position": {
+				"x": 2474.0,
+				"y": 156.6666717529297
+			},
+			"ActorName": "T",
+			"NodeComponents": [
+				
+			],
+			"Response": "We have two memories ready for exploration. These memories are fragile, and each investigation will corrupt them slightly. We're not exactly sure how many times we'll be able to reset the memory, so choose what you investigate wisely.\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 5,
+			"Position": {
+				"x": 3032.666748046875,
+				"y": 142.6666717529297
+			},
+			"ActorName": "T",
+			"NodeComponents": [
+				
+			],
+			"Response": "Your goal is to use the details in each memory to create the plaques and place them in front of the individuals found in the memory, labeling their name, relationship to the subject, and their role in the exhibit.\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 6,
+			"Position": {
+				"x": 3584.666748046875,
+				"y": 130.6666717529297
+			},
+			"ActorName": "T",
+			"NodeComponents": [
+				
+			],
+			"Response": "Here, this is your Memory Journal. Press TAB to view it. Use it to keep track of the individuals you encounter and their roles in the memories."
+		}
+	],
+	"StartNode": {
+		"Name": "StartNode",
+		"Type": "Start",
+		"ID": 0,
+		"Position": {
+			"x": 0.0,
+			"y": 0.0
+		},
+		"ActorName": "",
+		"NodeComponents": [
+			
+		]
+	},
+	"EndNodes": [
+		{
+			"Name": "EndNode",
+			"Type": "End",
+			"ID": 0,
+			"Position": {
+				"x": 4140.66650390625,
+				"y": 130.6666717529297
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			]
+		}
+	],
+	"Groups": [
+		
+	],
+	"Connections": [
+		{
+			"From": "Start",
+			"FromID": 0,
+			"To": "Response",
+			"ToID": 0,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 0,
+			"To": "Response",
+			"ToID": 1,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 1,
+			"To": "Response",
+			"ToID": 2,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 2,
+			"To": "Response",
+			"ToID": 3,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 3,
+			"To": "Response",
+			"ToID": 4,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 4,
+			"To": "Response",
+			"ToID": 5,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 5,
+			"To": "Response",
+			"ToID": 6,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 6,
+			"To": "End",
+			"ToID": 0,
+			"ChoiceIndex": 0
+		}
+	],
+	"references": {
+		"version": 2,
+		"RefIds": [
+			
+		]
+	}
+}

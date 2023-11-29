@@ -2,24 +2,25 @@
 	"Name": "Card",
 	"Path": "/DescantDialogues/Card.desc.json",
 	"Autosave": false,
-	"ChoiceNodeID": 1,
-	"ResponseNodeID": 2,
+	"ChoiceNodeID": 2,
+	"ResponseNodeID": 5,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
 		{
 			"Name": "ChoiceNode",
 			"Type": "Choice",
-			"ID": 0,
+			"ID": 1,
 			"Position": {
-				"x": 860.0,
-				"y": 34.666664123535159
+				"x": 554.6666870117188,
+				"y": 692.6666870117188
 			},
+			"ActorName": "",
 			"NodeComponents": [
 				
 			],
 			"Choices": [
-				"i am a choice"
+				""
 			]
 		}
 	],
@@ -32,10 +33,53 @@
 				"x": 306.0,
 				"y": -26.0
 			},
+			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "I am card"
+			"Response": "You pick up the brightly colored 'Get Well Soon' card from the bedside table. The front of the card is adorned with cheerful illustrations of flowers and balloons, a stark contrast to the somber atmosphere of the room. Inside, the card is filled with well wishes and messages of hope."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 2,
+			"Position": {
+				"x": 881.3333740234375,
+				"y": 22.66666603088379
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": "The card is signed by many people - a few cousins, grandparents, and even some friends. Each signature is unique, a reflection of the person behind it. However, one signature is noticeably absent - the aunt's.\r\n\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 3,
+			"Position": {
+				"x": 1417.333251953125,
+				"y": 78.0
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": "As you hold the card, a memory surfaces. It's a sunny day, and the family is gathered in a park for a picnic. The boy is there, his face bright with laughter as he plays with his cousins. P1 and P2 are chatting with the grandparents, their faces relaxed and content. Even the aunt is there, her stern expression softened by the joyous occasion.\r\n\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 4,
+			"Position": {
+				"x": 1952.0,
+				"y": 78.0
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": "The memory is filled with warmth and happiness, a stark contrast to the current situation. The memory fades, leaving behind a sense of longing for simpler times and a deeper understanding of the family dynamics."
 		}
 	],
 	"StartNode": {
@@ -46,6 +90,7 @@
 			"x": 0.0,
 			"y": 0.0
 		},
+		"ActorName": "",
 		"NodeComponents": [
 			
 		]
@@ -56,9 +101,10 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 1422.0,
-				"y": 78.0
+				"x": 2490.666748046875,
+				"y": 92.66666412353516
 			},
+			"ActorName": "",
 			"NodeComponents": [
 				
 			]
@@ -78,6 +124,27 @@
 		{
 			"From": "Response",
 			"FromID": 0,
+			"To": "Response",
+			"ToID": 2,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 2,
+			"To": "Response",
+			"ToID": 3,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 3,
+			"To": "Response",
+			"ToID": 4,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 4,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

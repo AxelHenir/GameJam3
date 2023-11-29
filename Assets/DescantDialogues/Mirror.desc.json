@@ -1,6 +1,6 @@
 {
-	"Name": "Clipboard",
-	"Path": "/DescantDialogues/Clipboard.desc.json",
+	"Name": "Mirror",
+	"Path": "/DescantDialogues/Mirror.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
 	"ResponseNodeID": 4,
@@ -15,56 +15,56 @@
 			"Type": "Response",
 			"ID": 0,
 			"Position": {
-				"x": 358.0,
-				"y": -8.666666984558106
+				"x": 288.6666564941406,
+				"y": 0.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "You pick up the clipboard from the bed. It’s filled with medical jargon and numbers that seem to dance before your eyes, forming a cryptic ballet of the boy’s condition. His name, age, and diagnosis are clearly stated at the top. The rest of the sheet is filled with notes about his treatment plan, medication, and progress.\r\n"
+			"Response": "As you approach the mirror on the fridge, you notice the subject’s reflection. It’s a distorted image, almost unrecognizable. The subject stares back, their eyes filled with confusion and fear. It’s as if they’re looking at a stranger."
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 1,
 			"Position": {
-				"x": 890.6666870117188,
-				"y": 32.666664123535159
+				"x": 837.3333740234375,
+				"y": 0.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "As you read through the sheet, a memory surfaces. It’s abstract, more of a feeling than a clear image. You see flashes of blue and white, hear the distant wail of sirens, feel the cold rush of fear. There’s a sense of urgency, of desperation, of a life hanging in the balance.\r\n"
+			"Response": "The mirror triggers a series of memories. You see a flash of a scene from the subject’s recent past. They’re at a social gathering, surrounded by laughter and chatter. But the subject is quiet, their smile forced."
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 2,
 			"Position": {
-				"x": 1501.333251953125,
-				"y": 70.0
+				"x": 1356.0,
+				"y": 0.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "The scene shifts, and you’re in a hospital room. The boy is there, lying on the bed, his body still and lifeless. The room is filled with the steady beep of machines, the soft murmur of hushed conversations, the stifled sobs of a family grappling with a reality too painful to bear.\r\n"
+			"Response": "In this new perspective, you can see that the effort is exhausting. Every laugh, every nod, every word spoken is a performance."
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 3,
 			"Position": {
-				"x": 2082.0,
-				"y": 125.99999237060547
+				"x": 1856.0,
+				"y": 0.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "The memory fades, leaving behind a chilling echo of the tragic event that led to the boy’s hospitalization."
+			"Response": "The memory ends with the subject alone in their room, quietly sobbing.\r"
 		}
 	],
 	"StartNode": {
@@ -72,8 +72,8 @@
 		"Type": "Start",
 		"ID": 0,
 		"Position": {
-			"x": 50.0,
-			"y": 70.0
+			"x": 0.0,
+			"y": 0.0
 		},
 		"ActorName": "",
 		"NodeComponents": [
@@ -86,8 +86,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 2712.666748046875,
-				"y": 107.33332824707031
+				"x": 2484.666748046875,
+				"y": 0.0
 			},
 			"ActorName": "",
 			"NodeComponents": [

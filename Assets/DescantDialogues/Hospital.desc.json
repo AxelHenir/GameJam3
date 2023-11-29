@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Hospital.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 7,
+	"ResponseNodeID": 10,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -15,7 +15,7 @@
 			"Type": "Response",
 			"ID": 0,
 			"Position": {
-				"x": 386.6666564941406,
+				"x": 25.333332061767579,
 				"y": -402.0
 			},
 			"ActorName": "",
@@ -29,14 +29,14 @@
 			"Type": "Response",
 			"ID": 1,
 			"Position": {
-				"x": 996.6666870117188,
-				"y": -535.3333129882813
+				"x": -152.66665649414063,
+				"y": -35.333335876464847
 			},
 			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "P1 Looking at P2.\r\n"
+			"Response": "P1 looks at P2.\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -57,7 +57,7 @@
 			"Type": "Response",
 			"ID": 3,
 			"Position": {
-				"x": 935.3333129882813,
+				"x": 935.3333740234375,
 				"y": 32.666664123535159
 			},
 			"ActorName": "P2",
@@ -85,7 +85,7 @@
 			"Type": "Response",
 			"ID": 5,
 			"Position": {
-				"x": 2023.3333740234375,
+				"x": 2023.333251953125,
 				"y": 17.33333396911621
 			},
 			"ActorName": "P2",
@@ -107,6 +107,48 @@
 				
 			],
 			"Response": "P2 is right, there's nothing you could have done. And I told you that his meds were bad for him."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 7,
+			"Position": {
+				"x": 3105.33349609375,
+				"y": 6.666666030883789
+			},
+			"ActorName": "P1",
+			"NodeComponents": [
+				
+			],
+			"Response": "We entrusted him with you. How could you have let this happen? \r"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 8,
+			"Position": {
+				"x": 3640.0,
+				"y": 17.33333396911621
+			},
+			"ActorName": "A",
+			"NodeComponents": [
+				
+			],
+			"Response": "Let's take a breath, we're family. You know what happened. The machine didn't just turn itself off."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 9,
+			"Position": {
+				"x": 4150.0,
+				"y": 17.33333396911621
+			},
+			"ActorName": "P1",
+			"NodeComponents": [
+				
+			],
+			"Response": "I heard every damn word! The doctor said he was in a coma."
 		}
 	],
 	"StartNode": {
@@ -114,8 +156,8 @@
 		"Type": "Start",
 		"ID": 0,
 		"Position": {
-			"x": 50.0,
-			"y": 70.0
+			"x": -244.0,
+			"y": -368.0
 		},
 		"ActorName": "",
 		"NodeComponents": [
@@ -128,8 +170,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 2779.333251953125,
-				"y": 520.0
+				"x": 4740.66650390625,
+				"y": 17.33333396911621
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -144,6 +186,20 @@
 		{
 			"From": "Start",
 			"FromID": 0,
+			"To": "Response",
+			"ToID": 0,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 0,
+			"To": "Response",
+			"ToID": 1,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 1,
 			"To": "Response",
 			"ToID": 2,
 			"ChoiceIndex": 0
@@ -179,6 +235,27 @@
 		{
 			"From": "Response",
 			"FromID": 6,
+			"To": "Response",
+			"ToID": 7,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 7,
+			"To": "Response",
+			"ToID": 8,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 8,
+			"To": "Response",
+			"ToID": 9,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 9,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

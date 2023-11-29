@@ -1,10 +1,10 @@
 {
-	"Name": "AuntsHouse",
-	"Path": "/DescantDialogues/AuntsHouse.desc.json",
+	"Name": "FamilyPhoto",
+	"Path": "/DescantDialogues/FamilyPhoto.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 17,
-	"EndNodeID": 2,
+	"ResponseNodeID": 15,
+	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
 		
@@ -15,238 +15,210 @@
 			"Type": "Response",
 			"ID": 0,
 			"Position": {
-				"x": 59.33333206176758,
-				"y": 224.0
+				"x": 272.6666564941406,
+				"y": -75.33333587646485
 			},
 			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "You draw your attention to the now empty bottle of pills.\r\n\r"
+			"Response": "As you turn your attention to the family photo, you notice a question mark obscuring the subject’s face.\r\n"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 1,
 			"Position": {
-				"x": 487.3333435058594,
-				"y": 471.33331298828127
+				"x": 220.6666717529297,
+				"y": 191.33334350585938
 			},
-			"ActorName": "A",
+			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "Give me that, you little shit!\r\n\r\n"
+			"Response": "The photo triggers a memory. You’re transported to a family gathering. The room is filled with laughter and chatter."
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 2,
 			"Position": {
-				"x": 963.3333129882813,
-				"y": 636.0
+				"x": 210.0,
+				"y": 468.0
 			},
-			"ActorName": "B",
+			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "Ouch, that hurt!\r\n\r\n"
+			"Response": "In the midst of the crowd, you see the subject, a young girl, sitting quietly in a corner. She’s watching her brother, the boy with the bright eyes and restless energy, as he flits around the room.\r"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 3,
 			"Position": {
-				"x": 1463.3333740234375,
-				"y": 754.6666870117188
+				"x": 236.6666717529297,
+				"y": 734.6666870117188
 			},
-			"ActorName": "A",
+			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "Well, maybe you'll learn this time. Wait, why is this bottle empty?\r\n\r\n"
+			"Response": "The family, engrossed in their own conversations, barely notice him. They laugh at his antics, dismiss his outbursts, and ignore his pleas for attention. To them, he’s a nuisance, an inconvenience to be tolerated."
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 4,
 			"Position": {
-				"x": 1996.6666259765625,
-				"y": 824.6666870117188
+				"x": 338.0,
+				"y": 1001.3333740234375
 			},
-			"ActorName": "A",
+			"ActorName": "B",
 			"NodeComponents": [
 				
 			],
-			"Response": "Hey, don't turn away from me! Look at me in the eyes like I've told you.\r"
+			"Response": "Hey sis, are you gonna sit at the table all day?\r"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 5,
 			"Position": {
-				"x": 2496.666748046875,
-				"y": 925.3333740234375
+				"x": 454.0,
+				"y": 1268.0
 			},
-			"ActorName": "A",
+			"ActorName": "S",
 			"NodeComponents": [
 				
 			],
-			"Response": "I'll ask nice and slowly…\r"
+			"Response": "Uh, I'm not sure.\r"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 6,
 			"Position": {
-				"x": 2920.666748046875,
-				"y": 1142.0
+				"x": 636.6666870117188,
+				"y": 1534.6666259765625
 			},
-			"ActorName": "A",
+			"ActorName": "S",
 			"NodeComponents": [
 				
 			],
-			"Response": "What did you do with the pills?\r\n"
+			"Response": "I just don't want to make mom upset."
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 7,
 			"Position": {
-				"x": 3324.0,
-				"y": 1299.333251953125
+				"x": 926.0,
+				"y": 1801.333251953125
 			},
 			"ActorName": "B",
 			"NodeComponents": [
 				
 			],
-			"Response": "Please don't hurt me. I just wanna go home…"
+			"Response": "Mom's fine. C'mon, let's do something fun!"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 8,
 			"Position": {
-				"x": 3750.666748046875,
-				"y": 1446.0
+				"x": 1203.333251953125,
+				"y": 1439.333251953125
 			},
-			"ActorName": "A",
+			"ActorName": "S",
 			"NodeComponents": [
 				
 			],
-			"Response": "Well too bad, you can't go home. Your parents left you here with me."
+			"Response": "Alright, sure. What did you wanna do?"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 9,
 			"Position": {
-				"x": 4267.33349609375,
-				"y": 1496.0
+				"x": 1280.0,
+				"y": 1134.6666259765625
 			},
-			"ActorName": "A",
+			"ActorName": "B",
 			"NodeComponents": [
 				
 			],
-			"Response": "Now, answer my question or else. What did you do?\r\n"
+			"Response": "Hmm, you choose first. What's your favorite game?"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 10,
 			"Position": {
-				"x": 4861.33349609375,
-				"y": 1475.333251953125
+				"x": 1530.0,
+				"y": 799.3333740234375
 			},
-			"ActorName": "B",
+			"ActorName": "S",
 			"NodeComponents": [
 				
 			],
-			"Response": "I swallowed them…\r\n\r\r\n"
+			"Response": "Mine? Um, I'm not sure."
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 11,
 			"Position": {
-				"x": 5398.0,
-				"y": 1459.333251953125
+				"x": 2109.33349609375,
+				"y": 705.3333740234375
 			},
-			"ActorName": "A",
+			"ActorName": "B",
 			"NodeComponents": [
 				
 			],
-			"Response": "Yeah, right. You wouldn't be stupid enough to do that.\r\n\r\n"
+			"Response": "Huh? You don't have a favorite game?\r"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 12,
 			"Position": {
-				"x": 6132.0,
-				"y": 1475.333251953125
+				"x": 2609.33349609375,
+				"y": 532.6666870117188
 			},
-			"ActorName": "A",
+			"ActorName": "B",
 			"NodeComponents": [
 				
 			],
-			"Response": "Just tell me the truth already.\n\n"
+			"Response": "What about your favorite food? Favorite animal?\r"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 13,
 			"Position": {
-				"x": 6730.0,
-				"y": 1496.0
+				"x": 2952.666748046875,
+				"y": 201.33334350585938
 			},
-			"ActorName": "B",
+			"ActorName": "S",
 			"NodeComponents": [
 				
 			],
-			"Response": "I'm not lying! Let go of me, it hurts!\r\n\r\n"
+			"Response": "I thought we were gonna play a game? Or are you scared I'm gonna win?"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 14,
 			"Position": {
-				"x": 7359.33349609375,
-				"y": 1475.333251953125
+				"x": 3452.666748046875,
+				"y": 68.0
 			},
-			"ActorName": "A",
+			"ActorName": "B",
 			"NodeComponents": [
 				
 			],
-			"Response": "Ugh, I'm so done with you! Why can't you behave like your sister?\r\n\r\n"
-		},
-		{
-			"Name": "ResponseNode",
-			"Type": "Response",
-			"ID": 15,
-			"Position": {
-				"x": 7972.0,
-				"y": 1446.0
-			},
-			"ActorName": "A",
-			"NodeComponents": [
-				
-			],
-			"Response": "Fine, I'm gonna call an ambulance. They'll take you to the hospital and pump your stomach.\r\n\r\n"
-		},
-		{
-			"Name": "ResponseNode",
-			"Type": "Response",
-			"ID": 16,
-			"Position": {
-				"x": 8549.3330078125,
-				"y": 1459.333251953125
-			},
-			"ActorName": "A",
-			"NodeComponents": [
-				
-			],
-			"Response": "That's what you get for messing with my pills"
+			"Response": "There's no way you'll win. You'll see!\r"
 		}
 	],
 	"StartNode": {
@@ -254,8 +226,8 @@
 		"Type": "Start",
 		"ID": 0,
 		"Position": {
-			"x": 50.0,
-			"y": 70.0
+			"x": 0.0,
+			"y": 0.0
 		},
 		"ActorName": "",
 		"NodeComponents": [
@@ -268,21 +240,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 9152.0,
-				"y": 1475.333251953125
-			},
-			"ActorName": "",
-			"NodeComponents": [
-				
-			]
-		},
-		{
-			"Name": "EndNode",
-			"Type": "End",
-			"ID": 1,
-			"Position": {
-				"x": 244.6666717529297,
-				"y": 564.6666870117188
+				"x": 4106.66650390625,
+				"y": 67.33332824707031
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -402,20 +361,6 @@
 		{
 			"From": "Response",
 			"FromID": 14,
-			"To": "Response",
-			"ToID": 15,
-			"ChoiceIndex": 0
-		},
-		{
-			"From": "Response",
-			"FromID": 15,
-			"To": "Response",
-			"ToID": 16,
-			"ChoiceIndex": 0
-		},
-		{
-			"From": "Response",
-			"FromID": 16,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0
