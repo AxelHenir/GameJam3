@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Ending/Letter-EndingOkay.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 1,
+	"ResponseNodeID": 6,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -22,7 +22,77 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "This is the version of the letter if the player does okay."
+			"Response": "Dear [Player Character],"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 1,
+			"Position": {
+				"x": 844.0,
+				"y": 276.6666564941406
+			},
+			"ActorName": "S",
+			"NodeComponents": [
+				
+			],
+			"Response": "I’m sending you this letter with a heart full of love and a sincere wish that it finds you in the best of spirits. I have been informed about the completion of the exhibit at the Museum of Neurodiversity."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 2,
+			"Position": {
+				"x": 1374.6666259765625,
+				"y": 276.6666564941406
+			},
+			"ActorName": "S",
+			"NodeComponents": [
+				
+			],
+			"Response": "I must admit, I was filled with a sense of unease when I first agreed to share my memories with the museum. The thought of my past being laid bare for all to see was daunting, to say the least.\r"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 3,
+			"Position": {
+				"x": 1904.0,
+				"y": 276.6666564941406
+			},
+			"ActorName": "S",
+			"NodeComponents": [
+				
+			],
+			"Response": "However, knowing that you were the one tasked with the responsibility of completing the exhibit brought me some comfort. I appreciate your earnest efforts. I am not entirely sure if this is how it all transpired, but my memory might be failing me."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 4,
+			"Position": {
+				"x": 2432.666748046875,
+				"y": 276.6666564941406
+			},
+			"ActorName": "S",
+			"NodeComponents": [
+				
+			],
+			"Response": "I am proud of you for the dedication and respect you showed towards my memories, despite the challenges you faced."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 5,
+			"Position": {
+				"x": 2986.0,
+				"y": 276.6666564941406
+			},
+			"ActorName": "S",
+			"NodeComponents": [
+				
+			],
+			"Response": "Thank you,\r\n\r\n[Grandmother’s Name]\r"
 		}
 	],
 	"StartNode": {
@@ -44,8 +114,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 897.3333740234375,
-				"y": 510.6666564941406
+				"x": 3554.666748046875,
+				"y": 260.6666564941406
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -67,6 +137,41 @@
 		{
 			"From": "Response",
 			"FromID": 0,
+			"To": "Response",
+			"ToID": 1,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 1,
+			"To": "Response",
+			"ToID": 2,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 2,
+			"To": "Response",
+			"ToID": 3,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 3,
+			"To": "Response",
+			"ToID": 4,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 4,
+			"To": "Response",
+			"ToID": 5,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 5,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

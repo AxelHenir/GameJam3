@@ -60,7 +60,7 @@ public class EndingController : MonoBehaviour
         VisualTrigger LetterVisualTrigger = Letter.transform.GetChild(0).GetComponent<VisualTrigger>();
 
         //Pick the ending based on the guesses:
-
+        /*
         //If the correct number of guessed entries is 0, 1 or 2
         if (CorrectlyGuessedEntries.Count <= 2) 
         {
@@ -78,6 +78,20 @@ public class EndingController : MonoBehaviour
         {
             //Set the dialogue script to the amazing one
             LetterVisualTrigger.SetThisDialogueScript(EndingScripts[2]); //2 is amazing ending
+        }
+        */
+
+        //If the correct number of guessed entries is 0, 1 or 2
+        if (CorrectlyGuessedEntries.Count <= 4)
+        {
+            //Set the dialogue script to the okay one
+            LetterVisualTrigger.SetThisDialogueScript(EndingScripts[0]); //0 is okay ending          
+        }
+        //If the correct number of guessed entries is 5
+        else if (CorrectlyGuessedEntries.Count == 5)
+        {
+            //Set the dialogue script to the amazing one
+            LetterVisualTrigger.SetThisDialogueScript(EndingScripts[1]); //1 is amazing ending
         }
 
         //Spawn the letter
