@@ -154,8 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Letter: {fileID: 523526057}
   EndingScripts:
-  - {fileID: 4900000, guid: 3bf5c556ae8bb2742a7f298ef99a6e24, type: 3}
   - {fileID: 4900000, guid: b9af6ba7f1c9fa5428ac03289c38b412, type: 3}
+  - {fileID: 4900000, guid: 3bf5c556ae8bb2742a7f298ef99a6e24, type: 3}
 --- !u!4 &408944560
 Transform:
   m_ObjectHideFlags: 0

@@ -576,11 +576,11 @@ MonoBehaviour:
   - A
   - T
   actorSprites:
-  - {fileID: 21300000, guid: e3c3ab10dd80c454bbfeef1df85c6eab, type: 3}
+  - {fileID: 21300000, guid: a867bdabfb47d0f46be7e29e548caff3, type: 3}
   - {fileID: 21300000, guid: 3f7aa669e25c8ab40988a2cd3cc1ad74, type: 3}
   - {fileID: 21300000, guid: 55c81ca81bf552c4dbf42c0b5a1aad71, type: 3}
   - {fileID: 21300000, guid: 99af976ea96fcc8468857c8c35a042c9, type: 3}
-  - {fileID: 21300000, guid: a867bdabfb47d0f46be7e29e548caff3, type: 3}
+  - {fileID: 21300000, guid: e3c3ab10dd80c454bbfeef1df85c6eab, type: 3}
   - {fileID: 21300000, guid: 7141066ff10bc85469410e023efe9d3d, type: 3}
   isResponseType: 0
 --- !u!1 &8376441896722457740
