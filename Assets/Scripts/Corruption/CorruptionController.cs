@@ -14,7 +14,7 @@ public class CorruptionController : MonoBehaviour
 
     // Reference to the FirstPersonController script
     [SerializeField] FirstPersonController firstPersonController;
-    private Vector3 PlayerStartingPosition = new Vector3(0,1.5f,0);
+    private Vector3 PlayerStartingPosition = new Vector3(10.85f,1.5f,0);
     private Vector3 PlayerStartingRotation = new Vector3(0,0,0);
     
     // The distance the player needs to travel for the scene to be corrupted
