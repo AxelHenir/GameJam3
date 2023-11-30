@@ -92,7 +92,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Your goal is to use the details in each memory to create the plaques and place them in front of the individuals found in the memory, labeling their name, relationship to the subject, and their role in the exhibit.\r\n\r\n"
+			"Response": "Your goal is to use the details in each memory to create the plaques and place them in front of the individuals found in the memory, <b>labeling</b> their name, <b>relationship</b> to the subject, and their <b>role</b> in the exhibit.\r\n\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -106,7 +106,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Here, this is your Memory Journal. Press TAB to view it. Use it to keep track of the individuals you encounter and their roles in the memories."
+			"Response": "Here, this is your Memory Journal. <b>Press TAB</b> to view it. Use it to keep track of the individuals you encounter and their roles in the memories."
 		},
 		{
 			"Name": "ResponseNode",

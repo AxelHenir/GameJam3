@@ -15,6 +15,7 @@ public class CorruptionController : MonoBehaviour
     // Reference to the FirstPersonController script
     [SerializeField] FirstPersonController firstPersonController;
     private Vector3 PlayerStartingPosition = new Vector3(0,1.5f,0);
+    private Vector3 PlayerStartingRotation = new Vector3(0,0,0);
     
     // The distance the player needs to travel for the scene to be corrupted
     public float corruptionThreshold = 60.0f; //100
@@ -77,6 +78,7 @@ public class CorruptionController : MonoBehaviour
 
         //Reset the player's position to the start
         firstPersonController.GetComponent<Transform>().position = PlayerStartingPosition;
+        firstPersonController.GetComponent<Transform>().rotation = Quaternion.Euler(PlayerStartingRotation);
 
         //Reset the distance travelled by the player
         firstPersonController.distanceTraveled = 0.0f;

@@ -2144,10 +2144,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1367973886542958443, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1417311341834682071, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.8
@@ -2593,6 +2589,10 @@ PrefabInstance:
     - target: {fileID: 6319072316093783772, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: m_Name
       value: AuntsHouseMemory
+      objectReference: {fileID: 0}
+    - target: {fileID: 7639906138477601266, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: m_Radius
+      value: 7.65
       objectReference: {fileID: 0}
     - target: {fileID: 8668288240221748805, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: ui

@@ -144,6 +144,16 @@ public class PlaqueController : MonoBehaviour
          
     }
 
+    void HidePlaque(string name)
+    {
+
+    }
+
+    void ShowPlaque(string name)
+    {
+
+    }
+
     List<GameObject> VariableValueFromName(string name)
     {
         //Debug.Log("Found "+name);
