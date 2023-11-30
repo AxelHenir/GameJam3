@@ -114,10 +114,11 @@ public class GameplayManager : MonoBehaviour
         numberOfReboots++;
         Debug.Log("Resetting corruption");
 
+        /*
         if(numberOfReboots >= 1)
         {
             corruptionController.corruptionThreshold = 60.0f; 
-        }
+        }*/
     }
 
     public void LoadEnding()

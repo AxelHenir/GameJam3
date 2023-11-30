@@ -66,7 +66,7 @@ public class CorruptionController : MonoBehaviour
         HospitalTutorialText.SetActive(false);
         AuntsHouseTutorialText.SetActive(false);
 
-        corruptionThreshold = 100.0f;
+        corruptionThreshold = 60.0f;
     }
 
     public void ResetCorruption()
