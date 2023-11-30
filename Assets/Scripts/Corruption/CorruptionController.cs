@@ -18,7 +18,7 @@ public class CorruptionController : MonoBehaviour
     private Vector3 PlayerStartingRotation = new Vector3(0,0,0);
     
     // The distance the player needs to travel for the scene to be corrupted
-    public float corruptionThreshold = 60.0f; //100
+    public float corruptionThreshold; //100
 
     // The total distance the player had traveled the last time the scene was corrupted
     private float lastCorruptionDistance = 0.0f;
@@ -65,6 +65,8 @@ public class CorruptionController : MonoBehaviour
 
         HospitalTutorialText.SetActive(false);
         AuntsHouseTutorialText.SetActive(false);
+
+        corruptionThreshold = 100.0f;
     }
 
     public void ResetCorruption()
