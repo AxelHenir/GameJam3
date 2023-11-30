@@ -144,12 +144,12 @@ public class PlaqueController : MonoBehaviour
          
     }
 
-    void HidePlaque(string name)
+    void HidePlaques()
     {
 
     }
 
-    void ShowPlaque(string name)
+    void ShowPlaques()
     {
 
     }

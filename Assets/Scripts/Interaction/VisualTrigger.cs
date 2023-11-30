@@ -9,6 +9,8 @@ public class VisualTrigger : MonoBehaviour
 
     private GameObject visualCue; //holds all of the visual cue content
 
+    private GameObject visualCueLook; //holds the object for the raycast/looking outline
+
     private FirstPersonController playerController;
     private GameObject ObjectThatIsInteractedWith;
 
@@ -26,7 +28,11 @@ public class VisualTrigger : MonoBehaviour
 
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
 
-        visualCue = this.transform.GetChild(0).gameObject;
+        visualCue = this.transform.Find("VisualCue").gameObject;
+
+        visualCueLook = this.transform.Find("VisualCue").Find("VisualCueLook").gameObject;
+
+        visualCueLook.SetActive(false);
 
 
         CheckHideUI();
@@ -39,6 +45,9 @@ public class VisualTrigger : MonoBehaviour
         ObjectThatIsInteractedWith = this.transform.parent.gameObject;
 
         isCorrupted = false;
+
+        visualCue.GetComponent<MeshFilter>().mesh = ObjectThatIsInteractedWith.GetComponent<MeshFilter>().mesh;
+        visualCueLook.GetComponent<MeshFilter>().mesh = ObjectThatIsInteractedWith.GetComponent<MeshFilter>().mesh;
     }
 
 
@@ -90,14 +99,34 @@ public class VisualTrigger : MonoBehaviour
                 //show visual cue if player is in range
                 visualCue.SetActive(true);
 
-                if (Input.GetKeyDown(KeyCode.E)) //interaction happens
-                {
-                    Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-                    RaycastHit hit;
+                Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+                RaycastHit hit;
 
-                    if (gameObject != null && Physics.Raycast(ray, out hit))
+                // Define the radius of the sphere cast
+                float radius = 0.3f;
+
+                //Displays the second outline if the player is looking at the object
+                if(gameObject != null && Physics.SphereCast(ray, radius, out hit)) //Physics.SphereCast(ray, radius, out hit)
+                {
+                    if (hit.transform.gameObject == ObjectThatIsInteractedWith) //if the ray hit object is the object that is being interacted with, then proceed with interaction
                     {
-                        if(hit.transform.gameObject == ObjectThatIsInteractedWith) //if the ray hit object is the object that is being interacted with, then proceed with interaction
+                        visualCueLook.SetActive(true);
+                    }
+                    else
+                    {
+                        visualCueLook.SetActive(false);
+                    }
+                }
+                else
+                {
+                    visualCueLook.SetActive(false);
+                }
+
+                if (Input.GetKeyDown(KeyCode.E)) //interaction happens
+                {                    
+                    if (gameObject != null && Physics.Raycast(ray, out hit)) //Physics.Raycast(ray, out hit)
+                    {
+                        if (hit.transform.gameObject == ObjectThatIsInteractedWith) //if the ray hit object is the object that is being interacted with, then proceed with interaction
                         {
                             Debug.Log("VISUAL TRIGGER INTERACT WITH " + ObjectThatIsInteractedWith.name);
 
@@ -110,8 +139,8 @@ public class VisualTrigger : MonoBehaviour
                             descantUIScript.InitializeDialogue(thisDialogueScript); //text asset for this object / person
                             Debug.Log("dialogue shown");
                             ShowUI();
-                        }  
-                    }     
+                        }
+                    }
                 }
             }
             else
