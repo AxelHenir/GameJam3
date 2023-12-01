@@ -22,7 +22,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "You draw your attention to the now empty bottle of pills.\r\n\r"
+			"Response": "<i>You draw your attention to the now empty bottle of pills.</i>\r\n\r"
 		},
 		{
 			"Name": "ResponseNode",
@@ -64,7 +64,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Well, maybe you'll learn this time. Wait, why is this bottle empty?\r\n\r\n"
+			"Response": "Well, maybe you'll learn this time. Why is this empty?\r"
 		},
 		{
 			"Name": "ResponseNode",
@@ -78,7 +78,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Hey, don't turn away from me! Look at me in the eyes like I've told you.\r"
+			"Response": "Hey, don't turn away from me! Look me in the eyes like I've told you."
 		},
 		{
 			"Name": "ResponseNode",
@@ -106,7 +106,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "What did you do with the pills?\r\n"
+			"Response": "What did you do with the pills?"
 		},
 		{
 			"Name": "ResponseNode",
@@ -148,7 +148,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Now, answer my question or else. What did you do?\r\n"
+			"Response": "Now, answer me. What did you do with them?"
 		},
 		{
 			"Name": "ResponseNode",
@@ -162,7 +162,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "I swallowed them…\r\n\r\r\n"
+			"Response": "I swallowed them.\r\n\r\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -176,7 +176,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Yeah, right. You wouldn't be stupid enough to do that.\r\n\r\n"
+			"Response": "Yeah, right. You're not  stupid enough to do that."
 		},
 		{
 			"Name": "ResponseNode",
@@ -204,7 +204,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "I'm not lying! Let go of me, it hurts!\r\n\r\n"
+			"Response": "It is the truth! Let go of me, it hurts!"
 		},
 		{
 			"Name": "ResponseNode",
@@ -218,7 +218,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Ugh, I'm so done with you! Why can't you behave like your sister?\r\n\r\n"
+			"Response": "Ugh, you're too much work. Why can't you behave like your sister?"
 		},
 		{
 			"Name": "ResponseNode",
