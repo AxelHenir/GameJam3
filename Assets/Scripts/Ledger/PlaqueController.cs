@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlaqueController : MonoBehaviour
 {
@@ -16,7 +17,11 @@ public class PlaqueController : MonoBehaviour
     GameObject CurrentMuseumPlaque;
     TMP_Text CurrentPlaqueText;
     List<GameObject> allMuseumPlaques;
-    // Start is called before the first frame update
+
+    //--- Plaque Visibility Button ---
+
+    [SerializeField] Button PlaqueVisibilityButton;
+
     void Start()
     {
         allMuseumPlaques = new List<GameObject>();
