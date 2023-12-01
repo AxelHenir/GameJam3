@@ -82,7 +82,7 @@ public class PlaqueController : MonoBehaviour
     {      
         foreach(GameObject parentObj in listToModify)
         {
-            Vector3 pedestalPosition = new Vector3(parentObj.transform.position.x, parentObj.transform.position.y - 0.25f, parentObj.transform.position.z);
+            Vector3 pedestalPosition = new Vector3(parentObj.transform.position.x, parentObj.transform.position.y, parentObj.transform.position.z); // .y - 0.25f
 
             //spawn the museum plaque & pedestal
             CurrentMuseumPlaque = GameObject.Instantiate(MuseumPlaquePrefab, pedestalPosition, Quaternion.identity, parentObj.transform);

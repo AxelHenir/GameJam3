@@ -61,9 +61,9 @@ Transform:
   m_GameObject: {fileID: 1133038985001401509}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -0.6289, y: 0.04, z: 0.588}
-  m_LocalScale: {x: 202.08055, y: 302.38, z: 302.38}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -0.5618, y: 0.04, z: 0.52637}
+  m_LocalScale: {x: 179.71024, y: 302.38, z: 271.56445}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8417349253901288236}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
@@ -187,7 +187,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5204188810123090926}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -239,7 +239,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5000001
   m_Height: 2
@@ -542,8 +542,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -822,8 +822,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
