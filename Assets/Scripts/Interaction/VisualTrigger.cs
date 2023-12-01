@@ -13,6 +13,7 @@ public class VisualTrigger : MonoBehaviour
 
     private FirstPersonController playerController;
     private GameObject ObjectThatIsInteractedWith;
+    public AudioController dialogueAudioController;
 
     [SerializeField] GameObject ui; //holds descant script'
     [SerializeField] TextAsset thisDialogueScript;
@@ -22,6 +23,7 @@ public class VisualTrigger : MonoBehaviour
     public bool isCorrupted;
 
     //Make sure the sphere collider to this object is in a big enough range, and is isTrigger
+
     void Awake()
     {
         descantUIScript = ui.GetComponent<DescantConversationUI>();
@@ -46,8 +48,12 @@ public class VisualTrigger : MonoBehaviour
 
         isCorrupted = false;
 
+        //make sure the outline meshes match the parent mesh
         visualCue.GetComponent<MeshFilter>().mesh = ObjectThatIsInteractedWith.GetComponent<MeshFilter>().mesh;
         visualCueLook.GetComponent<MeshFilter>().mesh = ObjectThatIsInteractedWith.GetComponent<MeshFilter>().mesh;
+
+        //get audio controller
+        //dialogueAudioController = GameObject.Find("BGSoundsDialogue").GetComponent<AudioController>();
     }
 
 
@@ -56,11 +62,11 @@ public class VisualTrigger : MonoBehaviour
     {
         if(descantUIScript.isResponseType)
         {
-            Invoke(nameof(HideUI), 0.5f);
+            Invoke(nameof(HideUI), 0.2f);            
         }
         else
         {
-            HideUI();
+            HideUI();            
         }
     }
 
@@ -71,6 +77,9 @@ public class VisualTrigger : MonoBehaviour
         //playerController.lockCursor = true;
         Cursor.lockState = CursorLockMode.Locked;
         playerController.cameraCanMove = true;
+
+        //stop sounds  
+        if (soundToPlay != null) dialogueAudioController.FadeOutClip(soundToPlay);
     }
 
     void ShowUI()
@@ -139,6 +148,7 @@ public class VisualTrigger : MonoBehaviour
                             descantUIScript.InitializeDialogue(thisDialogueScript); //text asset for this object / person
                             Debug.Log("dialogue shown");
                             ShowUI();
+                            if (soundToPlay != null) dialogueAudioController.FadeInClip(soundToPlay); //start sounds 
                         }
                     }
                 }

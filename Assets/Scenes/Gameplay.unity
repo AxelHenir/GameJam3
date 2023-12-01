@@ -1419,6 +1419,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894100366}
   m_CullTransparentMesh: 1
+--- !u!114 &1970832942 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 681257874374669670, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 2046270585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351ebbad6000bfa489eca04949efe13a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2005851459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6602764883944798652, guid: 38fccb424ad2eda45ac0ab62da83091e, type: 3}
@@ -1432,6 +1443,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2769153952697853894, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.85
@@ -1552,6 +1567,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 635382928}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1403489727931041137, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: plaqueController
       value: 
@@ -1623,6 +1650,10 @@ PrefabInstance:
     - target: {fileID: 4780677340079214573, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111604271565288023, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5198605623823393791, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: plaqueController
@@ -1797,14 +1828,26 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 4738349501799494898, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: dialogueAudioController
+      value: 
+      objectReference: {fileID: 1970832942}
     - target: {fileID: 4928792770937600110, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 4928792770937600110, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: dialogueAudioController
+      value: 
+      objectReference: {fileID: 1970832942}
     - target: {fileID: 5555626944326351587, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 5555626944326351587, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: dialogueAudioController
+      value: 
+      objectReference: {fileID: 1970832942}
     - target: {fileID: 7509998742603913805, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: CorruptionController
       value: 
@@ -1817,11 +1860,12 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 9218657532204450166, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: dialogueAudioController
+      value: 
+      objectReference: {fileID: 1970832942}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2264755492845984398, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
-    - {fileID: 3375168832370630994, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
-    - {fileID: 6716987421652975379, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1244633291391178262, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
@@ -2016,6 +2060,14 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 5860266365767802420, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
+      propertyPath: soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f28ae184ddc0664e87561d00054d0e0, type: 3}
+    - target: {fileID: 5860266365767802420, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
+      propertyPath: dialogueAudioController
+      value: 
+      objectReference: {fileID: 1970832942}
     - target: {fileID: 6184573859432755243, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.84
@@ -2129,6 +2181,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 4069517967126100321, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: dialogueAudioController
+      value: 
+      objectReference: {fileID: 1970832942}
     - target: {fileID: 5290386535438574139, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: CorruptionController
       value: 
@@ -2137,6 +2193,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 5460486663970788906, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: dialogueAudioController
+      value: 
+      objectReference: {fileID: 1970832942}
     - target: {fileID: 6319072316093783772, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: m_Name
       value: AuntsHouseMemory
@@ -2145,6 +2205,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 8668288240221748805, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: dialogueAudioController
+      value: 
+      objectReference: {fileID: 1970832942}
     - target: {fileID: 8993215719420929150, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.81
