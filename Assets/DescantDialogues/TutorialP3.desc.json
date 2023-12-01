@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/TutorialP3.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 8,
+	"ResponseNodeID": 11,
 	"EndNodeID": 2,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -29,14 +29,14 @@
 			"Type": "Response",
 			"ID": 1,
 			"Position": {
-				"x": 841.3333740234375,
+				"x": 841.3333129882813,
 				"y": 110.66666412353516
 			},
 			"ActorName": "T",
 			"NodeComponents": [
 				
 			],
-			"Response": "I am the head curator of the Museum of Neurodiversity. Thank you for volunteering. Now let's go over the details of the exhibit.\r\n\r\n\r\n"
+			"Response": "I am the head curator of the <b>Museum of Neurodiversity</b>. Thank you for volunteering. Now let's go over the details of our newest  exhibit."
 		},
 		{
 			"Name": "ResponseNode",
@@ -50,7 +50,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "We're using groundbreaking technology in order to bring this experiment to life. It's called Memory Mapping, and it allows us to upload and explore the memories of a person.\r\n\r\n"
+			"Response": "We're using groundbreaking technology in order to bring this experiment to life. It's called <b>Memory Mapping, and it allows us to <b>upload</b> and <b>explore</b> an individual's memories</b>."
 		},
 		{
 			"Name": "ResponseNode",
@@ -64,63 +64,105 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The subject of our exhibit, Robin, is a neurodivergent individual who lived in a time when society was less understanding. Our goal is to shed light on the mistreatment they and others like them faced.\r\n\r\n"
+			"Response": "The subject of our exhibit, Robin, is a neurodiverse individual. When Robin was younger, society wasn't as understanding of those with neurodiversities as it is today. \r"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 4,
 			"Position": {
-				"x": 2474.0,
-				"y": 156.6666717529297
+				"x": 3052.666748046875,
+				"y": 175.33334350585938
 			},
 			"ActorName": "T",
 			"NodeComponents": [
 				
 			],
-			"Response": "We have two memories ready for exploration. These memories are fragile, and each investigation will corrupt them slightly. We're not exactly sure how many times we'll be able to reset the memory, so choose what you investigate wisely.\r\n\r\n"
+			"Response": "We have two memories ready for exploration. These memories are fragile, and each investigation will corrupt them slightly. We're not exactly sure how many times we'll be able to reset the memory, so choose what you investigate wisely.\r\n"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 5,
 			"Position": {
-				"x": 3032.666748046875,
-				"y": 142.6666717529297
+				"x": 3666.666748046875,
+				"y": 235.3333282470703
 			},
 			"ActorName": "T",
 			"NodeComponents": [
 				
 			],
-			"Response": "Your goal is to use the details in each memory to create the plaques and place them in front of the individuals found in the memory, <b>labeling</b> their name, <b>relationship</b> to the subject, and their <b>role</b> in the exhibit.\r\n\r\n"
+			"Response": "Your goal is to use the details in each memory to generate plaques which will be placed in front of the individuals in the memory. Each plaque needs a <b>name</b>, <b>relationship</b> to the subject, and their <b>role</b> in the exhibit.\r\n"
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 6,
 			"Position": {
-				"x": 3584.666748046875,
-				"y": 130.6666717529297
+				"x": 4218.66650390625,
+				"y": 223.33334350585938
 			},
 			"ActorName": "T",
 			"NodeComponents": [
 				
 			],
-			"Response": "Here, this is your Memory Journal. <b>Press TAB</b> to view it. Use it to keep track of the individuals you encounter and their roles in the memories."
+			"Response": "To help keep track of all this, you can use this Memory Journal. <b>Press TAB</b> to view it. Use it to keep track of the individuals you encounter and their roles in the memories."
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 7,
 			"Position": {
-				"x": 4133.3330078125,
-				"y": 101.33332824707031
+				"x": 4882.0,
+				"y": 204.6666717529297
+			},
+			"ActorName": "T",
+			"NodeComponents": [
+				
+			],
+			"Response": "Any changes made in your journal will be updated to the plaques automatically. Once you make guesses, plaques will be created and updated accordingly. Once you’re satisfied with the answers you find, you may submit them from your journal."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 8,
+			"Position": {
+				"x": 2458.0,
+				"y": 174.0
+			},
+			"ActorName": "T",
+			"NodeComponents": [
+				
+			],
+			"Response": "Our goal is to shed light on the mistreatment they and others like them faced. Robin agreed to share her memories, however, we need more information, and that's where you come in."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 9,
+			"Position": {
+				"x": 6184.0,
+				"y": 161.33334350585938
 			},
 			"ActorName": "",
 			"NodeComponents": [
 				
 			],
 			"Response": ""
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 10,
+			"Position": {
+				"x": 5504.66650390625,
+				"y": 134.6666717529297
+			},
+			"ActorName": "T",
+			"NodeComponents": [
+				
+			],
+			"Response": "Well, that's my speech. It's all a bit overwhelming, isn't it? You'll get the hang of it in no time, I'm sure."
 		}
 	],
 	"StartNode": {
@@ -142,8 +184,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 4703.3330078125,
-				"y": 101.33332824707031
+				"x": 6924.66650390625,
+				"y": 188.6666717529297
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -198,7 +240,7 @@
 		},
 		{
 			"From": "Response",
-			"FromID": 3,
+			"FromID": 8,
 			"To": "Response",
 			"ToID": 4,
 			"ChoiceIndex": 0
@@ -226,7 +268,28 @@
 		},
 		{
 			"From": "Response",
+			"FromID": 3,
+			"To": "Response",
+			"ToID": 8,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 10,
+			"To": "Response",
+			"ToID": 9,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
 			"FromID": 7,
+			"To": "Response",
+			"ToID": 10,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 9,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0
