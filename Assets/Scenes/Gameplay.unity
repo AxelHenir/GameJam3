@@ -1076,7 +1076,7 @@ MonoBehaviour:
   - {fileID: 613485093}
   - {fileID: 698397919}
   MuseumPlaquePrefab: {fileID: 851461187390151189, guid: 8f68d07e4ee6abf46813a1a0f9c251be, type: 3}
-  PlaqueVisibilityButton: {fileID: 0}
+  PlaqueVisibilityButton: {fileID: 1544209226}
 --- !u!1 &926185276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1322,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1544209226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+  m_PrefabInstance: {fileID: 508206090385508103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1642789590 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4812817519871424566, guid: 38fccb424ad2eda45ac0ab62da83091e, type: 3}
@@ -1511,7 +1522,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 389489083137458904, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00091420946
+      value: -0.0008464496
       objectReference: {fileID: 0}
     - target: {fileID: 707798592733296750, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: plaqueController
@@ -1549,6 +1560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ledger UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 923723310}
     - target: {fileID: 4109961510959637825, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1829,10 +1844,6 @@ PrefabInstance:
     - target: {fileID: 6965412547411206118, guid: 58d4efc8afc9b2e4392799f243d0f035, type: 3}
       propertyPath: m_Name
       value: ConversationUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965412547411206118, guid: 58d4efc8afc9b2e4392799f243d0f035, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7557580987282582878, guid: 58d4efc8afc9b2e4392799f243d0f035, type: 3}
       propertyPath: m_Pivot.x

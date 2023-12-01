@@ -20,11 +20,17 @@ public class PlaqueController : MonoBehaviour
 
     //--- Plaque Visibility Button ---
 
+    private bool isPlaqueOn;
     [SerializeField] Button PlaqueVisibilityButton;
+    TextMeshProUGUI PlaqueButtonText;
 
     void Start()
     {
         allMuseumPlaques = new List<GameObject>();
+
+        PlaqueButtonText = PlaqueVisibilityButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+
+        isPlaqueOn = true; // default on
     }
 
     // Update is called once per frame
@@ -35,6 +41,8 @@ public class PlaqueController : MonoBehaviour
         {
             RotateAllPlaquesTowardsPlayer();
         }
+
+
     }
 
     public void UpdateMuseumPlaque(string personToUpdate, int columnToUpdate, string guess)
@@ -66,7 +74,7 @@ public class PlaqueController : MonoBehaviour
         //use guess for the new guess to change
         UpdateTextField(listofMuseumPlaques, columnToUpdate, guess);
 
-        
+        UpdateVisibility();
     }
 
     //spawn as a child of each game object in the list
@@ -82,7 +90,7 @@ public class PlaqueController : MonoBehaviour
             RotatePlaqueTowardsPlayer();
 
             //add the pedestal height to the character
-            parentObj.transform.position += new Vector3(0, 0.25f, 0);
+            //parentObj.transform.position += new Vector3(0, 0.25f, 0);
         }
     }
 
@@ -111,52 +119,62 @@ public class PlaqueController : MonoBehaviour
                 CurrentPlaqueText.text = "\n\n\n" + guess + ".";
                 //Debug.Log("Guess to add to Role: " + guess);
             }
-        }
-        /*
-        foreach (GameObject museumPlaque in listofMuseumPlaques)
-        {
-            Transform childTransform;
-            if (columnToUpdate == 0)
-            {
-                childTransform = museumPlaque.transform.Find("Plaque").transform.Find("PlaqueTextName");
-            }
-            else if (columnToUpdate == 1)
-            {
-                childTransform = museumPlaque.transform.Find("Plaque").transform.Find("PlaqueTextRelationship");
-            }
-            else // columnToUpdate == 2
-            {
-                childTransform = museumPlaque.transform.Find("Plaque").transform.Find("PlaqueTextRole");
-            }
+        }         
+    }
 
-            if (childTransform == null)
+    //make sure all plaques have the current visibility level
+    void UpdateVisibility()
+    {
+        if(isPlaqueOn)
+        {
+            foreach(GameObject obj in allMuseumPlaques)
             {
-                Debug.LogError("Child object not found");
+                obj.SetActive(true);
             }
-            else
+        }
+        else
+        {
+            foreach (GameObject obj in allMuseumPlaques)
             {
-                CurrentPlaqueText = childTransform.GetComponent<TMP_Text>();
-                if (CurrentPlaqueText == null)
-                {
-                    Debug.LogError("TMP_Text component not found");
-                }
-                else
-                {
-                    CurrentPlaqueText.text = "\n\n\n" + guess + ".";
-                }
+                obj.SetActive(false);
             }
-        }*/
-         
+        }
     }
 
     void HidePlaques()
     {
-
+        isPlaqueOn = false;
     }
 
     void ShowPlaques()
     {
+        isPlaqueOn = true;
+    }
 
+    public void SetVisibility()
+    {
+        if(isPlaqueOn) //if currently on, turn them off
+        {
+            HidePlaques();
+
+
+            Color newColor = PlaqueVisibilityButton.image.color;
+            newColor.a = 0.5f; //lower opacity
+            PlaqueVisibilityButton.image.color = newColor;
+            PlaqueButtonText.text = "Plaques OFF"; //should display the current status of the plaques
+        }
+        else //if currently off, turn them on
+        {
+            ShowPlaques();
+
+            Color newColor = PlaqueVisibilityButton.image.color;
+            newColor.a = 1.0f; //full opacity
+            PlaqueVisibilityButton.image.color = newColor;
+            PlaqueButtonText.text = "Plaques ON"; //should display the current status of the plaques
+
+        }
+
+        UpdateVisibility();
     }
 
     List<GameObject> VariableValueFromName(string name)
