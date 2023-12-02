@@ -49,8 +49,8 @@ public class VisualTrigger : MonoBehaviour
         isCorrupted = false;
 
         //make sure the outline meshes match the parent mesh
-        visualCue.GetComponent<MeshFilter>().mesh = ObjectThatIsInteractedWith.GetComponent<MeshFilter>().mesh;
-        visualCueLook.GetComponent<MeshFilter>().mesh = ObjectThatIsInteractedWith.GetComponent<MeshFilter>().mesh;
+        //visualCue.GetComponent<MeshFilter>().mesh = ObjectThatIsInteractedWith.GetComponent<MeshFilter>().mesh;
+        //visualCueLook.GetComponent<MeshFilter>().mesh = ObjectThatIsInteractedWith.GetComponent<MeshFilter>().mesh;
 
         //get audio controller
         //dialogueAudioController = GameObject.Find("BGSoundsDialogue").GetComponent<AudioController>();

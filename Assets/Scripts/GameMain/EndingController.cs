@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndingController : MonoBehaviour
 {
@@ -101,7 +102,12 @@ public class EndingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        //temporary restart button
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Gameplay");
+        }        
     }
 
     void SpawnTheLetter(float timeToWait)
