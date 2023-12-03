@@ -64,7 +64,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Well, maybe you'll learn this time. Why is this empty?\r"
+			"Response": "Well, maybe you'll learn this time. Why is this empty?"
 		},
 		{
 			"Name": "ResponseNode",
@@ -78,7 +78,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Hey, don't turn away from me! Look me in the eyes like I've told you."
+			"Response": "Hey, don't turn away from me! Look me in the eyes like I've told you.\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -92,7 +92,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "I'll ask nice and slowly…\r"
+			"Response": "I'll ask nice and slowly…\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -106,7 +106,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "What did you do with the pills?"
+			"Response": "What did you do with my pills?"
 		},
 		{
 			"Name": "ResponseNode",
@@ -120,7 +120,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Please don't hurt me. I just wanna go home…"
+			"Response": "Please don't hurt me. I just want to go home…"
 		},
 		{
 			"Name": "ResponseNode",
@@ -162,7 +162,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "I swallowed them.\r\n\r\r\n"
+			"Response": "I swallowed them."
 		},
 		{
 			"Name": "ResponseNode",
@@ -176,7 +176,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Yeah, right. You're not  stupid enough to do that."
+			"Response": "Yeah, right. You're not stupid enough to do that."
 		},
 		{
 			"Name": "ResponseNode",
@@ -190,7 +190,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Just tell me the truth already.\n\n"
+			"Response": "Just tell me the truth already."
 		},
 		{
 			"Name": "ResponseNode",
@@ -204,7 +204,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "It is the truth! Let go of me, it hurts!"
+			"Response": "It is the truth! Let go of me, it hurts!\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -218,7 +218,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Ugh, you're too much work. Why can't you behave like your sister?"
+			"Response": "Now I have to call for an ambulance. They'll take you to the hospital and pump your stomach."
 		},
 		{
 			"Name": "ResponseNode",
@@ -232,7 +232,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Fine, I'm gonna call an ambulance. They'll take you to the hospital and pump your stomach.\r\n\r\n"
+			"Response": "Ugh, you're too much work. Why can't you behave like your sister?"
 		},
 		{
 			"Name": "ResponseNode",
@@ -246,15 +246,15 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "That's what you get for messing with my pills."
+			"Response": ""
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 17,
 			"Position": {
-				"x": 9088.0,
-				"y": 1459.333251953125
+				"x": 9032.0,
+				"y": 1475.333251953125
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -423,13 +423,6 @@
 		{
 			"From": "Response",
 			"FromID": 15,
-			"To": "Response",
-			"ToID": 16,
-			"ChoiceIndex": 0
-		},
-		{
-			"From": "Response",
-			"FromID": 16,
 			"To": "Response",
 			"ToID": 17,
 			"ChoiceIndex": 0
