@@ -14,13 +14,15 @@ public class LedgerController : MonoBehaviour
     // Buttons
     public Button exitButton;
     public Button submitAnswersButton;
-  
-    
+
+    private AudioHandlerMech audioHandler;
+
     void Start()
     {
         // Ledger begins closed
         ledgerUI.SetActive(false);
 
+        audioHandler = GameObject.Find("AudioHandler").GetComponent<AudioHandlerMech>(); //assumes we have the AudioHandlerMech on an object with this name
     }
 
     void Update()
@@ -60,7 +62,10 @@ public class LedgerController : MonoBehaviour
 
         // Set the UI to active
         ledgerUI.SetActive(true);
-        
+
+        //play opening ledger sound
+        //AudioHandlerMech.Instance.PlaySound("page_turn_1");
+
     }
 
     // Closes the ledger
@@ -76,7 +81,9 @@ public class LedgerController : MonoBehaviour
         // Enable the player's movement controls
         playerController.playerCanMove = true;
         playerController.cameraCanMove = true;
-      
+
+        //play closing ledger sound
+        //AudioHandlerMech.Instance.PlaySound("page_turn_1");
     }
 
 }
