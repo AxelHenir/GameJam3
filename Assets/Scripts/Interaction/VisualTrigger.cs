@@ -10,6 +10,7 @@ public class VisualTrigger : MonoBehaviour
     private GameObject visualCue; //holds all of the visual cue content
 
     private GameObject visualCueLook; //holds the object for the raycast/looking outline
+    [SerializeField] GameObject EIconObject; //holds the object that will show the E keyboard prompt
 
     private FirstPersonController playerController;
     private GameObject ObjectThatIsInteractedWith;
@@ -24,6 +25,8 @@ public class VisualTrigger : MonoBehaviour
 
     //Make sure the sphere collider to this object is in a big enough range, and is isTrigger
 
+    private bool isInDialogue;
+
     void Awake()
     {
         descantUIScript = ui.GetComponent<DescantConversationUI>();
@@ -33,9 +36,8 @@ public class VisualTrigger : MonoBehaviour
         visualCue = this.transform.Find("VisualCue").gameObject;
 
         visualCueLook = this.transform.Find("VisualCue").Find("VisualCueLook").gameObject;
-
         visualCueLook.SetActive(false);
-
+        
 
         CheckHideUI();
 
@@ -54,6 +56,7 @@ public class VisualTrigger : MonoBehaviour
 
         //get audio controller
         //dialogueAudioController = GameObject.Find("BGSoundsDialogue").GetComponent<AudioController>();
+        
     }
 
 
@@ -80,16 +83,19 @@ public class VisualTrigger : MonoBehaviour
 
         //stop sounds  
         if (soundToPlay != null) dialogueAudioController.FadeOutClip(soundToPlay);
+
+        isInDialogue = false;
     }
 
     void ShowUI()
     {
-        
+        isInDialogue = true;
+
         playerController.playerCanMove = false;
         playerController.cameraCanMove = false;
         //playerController.lockCursor = false;
         Cursor.lockState = CursorLockMode.None;
-        ui.SetActive(true);
+        ui.SetActive(true);        
     }
 
     private void Start()
@@ -120,15 +126,25 @@ public class VisualTrigger : MonoBehaviour
                     if (hit.transform.gameObject == ObjectThatIsInteractedWith) //if the ray hit object is the object that is being interacted with, then proceed with interaction
                     {
                         visualCueLook.SetActive(true);
+                        if(isInDialogue)
+                        {
+                            EIconObject.SetActive(false); 
+                        }  
+                        else
+                        {
+                            EIconObject.SetActive(true); //show E icon only if the ui is not there
+                        }
                     }
                     else
                     {
                         visualCueLook.SetActive(false);
+                        EIconObject.SetActive(false);
                     }
                 }
                 else
                 {
                     visualCueLook.SetActive(false);
+                    EIconObject.SetActive(false);
                 }
 
                 if (Input.GetKeyDown(KeyCode.E)) //interaction happens

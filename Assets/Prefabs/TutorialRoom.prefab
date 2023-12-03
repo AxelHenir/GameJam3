@@ -1514,6 +1514,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: c740ce7038d10304b96d3ec22192484c, type: 3}
     - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f28ae184ddc0664e87561d00054d0e0, type: 3}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: thisDialogueScript
       value: 
       objectReference: {fileID: 4900000, guid: ec0470f4c08483a4b8be41b1efbe10e6, type: 3}

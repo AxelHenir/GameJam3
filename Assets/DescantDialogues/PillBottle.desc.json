@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/PillBottle.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 20,
+	"ResponseNodeID": 21,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -57,8 +57,8 @@
 			"Type": "Response",
 			"ID": 3,
 			"Position": {
-				"x": 9094.0,
-				"y": 40.0
+				"x": 9819.333984375,
+				"y": 26.66666603088379
 			},
 			"ActorName": "S",
 			"NodeComponents": [
@@ -71,8 +71,8 @@
 			"Type": "Response",
 			"ID": 4,
 			"Position": {
-				"x": 8506.0,
-				"y": 50.666664123535159
+				"x": 9231.333984375,
+				"y": 37.333335876464847
 			},
 			"ActorName": "B",
 			"NodeComponents": [
@@ -85,7 +85,7 @@
 			"Type": "Response",
 			"ID": 5,
 			"Position": {
-				"x": 7990.0,
+				"x": 8737.333984375,
 				"y": 76.66666412353516
 			},
 			"ActorName": "B",
@@ -99,7 +99,7 @@
 			"Type": "Response",
 			"ID": 6,
 			"Position": {
-				"x": 7458.0,
+				"x": 8165.3330078125,
 				"y": 76.66666412353516
 			},
 			"ActorName": "S",
@@ -113,7 +113,7 @@
 			"Type": "Response",
 			"ID": 7,
 			"Position": {
-				"x": 6946.0,
+				"x": 7561.3330078125,
 				"y": 76.66666412353516
 			},
 			"ActorName": "B",
@@ -127,8 +127,8 @@
 			"Type": "Response",
 			"ID": 8,
 			"Position": {
-				"x": 6424.0,
-				"y": 76.66666412353516
+				"x": 6990.0,
+				"y": 90.0
 			},
 			"ActorName": "S",
 			"NodeComponents": [
@@ -141,8 +141,8 @@
 			"Type": "Response",
 			"ID": 9,
 			"Position": {
-				"x": 5887.3330078125,
-				"y": 76.66666412353516
+				"x": 6453.3330078125,
+				"y": 90.0
 			},
 			"ActorName": "B",
 			"NodeComponents": [
@@ -155,8 +155,8 @@
 			"Type": "Response",
 			"ID": 10,
 			"Position": {
-				"x": 5356.66650390625,
-				"y": 103.33332824707031
+				"x": 5922.66650390625,
+				"y": 116.66666412353516
 			},
 			"ActorName": "S",
 			"NodeComponents": [
@@ -169,8 +169,8 @@
 			"Type": "Response",
 			"ID": 11,
 			"Position": {
-				"x": 4838.66650390625,
-				"y": 123.33333587646485
+				"x": 5404.66650390625,
+				"y": 136.6666717529297
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -183,14 +183,14 @@
 			"Type": "Response",
 			"ID": 12,
 			"Position": {
-				"x": 4292.0,
-				"y": 135.33334350585938
+				"x": 4858.0,
+				"y": 148.6666717529297
 			},
 			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "Robin doesn't say a word as she gently sits on the bed, and starts rubbing Noa's back. She lays on the bed where Noa would hit to catch his hand before it hits her.\r\n\r\n"
+			"Response": "She enters the room silently, walks over to the bed, and sits down to gently stroke Noa's back."
 		},
 		{
 			"Name": "ResponseNode",
@@ -204,7 +204,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Robin slowly open's Noa's door to be greeted with Noa in the middle of a meltdown on his bed. He's wailing, hitting the bed and cries harder when Robin slides in the room with her hand behind her back.\r\n\r\n"
+			"Response": "Robin opens the door to Noa's bedroom. Noa is sitting on the bed, wailing and slamming his fists against the mattress. "
 		},
 		{
 			"Name": "ResponseNode",
@@ -281,14 +281,28 @@
 			"Type": "Response",
 			"ID": 19,
 			"Position": {
-				"x": 9636.6669921875,
-				"y": 40.0
+				"x": 10362.0,
+				"y": 26.66666603088379
 			},
 			"ActorName": "",
 			"NodeComponents": [
 				
 			],
 			"Response": ""
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 20,
+			"Position": {
+				"x": 4265.3330078125,
+				"y": 148.6666717529297
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": "The cries get louder when he sees Robin in his doorway, her hands behind her back. "
 		}
 	],
 	"StartNode": {
@@ -310,8 +324,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 10217.333984375,
-				"y": 13.333333969116211
+				"x": 10942.6669921875,
+				"y": 0.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -395,7 +409,7 @@
 		},
 		{
 			"From": "Response",
-			"FromID": 13,
+			"FromID": 20,
 			"To": "Response",
 			"ToID": 12,
 			"ChoiceIndex": 0
@@ -447,6 +461,13 @@
 			"FromID": 3,
 			"To": "Response",
 			"ToID": 19,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 13,
+			"To": "Response",
+			"ToID": 20,
 			"ChoiceIndex": 0
 		},
 		{

@@ -298,6 +298,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2091280718317700755, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
   m_PrefabInstance: {fileID: 952502779453776662}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &242260556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 18574486857909552, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 2046270585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &260858539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,10 +1448,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2769153952697853894, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.85
@@ -1586,6 +1587,10 @@ PrefabInstance:
     - target: {fileID: 1424730756355388861, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_Name
       value: Ledger UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424730756355388861, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1829,6 +1834,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3774978762690992812}
     - target: {fileID: 4738349501799494898, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: EIconObject
+      value: 
+      objectReference: {fileID: 242260556}
+    - target: {fileID: 4738349501799494898, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 
       objectReference: {fileID: 1970832942}
@@ -1836,6 +1845,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 4928792770937600110, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: EIconObject
+      value: 
+      objectReference: {fileID: 242260556}
     - target: {fileID: 4928792770937600110, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 
@@ -1844,6 +1857,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 5555626944326351587, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: EIconObject
+      value: 
+      objectReference: {fileID: 242260556}
     - target: {fileID: 5555626944326351587, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 
@@ -1860,6 +1877,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 9218657532204450166, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: EIconObject
+      value: 
+      objectReference: {fileID: 242260556}
     - target: {fileID: 9218657532204450166, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 
@@ -2061,9 +2082,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3774978762690992812}
     - target: {fileID: 5860266365767802420, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
-      propertyPath: soundToPlay
+      propertyPath: EIconObject
       value: 
-      objectReference: {fileID: 8300000, guid: 5f28ae184ddc0664e87561d00054d0e0, type: 3}
+      objectReference: {fileID: 242260556}
     - target: {fileID: 5860266365767802420, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
       propertyPath: dialogueAudioController
       value: 
@@ -2182,6 +2203,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3774978762690992812}
     - target: {fileID: 4069517967126100321, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: EIconObject
+      value: 
+      objectReference: {fileID: 242260556}
+    - target: {fileID: 4069517967126100321, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: dialogueAudioController
       value: 
       objectReference: {fileID: 1970832942}
@@ -2194,6 +2219,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3774978762690992812}
     - target: {fileID: 5460486663970788906, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: EIconObject
+      value: 
+      objectReference: {fileID: 242260556}
+    - target: {fileID: 5460486663970788906, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: dialogueAudioController
       value: 
       objectReference: {fileID: 1970832942}
@@ -2205,6 +2234,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 3774978762690992812}
+    - target: {fileID: 8668288240221748805, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: EIconObject
+      value: 
+      objectReference: {fileID: 242260556}
     - target: {fileID: 8668288240221748805, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: dialogueAudioController
       value: 
