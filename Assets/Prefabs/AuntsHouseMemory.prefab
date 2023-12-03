@@ -172,8 +172,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0.0055222404}
+  m_Size: {x: 3.6541774, y: 10.906668, z: 1.4638091}
+  m_Center: {x: -0.09112857, y: -4.953328, z: -0.058989204}
 --- !u!54 &1888548160917713584
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -400,8 +400,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0.0055222404}
+  m_Size: {x: 1.1352918, y: 6.4519043, z: 1.5451193}
+  m_Center: {x: -0.0676459, y: 2.7259495, z: -0.01889621}
 --- !u!54 &6509294430818795850
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2623,7 +2623,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1045562364731108683, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Radius
-      value: 2.9
+      value: 2.03
       objectReference: {fileID: 0}
     - target: {fileID: 1675026603862678433, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Mesh
@@ -2895,9 +2895,13 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: 70273d9f60041d14c8e356d2bf0b553a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2534964839176971238, guid: a9d46712e3df3c84c805c0a264d5b450, type: 3}
     - target: {fileID: 919132149155446097, guid: 70273d9f60041d14c8e356d2bf0b553a, type: 3}
       propertyPath: m_Name
-      value: pill_bottle_red.001
+      value: pill_bottle_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 70273d9f60041d14c8e356d2bf0b553a, type: 3}
       propertyPath: m_TagString
@@ -2946,8 +2950,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.039949745, y: 0.04425771, z: 0.07512369}
-  m_Center: {x: 0.005772648, y: 0.0034211534, z: 0.001095302}
+  m_Size: {x: 0.039949745, y: 0.13460305, z: 0.17265305}
+  m_Center: {x: 0.0057505616, y: -0.0031607286, z: 0.0104781315}
 --- !u!54 &1740387233903820379
 Rigidbody:
   m_ObjectHideFlags: 0
