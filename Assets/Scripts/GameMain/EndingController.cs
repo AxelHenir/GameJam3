@@ -58,7 +58,7 @@ public class EndingController : MonoBehaviour
 
 
 
-        VisualTrigger LetterVisualTrigger = Letter.transform.GetChild(0).GetComponent<VisualTrigger>();
+        VisualTrigger LetterVisualTrigger = Letter.transform.GetChild(0).GetChild(0).GetComponent<VisualTrigger>();
 
         //Pick the ending based on the guesses:
         /*
