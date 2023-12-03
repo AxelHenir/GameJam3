@@ -38,6 +38,11 @@ public class CorruptionController : MonoBehaviour
     [SerializeField] public FuneralMemory FuneralMemory;
     [SerializeField] public AuntsHouseMemory AuntsHouseMemory;
 
+    //Holds the scripts that handles the cylinder corruption object for each memory
+    CorruptionHospital CorruptionHospital;
+    CorruptionAuntsHouse CorruptionAuntsHouse;
+    //[SerializeField] CorruptionFuneral CorruptionFuneral;
+
     // Reference to the CorruptionStatusBar script
     //public CorruptionStatusBar CorruptionStatusBar;
 
@@ -54,9 +59,14 @@ public class CorruptionController : MonoBehaviour
 
     //bool isResetting;
 
+    [SerializeField] CorruptionPlayer corruptionForPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
+        CorruptionHospital = corruptionHospitalObj.GetComponent<CorruptionHospital>();
+        CorruptionAuntsHouse = corruptionAuntsHouseObj.GetComponent<CorruptionAuntsHouse>();
+
         CorruptionMaterial = corruptionHospitalObj.GetComponent<Renderer>().material;
         statusBar.value = 0;
         //corruptionSpeed = 2;
@@ -75,6 +85,8 @@ public class CorruptionController : MonoBehaviour
         HospitalMemory.isInHospitalMemory = false;
         FuneralMemory.isInFuneralMemory = false;
         AuntsHouseMemory.isInAuntsHouseMemory = false;
+
+        UpdatePlayerCorruptionStatus();
 
         gameManager.ResetGame();    
 
@@ -124,9 +136,9 @@ public class CorruptionController : MonoBehaviour
 
             //Calculates the current corruption 
             corruptionLevel = firstPersonController.distanceTraveled / corruptionThreshold;
-                
+
             //Debug.Log("during lvl: " + corruptionLevel + " statusBar: " + statusBar.value + " dist: "+ firstPersonController.distanceTraveled);
-            
+
         }
 
         //Corrupt the scene
@@ -214,6 +226,40 @@ public class CorruptionController : MonoBehaviour
         else
         {
             Debug.LogError("SkinnedMeshRenderer not found on the other GameObject.");
+        }
+    }
+
+    public void UpdatePlayerCorruptionStatus()
+    {
+        //if the player is outside any of the memories, don't corrupt
+        if(!HospitalMemory.isInHospitalMemory && !AuntsHouseMemory.isInAuntsHouseMemory)
+        {
+            Debug.LogWarning("the player is outside any of the memories");
+            corruptionForPlayer.SetPlayerCorrupted(false);
+        }
+        //if the player is inside the memory but outside the cylinder, corrupt
+        else if (HospitalMemory.isInHospitalMemory && CorruptionHospital.isPlayerOutsideCylinder)
+        {
+            Debug.LogWarning("the player is inside the memory but outside the cylinder");
+            corruptionForPlayer.SetPlayerCorrupted(true);
+        }
+        //if the player is inside the memory but outside the cylinder, corrupt
+        else if (AuntsHouseMemory.isInAuntsHouseMemory && CorruptionAuntsHouse.isPlayerOutsideCylinder)
+        {
+            Debug.LogWarning("the player is inside the memory but outside the cylinder");
+            corruptionForPlayer.SetPlayerCorrupted(true);
+        }
+        //if the player is inside the memory but inside the cylinder, don't corrupt
+        else if (HospitalMemory.isInHospitalMemory && !CorruptionHospital.isPlayerOutsideCylinder)
+        {
+            Debug.LogWarning("the player is inside the memory but inside the cylinder");
+            corruptionForPlayer.SetPlayerCorrupted(false);
+        }
+        //if the player is inside the memory but inside the cylinder, don't corrupt
+        else if (AuntsHouseMemory.isInAuntsHouseMemory && !CorruptionAuntsHouse.isPlayerOutsideCylinder)
+        {
+            Debug.LogWarning("the player is inside the memory but inside the cylinder");
+            corruptionForPlayer.SetPlayerCorrupted(false);
         }
     }
 }

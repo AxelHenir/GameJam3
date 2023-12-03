@@ -178,6 +178,7 @@ MonoBehaviour:
   UncorruptedMaterial: {fileID: 2100000, guid: c9caf7cb0eb844b42ae54e7a4dc6c8b8, type: 2}
   CorruptedMaterial: {fileID: 2100000, guid: e9277a5fb37ee2c4e98136892887e6d1, type: 2}
   statusBar: {fileID: 601949056}
+  corruptionForPlayer: {fileID: 1915197671}
 --- !u!4 &126332856
 Transform:
   m_ObjectHideFlags: 0
@@ -1631,6 +1632,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894100366}
   m_CullTransparentMesh: 1
+--- !u!114 &1915197671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 442554332966232274, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 2046270585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8f872c514da5848a8ba8cc58e6c8f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1970832942 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 681257874374669670, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -1775,6 +1787,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 635382928}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1403489727931041137, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: plaqueController
       value: 
@@ -2052,6 +2076,10 @@ PrefabInstance:
       propertyPath: dialogueAudioController
       value: 
       objectReference: {fileID: 1970832942}
+    - target: {fileID: 6120357486265159231, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: CorruptionController
+      value: 
+      objectReference: {fileID: 126332855}
     - target: {fileID: 7509998742603913805, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: CorruptionController
       value: 
@@ -2385,6 +2413,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2025950621315334792, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
+      propertyPath: CorruptionController
+      value: 
+      objectReference: {fileID: 126332855}
     - target: {fileID: 4069517967126100321, guid: 220fdf9f28535654ba985a2a5fa5e0e6, type: 3}
       propertyPath: ui
       value: 

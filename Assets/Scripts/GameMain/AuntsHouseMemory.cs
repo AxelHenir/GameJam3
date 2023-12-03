@@ -9,6 +9,8 @@ public class AuntsHouseMemory : MonoBehaviour
 
     FirstPersonController firstPersonController;
 
+    [SerializeField] CorruptionController CorruptionController;
+
     void Start()
     {
         isInAuntsHouseMemory = false;
@@ -39,6 +41,8 @@ public class AuntsHouseMemory : MonoBehaviour
             firstPersonController = other.gameObject.GetComponent<FirstPersonController>();
 
             firstPersonController.lastPosition = other.transform.position + new Vector3(0, 0.1f, 0);
+
+            CorruptionController.UpdatePlayerCorruptionStatus();
         }
     }
 
@@ -47,6 +51,8 @@ public class AuntsHouseMemory : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isInAuntsHouseMemory = false;
+
+            CorruptionController.UpdatePlayerCorruptionStatus();
         }
     }
 }

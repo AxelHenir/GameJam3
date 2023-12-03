@@ -9,6 +9,8 @@ public class HospitalMemory : MonoBehaviour
 
     FirstPersonController firstPersonController;
 
+    [SerializeField] CorruptionController CorruptionController;
+
     void Start()
     {
         isInHospitalMemory = false;
@@ -39,6 +41,8 @@ public class HospitalMemory : MonoBehaviour
             firstPersonController = other.gameObject.GetComponent<FirstPersonController>();
 
             firstPersonController.lastPosition = other.transform.position + new Vector3(0,0.1f,0);
+
+            CorruptionController.UpdatePlayerCorruptionStatus();
         }            
     }
 
@@ -47,6 +51,8 @@ public class HospitalMemory : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isInHospitalMemory = false;
+
+            CorruptionController.UpdatePlayerCorruptionStatus();
         }
     }
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AudioHandlerMech : MonoBehaviour
 {
+    /// <summary>
+    /// Handles the calling of sounds at specific moments for mechanics
+    /// </summary>
     public static AudioHandlerMech Instance { get; private set; }
 
 

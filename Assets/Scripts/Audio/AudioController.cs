@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
+    /// <summary>
+    /// Handles calling sounds to fade in and out for dialogue
+    /// </summary>
     static GameObject DialogueBGSoundsObj;
     public static AudioSource dialogueAudioSource;
 

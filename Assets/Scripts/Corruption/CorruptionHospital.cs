@@ -5,13 +5,17 @@ using UnityEngine;
 public class CorruptionHospital : MonoBehaviour
 {
     [SerializeField] CorruptionController CorruptionController;
+    CorruptionPlayer corruptionPlayer;
     /// <summary>
     /// Determines when objects should or shouldn't be interactable depending on where they are according to the corruption
     /// </summary>
+    /// 
+    public bool isPlayerOutsideCylinder;
     
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -20,17 +24,16 @@ public class CorruptionHospital : MonoBehaviour
         
     }
 
-    /*
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("HospitalInteractable"))
+        if (other.CompareTag("Player"))
         {
-            other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = false;
-          
-            //Debug.Log("No corruption");
+            isPlayerOutsideCylinder = false;
         }
+
     }
-    */
+    
 
     //Anything inside this object is not corrupted
     private void OnTriggerStay(Collider other)
@@ -69,7 +72,10 @@ public class CorruptionHospital : MonoBehaviour
             Debug.Log("Start corruption on " + other.name);
 
         }
+
+        if (other.CompareTag("Player")) //if the player is exiting
+        {
+            isPlayerOutsideCylinder = true;
+        }        
     }
-
-
 }

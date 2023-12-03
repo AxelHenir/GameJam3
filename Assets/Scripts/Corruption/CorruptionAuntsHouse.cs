@@ -9,6 +9,7 @@ public class CorruptionAuntsHouse : MonoBehaviour
     /// Determines when objects should or shouldn't be interactable depending on where they are according to the corruption
     /// </summary>
 
+    public bool isPlayerOutsideCylinder;
 
     // Start is called before the first frame update
     void Start()
@@ -21,17 +22,14 @@ public class CorruptionAuntsHouse : MonoBehaviour
 
     }
 
-    /*
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("AuntsHouseInteractable"))
+        if (other.CompareTag("Player"))
         {
-            other.transform.GetChild(0).GetComponent<VisualTrigger>().isCorrupted = false;
-          
-            //Debug.Log("No corruption");
+            isPlayerOutsideCylinder = false;
+            CorruptionController.UpdatePlayerCorruptionStatus();
         }
     }
-    */
 
     //Anything inside this object is not corrupted
     private void OnTriggerStay(Collider other)
@@ -69,6 +67,12 @@ public class CorruptionAuntsHouse : MonoBehaviour
             CorruptionController.SetOneCorruptionMaterial(other.gameObject);
             Debug.Log("Start corruption on " + other.name);
 
+        }
+
+        if (other.CompareTag("Player")) //if the player is exiting
+        {
+            isPlayerOutsideCylinder = true;
+            CorruptionController.UpdatePlayerCorruptionStatus();
         }
     }
 }
