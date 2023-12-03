@@ -1745,12 +1745,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 389489083137458904, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00009916164
+      value: 0.000052020194
       objectReference: {fileID: 0}
     - target: {fileID: 707798592733296750, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: plaqueController
       value: 
       objectReference: {fileID: 923723310}
+    - target: {fileID: 746763984448184060, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: correctRole
+      value: Victim
+      objectReference: {fileID: 0}
     - target: {fileID: 746763984448184060, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: plaqueController
       value: 
@@ -1794,10 +1798,6 @@ PrefabInstance:
     - target: {fileID: 1424730756355388861, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_Name
       value: Ledger UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1424730756355388861, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1862,10 +1862,6 @@ PrefabInstance:
     - target: {fileID: 4780677340079214573, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5111604271565288023, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5198605623823393791, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: plaqueController
