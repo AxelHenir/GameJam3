@@ -16,6 +16,13 @@ public class CharacterEntry : MonoBehaviour
 
     [SerializeField] PlaqueController plaqueController;
 
+    private AudioHandlerMech audioHandler;
+
+    private void Start()
+    {
+        audioHandler = GameObject.Find("AudioHandler").GetComponent<AudioHandlerMech>(); //assumes we have the AudioHandlerMech on an object with this name
+    }
+
     public void updateNameGuess(int index){
         switch (index){
             case 0: nameGuess = "Please select"; break;
@@ -27,6 +34,7 @@ public class CharacterEntry : MonoBehaviour
         }
         string personToUpdate = correctRel;
         plaqueController.UpdateMuseumPlaque(personToUpdate, 0, nameGuess);
+        AudioHandlerMech.Instance.PlaySound("pencil-scratch");
     }
 
     public void updateRelGuess(int index){
@@ -40,6 +48,7 @@ public class CharacterEntry : MonoBehaviour
         }
         string personToUpdate = correctRel;
         plaqueController.UpdateMuseumPlaque(personToUpdate, 1, relGuess);
+        AudioHandlerMech.Instance.PlaySound("pencil-scratch");
     }
 
     public void updateRoleGuess(int index){
@@ -53,6 +62,7 @@ public class CharacterEntry : MonoBehaviour
         }
         string personToUpdate = correctRel;
         plaqueController.UpdateMuseumPlaque(personToUpdate, 2, roleGuess);
+        AudioHandlerMech.Instance.PlaySound("pencil-scratch");
     }
 
     public bool verifyName(){

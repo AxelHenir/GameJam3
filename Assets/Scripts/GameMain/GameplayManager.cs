@@ -34,9 +34,15 @@ public class GameplayManager : MonoBehaviour
 
     [SerializeField] CorruptionController corruptionController;
 
+    private AudioHandlerMech audioHandler;
+
+    [SerializeField] Image fadeImage;
+    float fadeDuration = 7f;
+
     void Start()
     {
         numberOfReboots = 0;
+        audioHandler = GameObject.Find("AudioHandler").GetComponent<AudioHandlerMech>(); //assumes we have the AudioHandlerMech on an object with this name
     }
 
     // Update is called once per frame
@@ -105,6 +111,8 @@ public class GameplayManager : MonoBehaviour
             }
         }
 
+        
+
         SetPlayersGuesses();
         LoadEnding();
     }
@@ -123,7 +131,8 @@ public class GameplayManager : MonoBehaviour
 
     public void LoadEnding()
     {
-        SceneManager.LoadScene("Ending");
+        //SceneManager.LoadScene("Ending");
+        StartCoroutine(WaitAndLoadEnding());
     }
 
     public void SetPlayersGuesses()
@@ -133,5 +142,38 @@ public class GameplayManager : MonoBehaviour
         GlobalSManager.SetNumberOfRelsGuessedCorrectly(numberOfRelsGuessedCorrectly);
         GlobalSManager.SetNumberOfRolesGuessedCorrectly(numberOfRolesGuessedCorrectly);
         GlobalSManager.SetCorrectlyGuessedEntries(CorrectlyGuessedEntries);
+    }
+
+    IEnumerator WaitAndLoadEnding()
+    {
+        //yield return new WaitForSecondsRealtime(1f);
+        AudioHandlerMech.Instance.PlaySound("ui_stamp_02");
+
+        yield return new WaitForSecondsRealtime(1.5f);
+        SceneManager.LoadScene("Ending");
+    }
+
+    IEnumerator FadeImage()
+    {
+        //wait before fading
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        // loop over seconds
+        for (float i = 0; i <= fadeDuration; i += Time.deltaTime)
+        {
+            //Debug.Log("color: "+i);
+            // set color with i as alpha
+            fadeImage.color = new Color(0, 0, 0, i);
+
+            if (i > 4f)
+            {
+                break;
+            }
+
+            yield return null;
+        }
+
+        //load game after fade is done
+        SceneManager.LoadScene("Gameplay");
     }
 }

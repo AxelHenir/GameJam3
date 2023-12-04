@@ -64,7 +64,7 @@ public class LedgerController : MonoBehaviour
         ledgerUI.SetActive(true);
 
         //play opening ledger sound
-        //AudioHandlerMech.Instance.PlaySound("page_turn_1");
+        AudioHandlerMech.Instance.PlaySound("book-open");
 
     }
 
@@ -83,7 +83,7 @@ public class LedgerController : MonoBehaviour
         playerController.cameraCanMove = true;
 
         //play closing ledger sound
-        //AudioHandlerMech.Instance.PlaySound("page_turn_1");
+        AudioHandlerMech.Instance.PlaySound("book-open");
     }
 
 }
