@@ -2641,7 +2641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sound Design
+  m_text: Sound Design & Music
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
   m_sharedMaterial: {fileID: 1682274065094062295, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
