@@ -41,7 +41,7 @@ public class AudioHandlerMech : MonoBehaviour
             if (audioSource != null )
             {
                 //audioSources.Add( audioSource );
-                audioSourceDictionary.Add(child.name, audioSource); // Add to dictionary for easy access
+                audioSourceDictionary.TryAdd(child.name, audioSource); // Add to dictionary for easy access
             }
             else
             {
