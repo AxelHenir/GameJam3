@@ -157,7 +157,7 @@ public class EndingController : MonoBehaviour
     IEnumerator FadeImage()
     {
         //wait before fading
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(1f);
 
         // loop over seconds
         for (float i = 0; i <= fadeDuration; i += Time.deltaTime)

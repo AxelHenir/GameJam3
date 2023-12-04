@@ -105,7 +105,7 @@ public class GameplayManager : MonoBehaviour
             }
 
             // If all verifications are true, add the CharacterEntry to the CorrectlyGuessedEntries list
-            if (isNameCorrect && isRelCorrect && isRoleCorrect)
+            if (isNameCorrect && isRelCorrect) // && isRoleCorrect
             {
                 CorrectlyGuessedEntries.Add(characterEntry);
             }

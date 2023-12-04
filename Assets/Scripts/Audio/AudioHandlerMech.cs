@@ -38,7 +38,7 @@ public class AudioHandlerMech : MonoBehaviour
             Transform child = audioClipsTransform.GetChild(i);
             AudioSource audioSource = child.GetComponent<AudioSource>();
 
-            if (audioSource != null)
+            if (audioSource != null )
             {
                 //audioSources.Add( audioSource );
                 audioSourceDictionary.Add(child.name, audioSource); // Add to dictionary for easy access

@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Ending/Letter-EndingOkay.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 7,
+	"ResponseNodeID": 8,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -64,14 +64,14 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "However, knowing that you were the one tasked with the responsibility of completing the exhibit brought me some comfort. I appreciate your earnest efforts. I am not entirely sure if this is how it all transpired, but my memory might be failing me."
+			"Response": "However, knowing that you were the one tasked with the responsibility of completing the exhibit brought me some comfort. I appreciate your earnest efforts. I am not entirely sure you’ve identified everyone correctly, but my memory might be failing me. "
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 4,
 			"Position": {
-				"x": 2432.666748046875,
+				"x": 3070.666748046875,
 				"y": 276.6666564941406
 			},
 			"ActorName": "S",
@@ -85,7 +85,7 @@
 			"Type": "Response",
 			"ID": 5,
 			"Position": {
-				"x": 2986.0,
+				"x": 3624.0,
 				"y": 276.6666564941406
 			},
 			"ActorName": "S",
@@ -99,7 +99,7 @@
 			"Type": "Response",
 			"ID": 6,
 			"Position": {
-				"x": 3512.0,
+				"x": 4150.0,
 				"y": 276.6666564941406
 			},
 			"ActorName": "",
@@ -107,6 +107,20 @@
 				
 			],
 			"Response": ""
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 7,
+			"Position": {
+				"x": 2466.666748046875,
+				"y": 276.6666564941406
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": "The museum made me agree not to comment on the roles in the exhibit in order to preserve the narrative the exhibit holds. I accept the fact that the role you have assigned to each person may not be reflective of my lived experience or may be incorrect in some ways. After all, it was your job to curate the exhibit, not mine. "
 		}
 	],
 	"StartNode": {
@@ -128,7 +142,7 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 4078.666748046875,
+				"x": 4716.66650390625,
 				"y": 276.6666564941406
 			},
 			"ActorName": "",
@@ -171,7 +185,7 @@
 		},
 		{
 			"From": "Response",
-			"FromID": 3,
+			"FromID": 7,
 			"To": "Response",
 			"ToID": 4,
 			"ChoiceIndex": 0
@@ -188,6 +202,13 @@
 			"FromID": 5,
 			"To": "Response",
 			"ToID": 6,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 3,
+			"To": "Response",
+			"ToID": 7,
 			"ChoiceIndex": 0
 		},
 		{
