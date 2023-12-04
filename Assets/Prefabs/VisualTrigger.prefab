@@ -251,6 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 832c0f6540620d44285f1c9cf8717f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EIconObject: {fileID: 0}
+  dialogueAudioController: {fileID: 0}
   ui: {fileID: 0}
   thisDialogueScript: {fileID: 0}
   soundToPlay: {fileID: 0}

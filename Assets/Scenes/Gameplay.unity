@@ -2450,7 +2450,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2117520964273720322, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_Volume
-      value: 0.429
+      value: 0.398
       objectReference: {fileID: 0}
     - target: {fileID: 2117520964273720322, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_audioClip
@@ -2584,6 +2584,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 635382928}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1403489727931041137, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: plaqueController
       value: 
@@ -2593,13 +2605,49 @@ PrefabInstance:
       value: Ledger UI
       objectReference: {fileID: 0}
     - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1318577702}
+      objectReference: {fileID: 923723310}
     - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 923723310}
+      objectReference: {fileID: 1318577702}
+    - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetVisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlaqueController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioHandlerMech, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098733589008090866, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: ui_button_simple_click_03
+      objectReference: {fileID: 0}
     - target: {fileID: 4109961510959637825, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -24,6 +24,8 @@ public class PlaqueController : MonoBehaviour
     [SerializeField] Button PlaqueVisibilityButton;
     TextMeshProUGUI PlaqueButtonText;
 
+    private AudioHandlerMech audioHandler;
+
     void Start()
     {
         allMuseumPlaques = new List<GameObject>();
@@ -31,6 +33,8 @@ public class PlaqueController : MonoBehaviour
         PlaqueButtonText = PlaqueVisibilityButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
 
         isPlaqueOn = true; // default on
+
+        audioHandler = GameObject.Find("AudioHandler").GetComponent<AudioHandlerMech>(); //assumes we have the AudioHandlerMech on an object with this name
     }
 
     // Update is called once per frame
@@ -173,6 +177,8 @@ public class PlaqueController : MonoBehaviour
             PlaqueButtonText.text = "Plaques ON"; //should display the current status of the plaques
 
         }
+
+        //AudioHandlerMech.Instance.PlaySound("ui_button_simple_click_03");
 
         UpdateVisibility();
     }

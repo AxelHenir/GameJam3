@@ -111,7 +111,7 @@ public class GameplayManager : MonoBehaviour
             }
         }
 
-        
+        AudioHandlerMech.Instance.PlaySound("ui_stamp_02");
 
         SetPlayersGuesses();
         LoadEnding();
@@ -146,8 +146,7 @@ public class GameplayManager : MonoBehaviour
 
     IEnumerator WaitAndLoadEnding()
     {
-        //yield return new WaitForSecondsRealtime(1f);
-        AudioHandlerMech.Instance.PlaySound("ui_stamp_02");
+        //yield return new WaitForSecondsRealtime(1f);       
 
         yield return new WaitForSecondsRealtime(1.5f);
         SceneManager.LoadScene("Ending");

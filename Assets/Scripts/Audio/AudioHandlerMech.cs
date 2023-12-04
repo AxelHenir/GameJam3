@@ -11,7 +11,7 @@ public class AudioHandlerMech : MonoBehaviour
 
 
     [SerializeField] private List<AudioSource> audioSources = new List<AudioSource>();
-    private static Dictionary<string, AudioSource> audioSourceDictionary = new Dictionary<string, AudioSource>();
+    private Dictionary<string, AudioSource> audioSourceDictionary = new Dictionary<string, AudioSource>();
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class AudioHandlerMech : MonoBehaviour
         }
     }
 
-    private static void InitializeAudioSourcesDynamically()
+    private void InitializeAudioSourcesDynamically()
     {
         // Get child objects of the AudioClips GameObject and add their AudioSource components to audioSources list
         Transform audioClipsTransform = GameObject.Find("AudioClips").transform; // Assuming "AudioClips" is the name of your GameObject
