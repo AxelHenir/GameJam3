@@ -61,7 +61,7 @@ public class CorruptionPlayer : MonoBehaviour
             corruptionAudioSource.volume = 0;
             corruptionAudioSource.Play();
 
-            while (corruptionAudioSource.volume < 1)
+            while (corruptionAudioSource.volume < 0.5f)
             {
                 corruptionAudioSource.volume += Time.deltaTime / fadeInTime;
 
@@ -74,7 +74,7 @@ public class CorruptionPlayer : MonoBehaviour
     {
         if (corruptionAudioSource != null && corruptionAudioSource.isPlaying)
         {
-            corruptionAudioSource.volume = 1;
+            corruptionAudioSource.volume = 0.5f;
 
             while (corruptionAudioSource.volume > 0)
             {
