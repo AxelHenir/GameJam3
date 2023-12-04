@@ -47,7 +47,7 @@ public class CharacterEntry : MonoBehaviour
             case 0: roleGuess = "Please select"; break;
             case 1: roleGuess = "None"; break;
             case 2: roleGuess = "Perpetrator"; break;
-            case 3: roleGuess = "Conspirator"; break;
+            case 3: roleGuess = "Complicit"; break;
             case 4: roleGuess = "Survivor"; break;
             case 5: roleGuess = "Victim"; break;
         }
