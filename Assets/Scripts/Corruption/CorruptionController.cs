@@ -77,6 +77,8 @@ public class CorruptionController : MonoBehaviour
         AuntsHouseTutorialText.SetActive(false);
 
         corruptionThreshold = 60.0f;
+
+        UpdatePlayerCorruptionStatus();
     }
 
     public void ResetCorruption()

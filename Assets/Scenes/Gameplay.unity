@@ -2934,10 +2934,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 242260556}
     - target: {fileID: 9218657532204450166, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
-      propertyPath: soundToPlay
-      value: 
-      objectReference: {fileID: 8300000, guid: c690e281d44af0044b4e31d8a6fc8b00, type: 3}
-    - target: {fileID: 9218657532204450166, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 
       objectReference: {fileID: 1970832942}
