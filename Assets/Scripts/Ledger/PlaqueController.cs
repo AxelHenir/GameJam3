@@ -86,12 +86,13 @@ public class PlaqueController : MonoBehaviour
     {      
         foreach(GameObject parentObj in listToModify)
         {
+            Debug.Log("current person spawn plaque: "+parentObj.name+" and position of x:"+parentObj.transform.position.x+" z:"+parentObj.transform.position.z);
             Vector3 pedestalPosition = new Vector3(parentObj.transform.position.x, parentObj.transform.position.y, parentObj.transform.position.z); // .y - 0.25f
 
             //spawn the museum plaque & pedestal
             CurrentMuseumPlaque = GameObject.Instantiate(MuseumPlaquePrefab, pedestalPosition, Quaternion.identity, parentObj.transform);
 
-            RotatePlaqueTowardsPlayer();
+            //RotatePlaqueTowardsPlayer();
 
             //add the pedestal height to the character
             //parentObj.transform.position += new Vector3(0, 0.25f, 0);
@@ -104,7 +105,7 @@ public class PlaqueController : MonoBehaviour
         //Debug.Log("Guess to add: "+guess);
         foreach (GameObject museumPlaque in listofMuseumPlaques)
         {
-            RotatePlaqueTowardsPlayer();
+            //RotatePlaqueTowardsPlayer();
             if (columnToUpdate == 0)
             {
                 CurrentPlaqueText = museumPlaque.transform.Find("Plaque").transform.Find("PlaqueTextName").GetComponent<TMP_Text>();
@@ -157,7 +158,9 @@ public class PlaqueController : MonoBehaviour
 
     public void SetVisibility()
     {
-        if(isPlaqueOn) //if currently on, turn them off
+        AudioHandlerMech.Instance.PlaySound("ui_button_simple_click_03");
+
+        if (isPlaqueOn) //if currently on, turn them off
         {
             HidePlaques();
 
@@ -176,9 +179,7 @@ public class PlaqueController : MonoBehaviour
             PlaqueVisibilityButton.image.color = newColor;
             PlaqueButtonText.text = "Plaques ON"; //should display the current status of the plaques
 
-        }
-
-        //AudioHandlerMech.Instance.PlaySound("ui_button_simple_click_03");
+        }        
 
         UpdateVisibility();
     }
@@ -247,7 +248,6 @@ public class PlaqueController : MonoBehaviour
             lookPos.y = 0;
             Quaternion rotation = Quaternion.LookRotation(lookPos);
             obj.transform.rotation = rotation;
-        }
-        
+        }        
     }
 }
