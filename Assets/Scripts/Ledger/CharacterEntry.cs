@@ -19,7 +19,7 @@ public class CharacterEntry : MonoBehaviour
     public void updateNameGuess(int index){
         switch (index){
             case 0: nameGuess = "Please select"; break;
-            case 1: nameGuess = "Michelle Park"; break;
+            case 1: nameGuess = "Michelle Khan"; break;
             case 2: nameGuess = "Noa Park"; break;
             case 3: nameGuess = "Robin Park"; break;
             case 4: nameGuess = "Ryan Park"; break;
