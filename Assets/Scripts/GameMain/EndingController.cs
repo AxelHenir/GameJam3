@@ -40,6 +40,8 @@ public class EndingController : MonoBehaviour
         Debug.Log(numberOfRelsGuessedCorrectly + "/5 correct rel guesses");
         Debug.Log(numberOfRolesGuessedCorrectly + "/5 correct role guesses");
 
+        GlobalSManager.SetLastScene("Ending");
+
         LetterVisualTrigger = Letter.transform.GetChild(0).GetChild(0).GetComponent<VisualTrigger>();
 
         isReadyToFadeToBlack = false;
