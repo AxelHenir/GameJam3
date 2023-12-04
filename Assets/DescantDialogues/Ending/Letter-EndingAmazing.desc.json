@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Ending/Letter-EndingAmazing.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 6,
+	"ResponseNodeID": 7,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -93,6 +93,20 @@
 				
 			],
 			"Response": "With all my love,\r\n\r\nRobin\r\nxoxo\r\n"
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 6,
+			"Position": {
+				"x": 3836.0,
+				"y": 252.6666717529297
+			},
+			"ActorName": "",
+			"NodeComponents": [
+				
+			],
+			"Response": ""
 		}
 	],
 	"StartNode": {
@@ -114,8 +128,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 3767.33349609375,
-				"y": 395.33331298828127
+				"x": 4581.3330078125,
+				"y": 385.33331298828127
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -172,6 +186,13 @@
 		{
 			"From": "Response",
 			"FromID": 5,
+			"To": "Response",
+			"ToID": 6,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 6,
 			"To": "End",
 			"ToID": 0,
 			"ChoiceIndex": 0

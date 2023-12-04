@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,14 @@ public class EndingController : MonoBehaviour
 
     [SerializeField] GameObject Letter;
     [SerializeField] List<TextAsset> EndingScripts;
+    VisualTrigger LetterVisualTrigger;
+
+    bool isReadyToFadeToBlack;
+
+    [SerializeField] Image fadeImage;
+     float fadeDuration = 7f;
+
+    [SerializeField] FirstPersonController firstPersonController;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +39,10 @@ public class EndingController : MonoBehaviour
         Debug.Log(numberOfNamesGuessedCorrectly+"/5 correct name guesses");
         Debug.Log(numberOfRelsGuessedCorrectly + "/5 correct rel guesses");
         Debug.Log(numberOfRolesGuessedCorrectly + "/5 correct role guesses");
+
+        LetterVisualTrigger = Letter.transform.GetChild(0).GetChild(0).GetComponent<VisualTrigger>();
+
+        isReadyToFadeToBlack = false;
 
         // can print the names of the correctly guessed characters
         foreach (CharacterEntry correctEntry in CorrectlyGuessedEntries)
@@ -54,11 +67,7 @@ public class EndingController : MonoBehaviour
             */
 
         }
-
-
-
-
-        VisualTrigger LetterVisualTrigger = Letter.transform.GetChild(0).GetChild(0).GetComponent<VisualTrigger>();
+        
 
         //Pick the ending based on the guesses:
         /*
@@ -104,10 +113,29 @@ public class EndingController : MonoBehaviour
     {
 
         //temporary restart button
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("Gameplay");
-        }        
+        }   
+        
+        if(LetterVisualTrigger.GetIsInDialogue() && !isReadyToFadeToBlack) //if the player is in dialogue, we ready to fade to black
+        {
+            isReadyToFadeToBlack = true;
+        }
+
+        if(!LetterVisualTrigger.GetIsInDialogue() && isReadyToFadeToBlack) //when the player is no longer in dialogue, start fade to black
+        {
+            isReadyToFadeToBlack = false;
+            //fade to black & load menu
+            
+            LetterVisualTrigger.EIconObject.SetActive(false);
+            GameObject.Find("Reticle").SetActive(false);
+            firstPersonController.cameraCanMove = false;
+
+            Debug.Log("start fade");
+            StartCoroutine(FadeImage());
+
+        }
     }
 
     void SpawnTheLetter(float timeToWait)
@@ -122,4 +150,23 @@ public class EndingController : MonoBehaviour
 
         
     }*/
+
+
+    IEnumerator FadeImage()
+    {
+        //wait before fading
+        yield return new WaitForSecondsRealtime(3f);
+
+        // loop over seconds
+        for (float i = 0; i <= fadeDuration; i += Time.deltaTime)
+        {
+            //Debug.Log("color: "+i);
+            // set color with i as alpha
+            fadeImage.color = new Color(0, 0, 0, i);
+            yield return null;
+        }
+
+        //load menu after fade is done
+        SceneManager.LoadScene("Menu");
+    }
 }

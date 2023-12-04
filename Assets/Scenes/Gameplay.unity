@@ -2049,10 +2049,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 242260556}
     - target: {fileID: 4738349501799494898, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
-      propertyPath: soundToPlay
-      value: 
-      objectReference: {fileID: 8300000, guid: d2f28de6d922c4346b8d50e485dad0c6, type: 3}
-    - target: {fileID: 4738349501799494898, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 
       objectReference: {fileID: 1970832942}
@@ -2065,10 +2061,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 242260556}
     - target: {fileID: 4928792770937600110, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
-      propertyPath: soundToPlay
-      value: 
-      objectReference: {fileID: 8300000, guid: 05d78f2fc047a1e4880e9cd73b3909c8, type: 3}
-    - target: {fileID: 4928792770937600110, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 
       objectReference: {fileID: 1970832942}
@@ -2080,10 +2072,6 @@ PrefabInstance:
       propertyPath: EIconObject
       value: 
       objectReference: {fileID: 242260556}
-    - target: {fileID: 5555626944326351587, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
-      propertyPath: soundToPlay
-      value: 
-      objectReference: {fileID: 8300000, guid: e1acf4209cc69e64c96f417415a65338, type: 3}
     - target: {fileID: 5555626944326351587, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 
@@ -2108,10 +2096,6 @@ PrefabInstance:
       propertyPath: EIconObject
       value: 
       objectReference: {fileID: 242260556}
-    - target: {fileID: 9218657532204450166, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
-      propertyPath: soundToPlay
-      value: 
-      objectReference: {fileID: 8300000, guid: 7ddf5404267c5aa4ea615384502c2360, type: 3}
     - target: {fileID: 9218657532204450166, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 

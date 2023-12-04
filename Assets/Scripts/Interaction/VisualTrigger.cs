@@ -10,7 +10,7 @@ public class VisualTrigger : MonoBehaviour
     private GameObject visualCue; //holds all of the visual cue content
 
     private GameObject visualCueLook; //holds the object for the raycast/looking outline
-    [SerializeField] GameObject EIconObject; //holds the object that will show the E keyboard prompt
+    [SerializeField] public GameObject EIconObject; //holds the object that will show the E keyboard prompt
 
     private FirstPersonController playerController;
     private GameObject ObjectThatIsInteractedWith;
@@ -121,7 +121,7 @@ public class VisualTrigger : MonoBehaviour
                 float radius = 0.3f;
 
                 //Displays the second outline if the player is looking at the object
-                if(gameObject != null && Physics.SphereCast(ray, radius, out hit)) //Physics.SphereCast(ray, radius, out hit)
+                if(gameObject != null && Physics.SphereCast(ray, radius, out hit) && EIconObject != null) //Physics.SphereCast(ray, radius, out hit)
                 {
                     if (hit.transform.gameObject == ObjectThatIsInteractedWith) //if the ray hit object is the object that is being interacted with, then proceed with interaction
                     {
@@ -223,5 +223,10 @@ public class VisualTrigger : MonoBehaviour
     public void SetThisDialogueScript(TextAsset script)
     {
         thisDialogueScript = script;
+    }
+
+    public bool GetIsInDialogue()
+    {
+        return isInDialogue;
     }
 }

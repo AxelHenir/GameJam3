@@ -234,31 +234,31 @@ public class CorruptionController : MonoBehaviour
         //if the player is outside any of the memories, don't corrupt
         if(!HospitalMemory.isInHospitalMemory && !AuntsHouseMemory.isInAuntsHouseMemory)
         {
-            Debug.LogWarning("the player is outside any of the memories");
+            //Debug.LogWarning("the player is outside any of the memories");
             corruptionForPlayer.SetPlayerCorrupted(false);
         }
         //if the player is inside the memory but outside the cylinder, corrupt
         else if (HospitalMemory.isInHospitalMemory && CorruptionHospital.isPlayerOutsideCylinder)
         {
-            Debug.LogWarning("the player is inside the memory but outside the cylinder");
+            //Debug.LogWarning("the player is inside the memory but outside the cylinder");
             corruptionForPlayer.SetPlayerCorrupted(true);
         }
         //if the player is inside the memory but outside the cylinder, corrupt
         else if (AuntsHouseMemory.isInAuntsHouseMemory && CorruptionAuntsHouse.isPlayerOutsideCylinder)
         {
-            Debug.LogWarning("the player is inside the memory but outside the cylinder");
+            //Debug.LogWarning("the player is inside the memory but outside the cylinder");
             corruptionForPlayer.SetPlayerCorrupted(true);
         }
         //if the player is inside the memory but inside the cylinder, don't corrupt
         else if (HospitalMemory.isInHospitalMemory && !CorruptionHospital.isPlayerOutsideCylinder)
         {
-            Debug.LogWarning("the player is inside the memory but inside the cylinder");
+            //Debug.LogWarning("the player is inside the memory but inside the cylinder");
             corruptionForPlayer.SetPlayerCorrupted(false);
         }
         //if the player is inside the memory but inside the cylinder, don't corrupt
         else if (AuntsHouseMemory.isInAuntsHouseMemory && !CorruptionAuntsHouse.isPlayerOutsideCylinder)
         {
-            Debug.LogWarning("the player is inside the memory but inside the cylinder");
+            //Debug.LogWarning("the player is inside the memory but inside the cylinder");
             corruptionForPlayer.SetPlayerCorrupted(false);
         }
     }

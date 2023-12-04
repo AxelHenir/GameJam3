@@ -1589,6 +1589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInHospitalMemory: 0
+  CorruptionController: {fileID: 0}
 --- !u!1 &1727518153450634991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4810,6 +4811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CorruptionController: {fileID: 0}
+  isPlayerOutsideCylinder: 0
 --- !u!1 &7730938857036685057
 GameObject:
   m_ObjectHideFlags: 0
@@ -8832,6 +8834,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: bd41999685abd49408b18da18c615ed3, type: 3}
     - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ddf5404267c5aa4ea615384502c2360, type: 3}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: thisDialogueScript
       value: 
       objectReference: {fileID: 4900000, guid: bd41999685abd49408b18da18c615ed3, type: 3}
@@ -9202,6 +9208,10 @@ PrefabInstance:
       propertyPath: thisScript
       value: 
       objectReference: {fileID: 4900000, guid: 9f966558b0b768a49b6cf9c397982f38, type: 3}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: e1acf4209cc69e64c96f417415a65338, type: 3}
     - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: thisDialogueScript
       value: 
@@ -9724,6 +9734,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: dcf53999ff6773b44b8a25fe83afbd52, type: 3}
     - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 05d78f2fc047a1e4880e9cd73b3909c8, type: 3}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: thisDialogueScript
       value: 
       objectReference: {fileID: 4900000, guid: dcf53999ff6773b44b8a25fe83afbd52, type: 3}
@@ -9882,6 +9896,10 @@ PrefabInstance:
       propertyPath: thisScript
       value: 
       objectReference: {fileID: 4900000, guid: 875e118b13769c64294c30296db2e1fe, type: 3}
+    - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
+      propertyPath: soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: d2f28de6d922c4346b8d50e485dad0c6, type: 3}
     - target: {fileID: 3405698755467713171, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: thisDialogueScript
       value: 
