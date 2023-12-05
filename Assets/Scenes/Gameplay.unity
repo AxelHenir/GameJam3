@@ -3830,6 +3830,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1661283367602717912, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4579454407841743219, guid: 47a1ebd41fc1b154badc40c5a8365a4c, type: 3}
+    - target: {fileID: 3279023233283810440, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4493585093827132993, guid: a98771c19eb159241a00ca97102f50ab, type: 3}
     - target: {fileID: 4738349501799494898, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: ui
       value: 
@@ -3838,6 +3846,10 @@ PrefabInstance:
       propertyPath: EIconObject
       value: 
       objectReference: {fileID: 242260556}
+    - target: {fileID: 4738349501799494898, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: a58947bd9ba71604280993581c83f468, type: 3}
     - target: {fileID: 4738349501799494898, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 
@@ -3862,6 +3874,10 @@ PrefabInstance:
       propertyPath: EIconObject
       value: 
       objectReference: {fileID: 242260556}
+    - target: {fileID: 5555626944326351587, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 53c423d6f4903074abce71b2014ec08b, type: 3}
     - target: {fileID: 5555626944326351587, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 
@@ -3886,6 +3902,10 @@ PrefabInstance:
       propertyPath: EIconObject
       value: 
       objectReference: {fileID: 242260556}
+    - target: {fileID: 9218657532204450166, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 02fed48fa7e77fe498ace2368600b01a, type: 3}
     - target: {fileID: 9218657532204450166, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: dialogueAudioController
       value: 
@@ -4082,6 +4102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 3339097739348965321, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5512361600001258384, guid: 4cc4439e32e29a8439010ea1f46406e2, type: 3}
     - target: {fileID: 5860266365767802420, guid: 5bffff7fc7497da49bb5271c0a216d06, type: 3}
       propertyPath: ui
       value: 
