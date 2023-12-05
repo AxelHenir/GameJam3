@@ -1938,6 +1938,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.8630066
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5454266405463010827, guid: f09178c8270f66f49b672302dc96b38c, type: 3}
     - target: {fileID: 919132149155446097, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
       propertyPath: m_Name
       value: chair (1)
@@ -2868,6 +2872,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5454266405463010827, guid: f09178c8270f66f49b672302dc96b38c, type: 3}
     - target: {fileID: 919132149155446097, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
       propertyPath: m_Name
       value: chair (4)
@@ -3688,6 +3696,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5454266405463010827, guid: f09178c8270f66f49b672302dc96b38c, type: 3}
     - target: {fileID: 919132149155446097, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
       propertyPath: m_Name
       value: chair
@@ -3814,6 +3826,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5454266405463010827, guid: f09178c8270f66f49b672302dc96b38c, type: 3}
     - target: {fileID: 919132149155446097, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
       propertyPath: m_Name
       value: chair
@@ -4172,6 +4188,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5454266405463010827, guid: f09178c8270f66f49b672302dc96b38c, type: 3}
     - target: {fileID: 919132149155446097, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
       propertyPath: m_Name
       value: chair (2)
@@ -4298,6 +4318,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: fd9306690ebf1354aa810f54743c7037, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6692290496178104961, guid: a7c0200e80d92fa4da1ae045e3097719, type: 3}
     - target: {fileID: 919132149155446097, guid: fd9306690ebf1354aa810f54743c7037, type: 3}
       propertyPath: m_Name
       value: table
@@ -4980,6 +5004,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5454266405463010827, guid: f09178c8270f66f49b672302dc96b38c, type: 3}
     - target: {fileID: 919132149155446097, guid: f9694509c3b98ba4798cc2c6da5a824a, type: 3}
       propertyPath: m_Name
       value: chair (3)
