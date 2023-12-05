@@ -415,7 +415,7 @@ Transform:
   m_GameObject: {fileID: 2499790024055933319}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7035009, z: -0, w: 0.71069443}
-  m_LocalPosition: {x: 2.06, y: 10.85, z: 78.58}
+  m_LocalPosition: {x: 2.06, y: 10.99, z: 78.58}
   m_LocalScale: {x: 15.189996, y: 5.16, z: 15.189996}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -668,7 +668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.22, y: 7.9999995}
+  m_AnchoredPosition: {x: 5.22, y: 8.97}
   m_SizeDelta: {x: 12.3, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &2287486205766977585
@@ -3064,6 +3064,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AuntsHouse.003
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07e3157271160d54d91732be2e205d1e, type: 3}
+      propertyPath: m_TagString
+      value: AuntsHouseNonInteractable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3071,6 +3075,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 07e3157271160d54d91732be2e205d1e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6140680197425976678}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 07e3157271160d54d91732be2e205d1e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5278470798779430817}
   m_SourcePrefab: {fileID: 100100000, guid: 07e3157271160d54d91732be2e205d1e, type: 3}
 --- !u!4 &3817211525700839576 stripped
 Transform:
@@ -3104,6 +3111,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1439942400045231089, guid: 07e3157271160d54d91732be2e205d1e, type: 3}
+--- !u!54 &5278470798779430817
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4589912410724020770}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &4017248952327446333
 PrefabInstance:
   m_ObjectHideFlags: 0
