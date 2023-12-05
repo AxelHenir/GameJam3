@@ -22,7 +22,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Michelle, Ryan, Robin, and Noa are in their living room. Michelle is scrambling to get Noa ready for school while Robin is ready, sitting and playing with her hair. \r\n\r\n"
+			"Response": "<i>Michelle, Ryan, Robin, and Noa are in their living room. Michelle is scrambling to get Noa ready for school while Robin is ready, sitting and playing with her hair. \r\n</i>\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -64,7 +64,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "I don't. I hate them, not you."
+			"Response": "I don't. I hate <i>them</i>, not you."
 		},
 		{
 			"Name": "ResponseNode",
@@ -176,7 +176,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Eventually, Noa stops wailing and sniffles while Robin sits up.\r\n\r\n"
+			"Response": "<i>Eventually, Noa stops wailing and sniffles while Robin sits up.</i>\r\n\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -190,7 +190,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "She enters the room silently, walks over to the bed, and sits down to gently stroke Noa's back."
+			"Response": "<i>She enters the room silently, walks over to the bed, and sits down to gently stroke Noa's back.</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -204,7 +204,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Robin opens the door to Noa's bedroom. Noa is sitting on the bed, wailing and slamming his fists against the mattress. "
+			"Response": "<i>Robin opens the door to Noa's bedroom. Noa is sitting on the bed, wailing and slamming his fists against the mattress. </i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -218,7 +218,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "After a moment weighing her options, Robin gets the pills and heads to Noa's room.\r\n\r\n"
+			"Response": "<i>After a moment weighing her options, Robin gets the pills and heads to Noa's room.</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -302,7 +302,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The cries get louder when he sees Robin in his doorway, her hands behind her back. "
+			"Response": "<i>The cries get louder when he sees Robin in his doorway, her hands behind her back.</i>"
 		}
 	],
 	"StartNode": {

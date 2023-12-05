@@ -22,7 +22,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "You pick up the clipboard from the bed. It’s filled with medical jargon and numbers that seem to dance before your eyes, forming a cryptic ballet of the boy’s condition. His name, age, and diagnosis are clearly stated at the top. The rest of the sheet is filled with notes about his treatment plan, medication, and progress.\r\n"
+			"Response": "<i>You pick up the clipboard from the bed. It’s filled with medical jargon and numbers that seem to dance before your eyes, forming a cryptic ballet of the boy’s condition. His name, age, and diagnosis are clearly stated at the top. The rest of the sheet is filled with notes about his treatment plan, medication, and progress.\r\n</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -36,7 +36,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "As you read through the sheet, a memory surfaces. It’s abstract, more of a feeling than a clear image. You see flashes of blue and white, hear the distant wail of sirens, feel the cold rush of fear. There’s a sense of urgency, of desperation, of a life hanging in the balance.\r\n"
+			"Response": "<i>As you read through the sheet, a memory surfaces. It’s abstract, more of a feeling than a clear image. You see flashes of blue and white, hear the distant wail of sirens, feel the cold rush of fear. There’s a sense of urgency, of desperation, of a life hanging in the balance.\r\n</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -50,7 +50,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The scene shifts, and you’re in a hospital room. The boy is there, lying on the bed, his body still and lifeless. The room is filled with the steady beep of machines, the soft murmur of hushed conversations, the stifled sobs of a family grappling with a reality too painful to bear.\r\n"
+			"Response": "<i>The scene shifts, and you’re in a hospital room. The boy is there, lying on the bed, his body still and lifeless. The room is filled with the steady beep of machines, the soft murmur of hushed conversations, the stifled sobs of a family grappling with a reality too painful to bear.</i>\r\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -64,7 +64,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The memory fades, leaving behind a chilling echo of the tragic event that led to the boy’s hospitalization."
+			"Response": "<i>The memory fades, leaving behind a chilling echo of the tragic event that led to the boy’s hospitalization.</i>"
 		},
 		{
 			"Name": "ResponseNode",

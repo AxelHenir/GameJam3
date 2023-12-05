@@ -22,7 +22,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "As you approach the mirror on the fridge, you notice the subject’s reflection. It’s a distorted image, almost unrecognizable. The subject stares back, their eyes filled with confusion and fear. It’s as if they’re looking at a stranger."
+			"Response": "<i>As you approach the mirror on the fridge, you notice the subject’s reflection. It’s a distorted image, almost unrecognizable. The subject stares back, their eyes filled with confusion and fear. It’s as if they’re looking at a stranger.</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -36,7 +36,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The mirror triggers a series of memories. You see a flash of a scene from the subject’s past. She's at a social gathering, surrounded by laughter and chatter. But the subject is quiet, their smile forced."
+			"Response": "<i>The mirror triggers a series of memories. You see a flash of a scene from the subject’s past. She's at a social gathering, surrounded by laughter and chatter. But the subject is quiet, their smile forced.</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -50,7 +50,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "In this new perspective, you can see that the effort is exhausting. Every laugh, every nod, every word spoken is a performance."
+			"Response": "<i>In this new perspective, you can see that the effort is exhausting. Every laugh, every nod, every word spoken is a performance.</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -64,7 +64,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The memory ends with the subject alone in their room, quietly sobbing.\r"
+			"Response": "<i>The memory ends with the subject alone in their room, quietly sobbing.</i>\r"
 		},
 		{
 			"Name": "ResponseNode",
