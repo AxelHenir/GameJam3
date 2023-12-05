@@ -1522,6 +1522,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8655014706662577234, guid: 9858909507612d849878fb344afb62da, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5512361600001258384, guid: 4cc4439e32e29a8439010ea1f46406e2, type: 3}
     - target: {fileID: 919132149155446097, guid: 9858909507612d849878fb344afb62da, type: 3}
       propertyPath: m_Name
       value: robo_helper_07
@@ -1726,7 +1730,7 @@ PrefabInstance:
     - target: {fileID: 1675026603862678433, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 5512361600001258384, guid: 9858909507612d849878fb344afb62da, type: 3}
+      objectReference: {fileID: 5512361600001258384, guid: 4cc4439e32e29a8439010ea1f46406e2, type: 3}
     - target: {fileID: 2290157890189576668, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -61066,7 +61070,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616848633913751986}
-  m_Mesh: {fileID: 5512361600001258384, guid: 9858909507612d849878fb344afb62da, type: 3}
+  m_Mesh: {fileID: 5512361600001258384, guid: 4cc4439e32e29a8439010ea1f46406e2, type: 3}
 --- !u!23 &8463581370346028071
 MeshRenderer:
   m_ObjectHideFlags: 0
