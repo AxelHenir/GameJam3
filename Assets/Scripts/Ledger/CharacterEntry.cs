@@ -58,7 +58,8 @@ public class CharacterEntry : MonoBehaviour
             case 2: roleGuess = "Perpetrator"; break;
             case 3: roleGuess = "Complicit"; break;
             case 4: roleGuess = "Survivor"; break;
-            case 5: roleGuess = "Victim"; break;
+            case 5: roleGuess = "Victim"; break; 
+                //new role: Supporter? 
         }
         string personToUpdate = correctRel;
         plaqueController.UpdateMuseumPlaque(personToUpdate, 2, roleGuess);
