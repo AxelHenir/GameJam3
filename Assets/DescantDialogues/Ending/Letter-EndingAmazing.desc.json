@@ -3,7 +3,7 @@
 	"Path": "/DescantDialogues/Ending/Letter-EndingAmazing.desc.json",
 	"Autosave": false,
 	"ChoiceNodeID": 0,
-	"ResponseNodeID": 8,
+	"ResponseNodeID": 9,
 	"EndNodeID": 1,
 	"GroupID": 0,
 	"ChoiceNodes": [
@@ -64,7 +64,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "With that being said, I was pleased to hear that my granddaughter was the one who helped complete the exhibit. Not only that, but you accurately identified everyone in my memories. "
+			"Response": "With that being said, I was pleased to hear that my granddaughter was the one who helped complete the exhibit. Not only that, but you <b>accurately identified everyone in my memories</b>. "
 		},
 		{
 			"Name": "ResponseNode",
@@ -78,15 +78,15 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The museum made me agree not to comment on the roles in the exhibit in order to preserve the narrative the exhibit holds. I accept the fact that the role you have assigned to each person may not be reflective of my lived experience or may be incorrect in some ways. After all, it was your job to curate the exhibit, not mine. "
+			"Response": "The museum made me agree not to comment on the <b>roles</b> in the exhibit in order to preserve the narrative the exhibit holds. "
 		},
 		{
 			"Name": "ResponseNode",
 			"Type": "Response",
 			"ID": 5,
 			"Position": {
-				"x": 3861.33349609375,
-				"y": 330.6666564941406
+				"x": 4381.3330078125,
+				"y": 360.6666564941406
 			},
 			"ActorName": "S",
 			"NodeComponents": [
@@ -99,8 +99,8 @@
 			"Type": "Response",
 			"ID": 6,
 			"Position": {
-				"x": 4435.3330078125,
-				"y": 197.33334350585938
+				"x": 4955.3330078125,
+				"y": 227.33334350585938
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -113,14 +113,28 @@
 			"Type": "Response",
 			"ID": 7,
 			"Position": {
-				"x": 3248.666748046875,
-				"y": 361.33331298828127
+				"x": 3768.666748046875,
+				"y": 395.33331298828127
+			},
+			"ActorName": "S",
+			"NodeComponents": [
+				
+			],
+			"Response": "I'm proud of you for taking your time and treating my memories with care and respect."
+		},
+		{
+			"Name": "ResponseNode",
+			"Type": "Response",
+			"ID": 8,
+			"Position": {
+				"x": 3216.0,
+				"y": 395.33331298828127
 			},
 			"ActorName": "",
 			"NodeComponents": [
 				
 			],
-			"Response": "I'm proud of you for taking your time and treating my memories with care and respect."
+			"Response": "I accept the fact that the <b>role</b> you have assigned to each person may not be reflective of my lived experience or may be incorrect in some ways. After all, it was your job to curate the exhibit, not mine. "
 		}
 	],
 	"StartNode": {
@@ -142,8 +156,8 @@
 			"Type": "End",
 			"ID": 0,
 			"Position": {
-				"x": 5180.66650390625,
-				"y": 330.0
+				"x": 5700.66650390625,
+				"y": 360.0
 			},
 			"ActorName": "",
 			"NodeComponents": [
@@ -206,9 +220,16 @@
 		},
 		{
 			"From": "Response",
-			"FromID": 4,
+			"FromID": 8,
 			"To": "Response",
 			"ToID": 7,
+			"ChoiceIndex": 0
+		},
+		{
+			"From": "Response",
+			"FromID": 4,
+			"To": "Response",
+			"ToID": 8,
 			"ChoiceIndex": 0
 		},
 		{

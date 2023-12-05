@@ -22,7 +22,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Door shuts. Michelle, Ryan, Jesse, Robin, Noa are in the room."
+			"Response": "<i>Door shuts. Michelle, Ryan, Jesse, Robin, Noa are in the room.</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -36,7 +36,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Michelle looks at Ryan."
+			"Response": "<i>Michelle looks at Ryan.</i>"
 		},
 		{
 			"Name": "ResponseNode",

@@ -37,7 +37,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "You pick up the brightly colored 'Get Well Soon' card from the bedside table. The front of the card is adorned with cheerful illustrations of flowers and balloons, a stark contrast to the somber atmosphere of the room. Inside, the card is filled with well wishes and messages of hope."
+			"Response": "<i>You pick up the brightly colored 'Get Well Soon' card from the bedside table. The front of the card is adorned with cheerful illustrations of flowers and balloons, a stark contrast to the somber atmosphere of the room. Inside, the card is filled with well wishes and messages of hope.</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -51,7 +51,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "Below these notes are three signatures: Michelle, Ryan, and Robin. Each is signed in their unique handwriting, a reflection of the person behind it."
+			"Response": "<i>Below these notes are three signatures: Michelle, Ryan, and Robin. Each is signed in their unique handwriting, a reflection of the person behind it.</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -65,7 +65,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "As you hold the card, a memory surfaces. It's a sunny day, and the family is gathered in a park for a picnic. The boy is there, his face bright with laughter as he plays with his cousins. Michelle and Ryan are chatting with the grandparents, their faces relaxed and content. Even Jesse is there, her stern expression softened by the joyous occasion.\r\n\r\n"
+			"Response": "<i>As you hold the card, a memory surfaces. It's a sunny day, and the family is gathered in a park for a picnic. The boy is there, his face bright with laughter as he plays with his cousins. Michelle and Ryan are chatting with the grandparents, their faces relaxed and content. Even Jesse is there, her stern expression softened by the joyous occasion.\r\n\r</i>\n"
 		},
 		{
 			"Name": "ResponseNode",
@@ -79,7 +79,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The memory is filled with warmth and happiness, a stark contrast to the current situation. The memory fades, leaving behind a sense of longing for simpler times and a deeper understanding of the family dynamics."
+			"Response": "<i>The memory is filled with warmth and happiness, a stark contrast to the current situation. The memory fades, leaving behind a sense of longing for simpler times and a deeper understanding of the family dynamics.</i>"
 		},
 		{
 			"Name": "ResponseNode",

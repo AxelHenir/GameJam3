@@ -22,7 +22,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "As you turn your attention to the family photo, you notice a question mark obscuring the subject’s face.\r\n"
+			"Response": "<i>As you turn your attention to the family photo, you notice a question mark obscuring the subject’s face.\r\n</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -36,7 +36,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The photo triggers a memory. You’re transported to a family gathering. The room is filled with laughter and chatter."
+			"Response": "<i>The photo triggers a memory. You’re transported to a family gathering. The room is filled with laughter and chatter.</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -50,7 +50,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "In the midst of the crowd, you see the subject, a young girl, sitting quietly in a corner. She's watching her brother, the boy with the bright eyes and restless energy, as he flits around the room.\r"
+			"Response": "<i>In the midst of the crowd, you see the subject, a young girl, sitting quietly in a corner. She's watching her brother, the boy with the bright eyes and restless energy, as he flits around the room.</i>\r"
 		},
 		{
 			"Name": "ResponseNode",
@@ -64,7 +64,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The family, engrossed in their own conversations, barely notice him. They laugh at his antics, dismiss his outbursts, and ignore his pleas for attention. To them, he’s a nuisance, an inconvenience to be tolerated."
+			"Response": "<i>The family, engrossed in their own conversations, barely notice him. They laugh at his antics, dismiss his outbursts, and ignore his pleas for attention. To them, he’s a nuisance, an inconvenience to be tolerated.</i>"
 		},
 		{
 			"Name": "ResponseNode",
