@@ -3020,6 +3020,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HospitalMemory
       objectReference: {fileID: 0}
+    - target: {fileID: 7730938857036685057, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9218657532204450166, guid: 63bf9997d84ae4f4f9a1b5e24a03ba90, type: 3}
       propertyPath: ui
       value: 
