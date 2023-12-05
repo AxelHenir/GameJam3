@@ -30,6 +30,7 @@ public class CorruptionHospital : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerOutsideCylinder = false;
+            CorruptionController.UpdatePlayerCorruptionStatus();
         }
 
     }
@@ -76,6 +77,7 @@ public class CorruptionHospital : MonoBehaviour
         if (other.CompareTag("Player")) //if the player is exiting
         {
             isPlayerOutsideCylinder = true;
+            CorruptionController.UpdatePlayerCorruptionStatus();
         }        
     }
 }
