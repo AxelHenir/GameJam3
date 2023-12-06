@@ -15,7 +15,7 @@
 			"Type": "Response",
 			"ID": 0,
 			"Position": {
-				"x": 305.3333435058594,
+				"x": 305.33331298828127,
 				"y": 276.6666564941406
 			},
 			"ActorName": "S",
@@ -120,7 +120,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "The museum made me agree not to comment on the <b>roles</b> in the exhibit in order to preserve the narrative the exhibit holds. "
+			"Response": "The museum made me agree <b>not to comment</b> on the <b>roles</b> in the exhibit in order to preserve the narrative the exhibit holds."
 		},
 		{
 			"Name": "ResponseNode",
@@ -134,7 +134,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "I accept the fact that the <b>role</b> you have assigned to each person may not be reflective of my lived experience or may be incorrect in some ways. After all, it was your job to curate the exhibit, not mine."
+			"Response": "I accept the fact that the <b>role</b> you have assigned to each person may not be reflective of my lived experience. After all, it was your job to curate the exhibit, not mine."
 		}
 	],
 	"StartNode": {
