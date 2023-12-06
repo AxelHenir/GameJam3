@@ -54,11 +54,10 @@ public class CharacterEntry : MonoBehaviour
     public void updateRoleGuess(int index){
         switch (index){
             case 0: roleGuess = "Please select"; break;
-            case 1: roleGuess = "None"; break;
-            case 2: roleGuess = "Perpetrator"; break;
-            case 3: roleGuess = "Complicit"; break;
-            case 4: roleGuess = "Survivor"; break;
-            case 5: roleGuess = "Victim"; break; 
+            case 1: roleGuess = "Perpetrator"; break;
+            case 2: roleGuess = "Complicit"; break;
+            case 3: roleGuess = "Survivor"; break;
+            case 4: roleGuess = "Victim"; break; 
                 //new role: Supporter? 
         }
         string personToUpdate = correctRel;
