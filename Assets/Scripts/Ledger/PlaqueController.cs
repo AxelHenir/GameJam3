@@ -86,7 +86,7 @@ public class PlaqueController : MonoBehaviour
     {      
         foreach(GameObject parentObj in listToModify)
         {
-            Debug.Log("current person spawn plaque: "+parentObj.name+" and position of x:"+parentObj.transform.position.x+" z:"+parentObj.transform.position.z);
+            //Debug.Log("current person spawn plaque: "+parentObj.name+" and position of x:"+parentObj.transform.position.x+" z:"+parentObj.transform.position.z);
             Vector3 pedestalPosition = new Vector3(parentObj.transform.position.x, parentObj.transform.position.y, parentObj.transform.position.z); // .y - 0.25f
 
             //spawn the museum plaque & pedestal
