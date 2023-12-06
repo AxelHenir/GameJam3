@@ -5737,7 +5737,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1045562364731108683, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Radius
-      value: 0.99
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1675026603862678433, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Mesh
