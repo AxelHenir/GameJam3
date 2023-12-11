@@ -218,6 +218,7 @@ public class VisualTrigger : MonoBehaviour
             {
                 //don't show visual cue if player is not in range
                 visualCue.SetActive(false);
+                EIconObject.SetActive(false);
             }
         }
     }
