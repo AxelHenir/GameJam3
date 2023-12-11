@@ -235,7 +235,7 @@ public class VisualTrigger : MonoBehaviour
 
     public bool IsUIActive()
     {
-        if (ledgerController.GetIsLedgerActive())
+        if (ledgerController != null && ledgerController.GetIsLedgerActive())
         {
             return true;
         }
