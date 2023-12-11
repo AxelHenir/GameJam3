@@ -113,13 +113,13 @@ public class EndingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /*
         //temporary restart button
         if(Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("Gameplay");
         }   
-        
+        */
         if(LetterVisualTrigger.GetIsInDialogue() && !isReadyToFadeToBlack) //if the player is in dialogue, we ready to fade to black
         {
             isReadyToFadeToBlack = true;

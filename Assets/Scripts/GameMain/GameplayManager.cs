@@ -32,7 +32,7 @@ public class GameplayManager : MonoBehaviour
     int numberOfRolesGuessedCorrectly = 0;
     List<CharacterEntry> CorrectlyGuessedEntries;
 
-    [SerializeField] CorruptionController corruptionController;
+    [SerializeField] CorruptionController corruptionController;    
 
     private AudioHandlerMech audioHandler;
 
@@ -175,4 +175,6 @@ public class GameplayManager : MonoBehaviour
         //load game after fade is done
         SceneManager.LoadScene("Gameplay");
     }
+
+    
 }

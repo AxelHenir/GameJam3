@@ -11,6 +11,7 @@ public class LedgerPopupController : MonoBehaviour
     void Start()
     {        
         audioHandler = GameObject.Find("AudioHandler").GetComponent<AudioHandlerMech>(); //assumes we have the AudioHandlerMech on an object with this name
+        //popup begins closed
         LedgerAreYouSurePopup.SetActive(false);
     }
 

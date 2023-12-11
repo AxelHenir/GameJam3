@@ -16,7 +16,7 @@ public class VisualTrigger : MonoBehaviour
     private GameObject ObjectThatIsInteractedWith;
     public AudioController dialogueAudioController;
 
-    [SerializeField] GameObject ui; //holds descant script'
+    [SerializeField] GameObject ui; //conversation UI that holds descant script
     [SerializeField] TextAsset thisDialogueScript;
     public AudioClip soundToPlay;
     private DescantConversationUI descantUIScript;
@@ -26,6 +26,8 @@ public class VisualTrigger : MonoBehaviour
     //Make sure the sphere collider to this object is in a big enough range, and is isTrigger
 
     private bool isInDialogue;
+
+    [SerializeField] LedgerController ledgerController;
 
     void Awake()
     {
@@ -126,7 +128,7 @@ public class VisualTrigger : MonoBehaviour
                     if (hit.transform.gameObject == ObjectThatIsInteractedWith) //if the ray hit object is the object that is being interacted with, then proceed with interaction
                     {
                         visualCueLook.SetActive(true);
-                        if(isInDialogue)
+                        if(IsUIActive())
                         {
                             EIconObject.SetActive(false); 
                         }  
@@ -228,5 +230,21 @@ public class VisualTrigger : MonoBehaviour
     public bool GetIsInDialogue()
     {
         return isInDialogue;
+    }
+
+    public bool IsUIActive()
+    {
+        if (ledgerController.GetIsLedgerActive())
+        {
+            return true;
+        }
+        else if (GetIsInDialogue())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
