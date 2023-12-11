@@ -12,8 +12,8 @@ public class LedgerController : MonoBehaviour
     public GameObject ledgerUI;
 
     // Buttons
-    public Button exitButton;
-    public Button submitAnswersButton;
+     Button exitButton;
+     Button submitAnswersButton;
 
     private AudioHandlerMech audioHandler;
 
