@@ -3311,10 +3311,10 @@ PrefabInstance:
     - target: {fileID: -5754084199372789682, guid: ebb2a9a53f9cd8c4c8e146718c87b15d, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4493585093827132993, guid: a98771c19eb159241a00ca97102f50ab, type: 3}
+      objectReference: {fileID: 582315144540344358, guid: 1e76a25c6944341468be5b4d55713365, type: 3}
     - target: {fileID: 919132149155446097, guid: ebb2a9a53f9cd8c4c8e146718c87b15d, type: 3}
       propertyPath: m_Name
-      value: lit_07 1
+      value: lit_010
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebb2a9a53f9cd8c4c8e146718c87b15d, type: 3}
       propertyPath: m_TagString
@@ -3329,38 +3329,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ebb2a9a53f9cd8c4c8e146718c87b15d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8310254587408910317}
+      addedObject: {fileID: 2087228068170057454}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ebb2a9a53f9cd8c4c8e146718c87b15d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2087228068170057454}
+      addedObject: {fileID: 6683587403054026659}
   m_SourcePrefab: {fileID: 100100000, guid: ebb2a9a53f9cd8c4c8e146718c87b15d, type: 3}
 --- !u!1 &1253519638077976983 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ebb2a9a53f9cd8c4c8e146718c87b15d, type: 3}
   m_PrefabInstance: {fileID: 2135846046735011014}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &8310254587408910317
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253519638077976983}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4493585093827132993, guid: ebb2a9a53f9cd8c4c8e146718c87b15d, type: 3}
 --- !u!54 &2087228068170057454
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3388,6 +3366,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6683587403054026659
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253519638077976983}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5415239, y: 0.30570215, z: 0.2303931}
+  m_Center: {x: 0.06482633, y: -0.0009621781, z: -0.009540309}
 --- !u!4 &1886645219008277293 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ebb2a9a53f9cd8c4c8e146718c87b15d, type: 3}
@@ -5742,7 +5741,7 @@ PrefabInstance:
     - target: {fileID: 1675026603862678433, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4493585093827132993, guid: a98771c19eb159241a00ca97102f50ab, type: 3}
+      objectReference: {fileID: 582315144540344358, guid: 1e76a25c6944341468be5b4d55713365, type: 3}
     - target: {fileID: 2290157890189576668, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -5814,7 +5813,7 @@ PrefabInstance:
     - target: {fileID: 8011055373878809707, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4493585093827132993, guid: a98771c19eb159241a00ca97102f50ab, type: 3}
+      objectReference: {fileID: 582315144540344358, guid: 1e76a25c6944341468be5b4d55713365, type: 3}
     - target: {fileID: 9069927557997567086, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Name
       value: VisualTrigger

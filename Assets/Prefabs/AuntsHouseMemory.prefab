@@ -2611,7 +2611,7 @@ PrefabInstance:
     - target: {fileID: 1675026603862678433, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: ccaf2f7bc1ec49345a7b0b7336f9e993, type: 3}
+      objectReference: {fileID: -2105750355969190360, guid: 829d4cc7f7c3de74eaf06cc962c92aa8, type: 3}
     - target: {fileID: 2290157890189576668, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -2683,7 +2683,7 @@ PrefabInstance:
     - target: {fileID: 8011055373878809707, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -5495902117074765545, guid: ccaf2f7bc1ec49345a7b0b7336f9e993, type: 3}
+      objectReference: {fileID: -2105750355969190360, guid: 829d4cc7f7c3de74eaf06cc962c92aa8, type: 3}
     - target: {fileID: 9069927557997567086, guid: f61bf42cc850b744ebf6a2a4bd75e6af, type: 3}
       propertyPath: m_Name
       value: VisualTrigger
@@ -3265,8 +3265,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.27194098, y: 0.26366875, z: 0.5897891}
-  m_Center: {x: 0.000672077, y: -0.012144124, z: 0.0214289}
+  m_Size: {x: 0.19687441, y: 0.26366875, z: 0.5897891}
+  m_Center: {x: -0.012479018, y: -0.012134321, z: 0.021471353}
 --- !u!54 &1740387233903820379
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3358,9 +3358,13 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: ccaf2f7bc1ec49345a7b0b7336f9e993, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2105750355969190360, guid: 829d4cc7f7c3de74eaf06cc962c92aa8, type: 3}
     - target: {fileID: 919132149155446097, guid: ccaf2f7bc1ec49345a7b0b7336f9e993, type: 3}
       propertyPath: m_Name
-      value: picture_frame.003
+      value: picture_frame.007
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ccaf2f7bc1ec49345a7b0b7336f9e993, type: 3}
       propertyPath: m_TagString
