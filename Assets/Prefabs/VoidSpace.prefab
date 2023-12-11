@@ -1658,6 +1658,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: 0ecb9727c390d5543a86d1964f2daf95, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6996959348674979502, guid: 4b095cfd4adb50b44866521454a48fbe, type: 3}
     - target: {fileID: 919132149155446097, guid: 0ecb9727c390d5543a86d1964f2daf95, type: 3}
       propertyPath: m_Name
       value: walkwayStructure.002
@@ -1701,7 +1705,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5662004406226365359, guid: 0ecb9727c390d5543a86d1964f2daf95, type: 3}
+  m_Mesh: {fileID: -6996959348674979502, guid: 4b095cfd4adb50b44866521454a48fbe, type: 3}
 --- !u!1001 &4982140278922573524
 PrefabInstance:
   m_ObjectHideFlags: 0

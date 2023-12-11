@@ -1671,6 +1671,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: bc187039d676b8c44adbf0cca95907e0, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -3557349430308025516, guid: 3f1a0d9a56b7d6248bbdc403e6fbf1cc, type: 3}
     - target: {fileID: 919132149155446097, guid: bc187039d676b8c44adbf0cca95907e0, type: 3}
       propertyPath: m_Name
       value: TutorialRoom
@@ -1709,7 +1713,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -2477511411847689622, guid: bc187039d676b8c44adbf0cca95907e0, type: 3}
+  m_Mesh: {fileID: -3557349430308025516, guid: 3f1a0d9a56b7d6248bbdc403e6fbf1cc, type: 3}
 --- !u!4 &9151528739552798048 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bc187039d676b8c44adbf0cca95907e0, type: 3}
