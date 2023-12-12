@@ -2264,7 +2264,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 389489083137458904, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00002670288
+      value: -0.0007967225
       objectReference: {fileID: 0}
     - target: {fileID: 707798592733296750, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: plaqueController
@@ -2288,6 +2288,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1190527480680973811, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345165099043525867, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1403489727931041137, guid: e6170e3320a24fd44bc0fcbbad7d9adb, type: 3}
