@@ -176,7 +176,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "<i>Eventually, Noa stops wailing and sniffles while Robin sits up.</i>\r\n\r\n"
+			"Response": "<i>Eventually, Noa stops wailing and sniffles while Robin turns towards him.</i>"
 		},
 		{
 			"Name": "ResponseNode",
@@ -190,7 +190,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "<i>She enters the room silently, walks over to the bed, and sits down to gently stroke Noa's back.</i>"
+			"Response": "<i>The cries get louder when he sees Robin in his doorway, her hands behind her back. She enters the room silently and sits down on the bed to gently stroke Noa's back.</i>"
 		},
 		{
 			"Name": "ResponseNode",

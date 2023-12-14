@@ -97,7 +97,7 @@
 			"NodeComponents": [
 				
 			],
-			"Response": "It’s a lot to take in, but you’ll get the hang of it. You can always come back to ask any questions. <br><br>Do you have any questions about anything I mentioned?"
+			"Response": "It’s a lot to take in, but you’ll get the hang of it. You can always come back to ask any questions. <br><br>Is there anything you’d like to learn more about?"
 		},
 		{
 			"Name": "ResponseNode",
