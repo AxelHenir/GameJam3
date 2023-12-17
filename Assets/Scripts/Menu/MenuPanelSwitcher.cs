@@ -24,6 +24,7 @@ public class MenuPanelSwitcher : MonoBehaviour
 
         menuScreens.Add(mainMenuScreen);
         menuScreens.Add(CreditsScreen);
+        menuScreens.Add(SettingsScreen);
 
         string lastSceneName = GlobalSManager.GetLastScene();
 

@@ -12,6 +12,8 @@ public static class GlobalSManager
     private static int NumberOfRolesGuessedCorrectly;
     private static List<CharacterEntry> CorrectlyGuessedEntries;
 
+    private static float mouseLookSensitivity = 2f; //default: 2.0f
+
     public static string GetLastScene()
     {
         return lastScene;
@@ -70,6 +72,16 @@ public static class GlobalSManager
     public static void SetCorrectlyGuessedEntries(List<CharacterEntry> value)
     {
         CorrectlyGuessedEntries = value;
+    }
+
+    public static float GetMouseLookSensitivity()
+    {
+        return mouseLookSensitivity;
+    }
+
+    public static void SetMouseLookSensitivity(float sensitivity)
+    {
+        mouseLookSensitivity = sensitivity;
     }
 }
     public class GlobalSceneManager : MonoBehaviour

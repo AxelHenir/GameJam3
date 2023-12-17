@@ -149,6 +149,7 @@ public class FirstPersonController : MonoBehaviour
         playerCamera.fieldOfView = fov;
         originalScale = transform.localScale;
         jointOriginalPos = joint.localPosition;
+        mouseSensitivity = GlobalSManager.GetMouseLookSensitivity(); //get the sensitivity from the settings
 
         if (!unlimitedSprint)
         {
