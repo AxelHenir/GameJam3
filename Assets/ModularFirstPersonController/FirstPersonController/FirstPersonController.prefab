@@ -700,7 +700,7 @@ MonoBehaviour:
   sprintCooldown: 0.5
   sprintFOV: 70
   sprintFOVStepTime: 10
-  useSprintBar: 1
+  useSprintBar: 0
   hideBarWhenFull: 1
   sprintBarBG: {fileID: 4459864851397454648}
   sprintBar: {fileID: 4459864850888339820}

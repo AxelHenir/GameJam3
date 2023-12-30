@@ -23,6 +23,7 @@ public class LedgerController : MonoBehaviour
         // Ledger begins closed
         ledgerUI.SetActive(false);
         isLedgerActive = false;
+		Cursor.lockState = CursorLockMode.Locked;
 
         audioHandler = GameObject.Find("AudioHandler").GetComponent<AudioHandlerMech>(); //assumes we have the AudioHandlerMech on an object with this name
     }
