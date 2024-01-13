@@ -16,6 +16,10 @@ public class KeyRebindings : MonoBehaviour
     [SerializeField] private GameObject startRebindCorruptObj;
     [SerializeField] private GameObject waitingForInputCorruptObj;
 
+    [SerializeField] private TextMeshProUGUI bindingDisplayNameTextHorPos;
+    [SerializeField] private GameObject startRebindHorPosObj;
+    [SerializeField] private GameObject waitingForInputHorPosObj;
+
     //private InputActionRebindingExtensions.RebindingOperation rebindingOperation;
     private KeyCode rebindingKey;
     private string KeyType;
@@ -74,7 +78,6 @@ public class KeyRebindings : MonoBehaviour
     public void StartRebinding(string keyType)
     {
         Debug.Log("StartRebinding");
-        
 
         isRebound = false;
         isCancelled = false;
@@ -99,6 +102,16 @@ public class KeyRebindings : MonoBehaviour
             KeyType = "Corruption";
             rebindingKey = newCorruptionResetKey;
             Debug.Log("initial key: " + newCorruptionResetKey.ToString());
+            isWaitingOnInput = true; //wait for new input in update
+        }
+        else if (keyType == "HorizontalPositive")
+        {
+            startRebindHorPosObj.SetActive(false);
+            waitingForInputHorPosObj.SetActive(true);
+
+            KeyType = "HorizontalPositive";
+            rebindingKey = newHorPositiveKey;
+            Debug.Log("initial key: " + newHorPositiveKey.ToString());
             isWaitingOnInput = true; //wait for new input in update
         }
 
@@ -164,6 +177,19 @@ public class KeyRebindings : MonoBehaviour
                 startRebindCorruptObj.SetActive(true);
                 waitingForInputCorruptObj.SetActive(false);
             }
+            else if (KeyType == "HorizontalPositive")
+            {
+                //we want to check if the new key is already existing elsewhere in the playerbindings
+                CheckIfNewKeyExistsAndSwap(rebindingKey, newHorPositiveKey);
+
+                //rebind to the new key:
+                newHorPositiveKey = rebindingKey;
+                playerKeybindings[0] = newHorPositiveKey;
+                Debug.Log("new HorPos key: " + newHorPositiveKey.ToString());
+
+                startRebindHorPosObj.SetActive(true);
+                waitingForInputHorPosObj.SetActive(false);
+            }
 
             //send the new key to GlobalManager
             // do InputManager.SetAxis(axisName, newPositiveKey, newNegativeKey);
@@ -174,8 +200,9 @@ public class KeyRebindings : MonoBehaviour
             //display new key
             bindingDisplayNameTextInteract.text = newInteractKey.ToString();
 
-            //display new key
             bindingDisplayNameTextCorruption.text = newCorruptionResetKey.ToString();
+
+            bindingDisplayNameTextHorPos.text = newHorPositiveKey.ToString();
 
             isRebound = true;
         }    
@@ -195,6 +222,8 @@ public class KeyRebindings : MonoBehaviour
             waitingForInputInteractObj.SetActive(false);
             startRebindCorruptObj.SetActive(true);
             waitingForInputCorruptObj.SetActive(false);
+            startRebindHorPosObj.SetActive(true);
+            waitingForInputHorPosObj.SetActive(false);
 
             isCancelled = true;
         }                

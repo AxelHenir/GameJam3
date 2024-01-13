@@ -66,6 +66,10 @@ public class MenuPanelSwitcher : MonoBehaviour
                 currentScreenName = screen.name;
                 currentScreen = screen;
             }
+            else
+            {
+                screen.SetActive(false);
+            }
         }
 
         if (panelName.Equals("IntroPanel"))

@@ -55,7 +55,7 @@ public class GameplayManager : MonoBehaviour
         //TODO
         //add all rebinding buttons in menu for all other keys
 
-        //fix binding display text & waiting for input objects to be correct (potentially get the objects as parameters)
+        //fix binding display text & waiting for input objects to be correct 
 
         //add InputManager to be able to do: InputManager.SetAxis(axisName, newPositiveKey, newNegativeKey);
 
