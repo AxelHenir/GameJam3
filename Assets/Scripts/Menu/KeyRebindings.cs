@@ -280,7 +280,7 @@ public class KeyRebindings : MonoBehaviour
                 CheckIfNewKeyExistsAndSwap(rebindingKey, newHorNegativeKey);
 
                 //rebind to the new key:
-                newHorPositiveKey = rebindingKey;
+                newHorNegativeKey = rebindingKey;
                 playerKeybindings[1] = newHorNegativeKey;
                 Debug.Log("new HorNeg key: " + newHorNegativeKey.ToString());
 
