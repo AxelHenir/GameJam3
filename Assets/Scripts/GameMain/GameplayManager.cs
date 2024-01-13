@@ -59,7 +59,7 @@ public class GameplayManager : MonoBehaviour
 
         //add InputManager to be able to do: InputManager.SetAxis(axisName, newPositiveKey, newNegativeKey);
 
-        //and fix UI to look better
+        //and fix UI to look better (needs a scroll view)
     }
 
     void Start()

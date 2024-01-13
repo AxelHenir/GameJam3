@@ -20,6 +20,30 @@ public class KeyRebindings : MonoBehaviour
     [SerializeField] private GameObject startRebindHorPosObj;
     [SerializeField] private GameObject waitingForInputHorPosObj;
 
+    [SerializeField] private TextMeshProUGUI bindingDisplayNameTextHorNeg;
+    [SerializeField] private GameObject startRebindHorNegObj;
+    [SerializeField] private GameObject waitingForInputHorNegObj;
+
+    [SerializeField] private TextMeshProUGUI bindingDisplayNameTextVertPos;
+    [SerializeField] private GameObject startRebindVertPosObj;
+    [SerializeField] private GameObject waitingForInputVertPosObj;
+
+    [SerializeField] private TextMeshProUGUI bindingDisplayNameTextVertNeg;
+    [SerializeField] private GameObject startRebindVertNegObj;
+    [SerializeField] private GameObject waitingForInputVertNegObj;
+    
+    [SerializeField] private TextMeshProUGUI bindingDisplayNameTextSprint;
+    [SerializeField] private GameObject startRebindSprintObj;
+    [SerializeField] private GameObject waitingForInputSprintObj;
+
+    [SerializeField] private TextMeshProUGUI bindingDisplayNameTextZoom;
+    [SerializeField] private GameObject startRebindZoomObj;
+    [SerializeField] private GameObject waitingForInputZoomObj;
+
+    [SerializeField] private TextMeshProUGUI bindingDisplayNameTextLedg;
+    [SerializeField] private GameObject startRebindLedgObj;
+    [SerializeField] private GameObject waitingForInputLedgObj;
+    
     //private InputActionRebindingExtensions.RebindingOperation rebindingOperation;
     private KeyCode rebindingKey;
     private string KeyType;
@@ -114,6 +138,66 @@ public class KeyRebindings : MonoBehaviour
             Debug.Log("initial key: " + newHorPositiveKey.ToString());
             isWaitingOnInput = true; //wait for new input in update
         }
+        else if (keyType == "HorizontalNegative")
+        {
+            startRebindHorNegObj.SetActive(false);
+            waitingForInputHorNegObj.SetActive(true);
+
+            KeyType = "HorizontalNegative";
+            rebindingKey = newHorNegativeKey;
+            Debug.Log("initial key: " + newHorNegativeKey.ToString());
+            isWaitingOnInput = true; //wait for new input in update
+        }
+        else if (keyType == "VerticalPositive")
+        {
+            startRebindVertPosObj.SetActive(false);
+            waitingForInputVertPosObj.SetActive(true);
+
+            KeyType = "VerticalPositive";
+            rebindingKey = newVertPositiveKey;
+            Debug.Log("initial key: " + newVertPositiveKey.ToString());
+            isWaitingOnInput = true; //wait for new input in update
+        }
+        else if (keyType == "VerticalNegative")
+        {
+            startRebindVertNegObj.SetActive(false);
+            waitingForInputVertNegObj.SetActive(true);
+
+            KeyType = "VerticalNegative";
+            rebindingKey = newVertNegativeKey;
+            Debug.Log("initial key: " + newVertNegativeKey.ToString());
+            isWaitingOnInput = true; //wait for new input in update
+        }
+        else if (keyType == "Sprint")
+        {
+            startRebindSprintObj.SetActive(false);
+            waitingForInputSprintObj.SetActive(true);
+
+            KeyType = "Sprint";
+            rebindingKey = newSprintKey;
+            Debug.Log("initial key: " + newSprintKey.ToString());
+            isWaitingOnInput = true; //wait for new input in update
+        }
+        else if (keyType == "Zoom")
+        {
+            startRebindZoomObj.SetActive(false);
+            waitingForInputZoomObj.SetActive(true);
+
+            KeyType = "Zoom";
+            rebindingKey = newZoomKey;
+            Debug.Log("initial key: " + newZoomKey.ToString());
+            isWaitingOnInput = true; //wait for new input in update
+        }
+        else if (keyType == "Ledger")
+        {
+            startRebindLedgObj.SetActive(false);
+            waitingForInputLedgObj.SetActive(true);
+
+            KeyType = "Ledger";
+            rebindingKey = newLedgerKey;
+            Debug.Log("initial key: " + newLedgerKey.ToString());
+            isWaitingOnInput = true; //wait for new input in update
+        }
 
         Invoke(nameof(CancelledRebind), 5.0f);
     }
@@ -190,6 +274,84 @@ public class KeyRebindings : MonoBehaviour
                 startRebindHorPosObj.SetActive(true);
                 waitingForInputHorPosObj.SetActive(false);
             }
+            else if (KeyType == "HorizontalNegative")
+            {
+                //we want to check if the new key is already existing elsewhere in the playerbindings
+                CheckIfNewKeyExistsAndSwap(rebindingKey, newHorNegativeKey);
+
+                //rebind to the new key:
+                newHorPositiveKey = rebindingKey;
+                playerKeybindings[1] = newHorNegativeKey;
+                Debug.Log("new HorNeg key: " + newHorNegativeKey.ToString());
+
+                startRebindHorNegObj.SetActive(true);
+                waitingForInputHorNegObj.SetActive(false);
+            }
+            else if (KeyType == "VerticalPositive")
+            {
+                //we want to check if the new key is already existing elsewhere in the playerbindings
+                CheckIfNewKeyExistsAndSwap(rebindingKey, newVertPositiveKey);
+
+                //rebind to the new key:
+                newVertPositiveKey = rebindingKey;
+                playerKeybindings[2] = newVertPositiveKey;
+                Debug.Log("new VertPos key: " + newVertPositiveKey.ToString());
+
+                startRebindVertPosObj.SetActive(true);
+                waitingForInputVertPosObj.SetActive(false);
+            }
+            else if (KeyType == "VerticalNegative")
+            {
+                //we want to check if the new key is already existing elsewhere in the playerbindings
+                CheckIfNewKeyExistsAndSwap(rebindingKey, newVertNegativeKey);
+
+                //rebind to the new key:
+                newVertNegativeKey = rebindingKey;
+                playerKeybindings[3] = newVertNegativeKey;
+                Debug.Log("new VertNeg key: " + newVertNegativeKey.ToString());
+
+                startRebindVertNegObj.SetActive(true);
+                waitingForInputVertNegObj.SetActive(false);
+            }
+            else if (KeyType == "Sprint")
+            {
+                //we want to check if the new key is already existing elsewhere in the playerbindings
+                CheckIfNewKeyExistsAndSwap(rebindingKey, newSprintKey);
+
+                //rebind to the new key:
+                newSprintKey = rebindingKey;
+                playerKeybindings[5] = newSprintKey;
+                Debug.Log("new Sprint key: " + newSprintKey.ToString());
+
+                startRebindSprintObj.SetActive(true);
+                waitingForInputSprintObj.SetActive(false);
+            }
+            else if (KeyType == "Zoom")
+            {
+                //we want to check if the new key is already existing elsewhere in the playerbindings
+                CheckIfNewKeyExistsAndSwap(rebindingKey, newZoomKey);
+
+                //rebind to the new key:
+                newZoomKey = rebindingKey;
+                playerKeybindings[6] = newZoomKey;
+                Debug.Log("new Zoom key: " + newZoomKey.ToString());
+
+                startRebindZoomObj.SetActive(true);
+                waitingForInputZoomObj.SetActive(false);
+            }
+            else if (KeyType == "Ledger")
+            {
+                //we want to check if the new key is already existing elsewhere in the playerbindings
+                CheckIfNewKeyExistsAndSwap(rebindingKey, newLedgerKey);
+
+                //rebind to the new key:
+                newLedgerKey = rebindingKey;
+                playerKeybindings[7] = newLedgerKey;
+                Debug.Log("new Ledger key: " + newLedgerKey.ToString());
+
+                startRebindLedgObj.SetActive(true);
+                waitingForInputLedgObj.SetActive(false);
+            }
 
             //send the new key to GlobalManager
             // do InputManager.SetAxis(axisName, newPositiveKey, newNegativeKey);
@@ -203,6 +365,15 @@ public class KeyRebindings : MonoBehaviour
             bindingDisplayNameTextCorruption.text = newCorruptionResetKey.ToString();
 
             bindingDisplayNameTextHorPos.text = newHorPositiveKey.ToString();
+            bindingDisplayNameTextHorNeg.text = newHorNegativeKey.ToString();
+
+            bindingDisplayNameTextVertPos.text = newVertPositiveKey.ToString();
+            bindingDisplayNameTextVertNeg.text = newVertNegativeKey.ToString();
+
+            bindingDisplayNameTextSprint.text = newSprintKey.ToString();
+            bindingDisplayNameTextZoom.text = newZoomKey.ToString();
+
+            bindingDisplayNameTextLedg.text = newLedgerKey.ToString();
 
             isRebound = true;
         }    
@@ -224,6 +395,18 @@ public class KeyRebindings : MonoBehaviour
             waitingForInputCorruptObj.SetActive(false);
             startRebindHorPosObj.SetActive(true);
             waitingForInputHorPosObj.SetActive(false);
+            startRebindHorNegObj.SetActive(true);
+            waitingForInputHorNegObj.SetActive(false);
+            startRebindVertPosObj.SetActive(true);
+            waitingForInputVertPosObj.SetActive(false);
+            startRebindVertNegObj.SetActive(true);
+            waitingForInputVertNegObj.SetActive(false);
+            startRebindSprintObj.SetActive(true);
+            waitingForInputSprintObj.SetActive(false);
+            startRebindZoomObj.SetActive(true);
+            waitingForInputZoomObj.SetActive(false);
+            startRebindLedgObj.SetActive(true);
+            waitingForInputLedgObj.SetActive(false);
 
             isCancelled = true;
         }                
@@ -241,7 +424,7 @@ public class KeyRebindings : MonoBehaviour
 
                 //first check for these conditions, then if any other key was pressed for RebindComplete
                 //if the player pressed escape, cancel the waiting for input || or if the player pressed the same key as the initial key, cancel
-                if (keys[i] && ((KeyCode)values[i] == KeyCode.Escape || (KeyCode)values[i] == rebindingKey))
+                if (keys[i] && ((KeyCode)values[i] == KeyCode.Escape || (KeyCode)values[i] == rebindingKey || (KeyCode)values[i] == KeyCode.Mouse0))
                 {
                     Debug.Log("manual cancel");
                     CancelledRebind();
