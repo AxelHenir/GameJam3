@@ -23,7 +23,7 @@ public class LedgerController : MonoBehaviour
     private void Awake()
     {
         KeyCode[] PlayersKeyBindings = GlobalSManager.GetKeyBindings();
-        if (PlayersKeyBindings[7] != LedgerKey)
+        if (PlayersKeyBindings != null && PlayersKeyBindings[7] != LedgerKey)
             LedgerKey = PlayersKeyBindings[7]; //7 for ledger key binding
     }
 

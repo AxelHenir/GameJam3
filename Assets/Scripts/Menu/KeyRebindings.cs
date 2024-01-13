@@ -85,6 +85,13 @@ public class KeyRebindings : MonoBehaviour
             Debug.Log("initial key: "+newInteractKey.ToString());
             isWaitingOnInput = true; //wait for new input in update
         }
+        else if(keyType == "Corruption")
+        {
+            KeyType = "Corruption";
+            rebindingKey = newCorruptionResetKey;
+            Debug.Log("initial key: " + newCorruptionResetKey.ToString());
+            isWaitingOnInput = true; //wait for new input in update
+        }
 
         Invoke(nameof(CancelledRebind), 5.0f);
     }
@@ -103,7 +110,7 @@ public class KeyRebindings : MonoBehaviour
 
             for (int i = 0; i < values.Length; i++)
             {
-                //if the key is true and the key is not the same as the current key
+                //if the key is true and the key is not the same as the current key, store the key in temp
                 if (keys[i] && rebindingKey != (KeyCode)values[i])
                 {
                     rebindingKey = (KeyCode)values[i];
@@ -114,11 +121,19 @@ public class KeyRebindings : MonoBehaviour
                 keys[i] = false;
             }
 
+            //--rebinding happens--
+
             if (KeyType == "Interact")
             {
                 newInteractKey = rebindingKey;
                 playerKeybindings[4] = newInteractKey;
                 Debug.Log("new interact key: " + newInteractKey.ToString());
+            }
+            else if (KeyType == "Corruption")
+            {
+                newCorruptionResetKey = rebindingKey;
+                playerKeybindings[8] = newCorruptionResetKey;
+                Debug.Log("new corruption key: " + newCorruptionResetKey.ToString());
             }
 
             //send the new key to GlobalManager

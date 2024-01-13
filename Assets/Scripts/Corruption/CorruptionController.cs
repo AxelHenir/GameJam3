@@ -65,9 +65,13 @@ public class CorruptionController : MonoBehaviour
     private void Awake()
     {
         KeyCode[] PlayersKeyBindings = GlobalSManager.GetKeyBindings();
-        if (PlayersKeyBindings[8] != CorruptionResetKey)
+        if (PlayersKeyBindings != null && PlayersKeyBindings[8] != CorruptionResetKey)
+        {
             CorruptionResetKey = PlayersKeyBindings[8]; //8 for corruption reset key
 
+            HospitalTutorialText.GetComponent<TMPro.TextMeshPro>().text = "Press " + PlayersKeyBindings[8] + " to Reset the Memory";
+            AuntsHouseTutorialText.GetComponent<TMPro.TextMeshPro>().text = "Press " + PlayersKeyBindings[8] + " to Reset the Memory";
+        }
     }
 
     // Start is called before the first frame update
@@ -160,7 +164,7 @@ public class CorruptionController : MonoBehaviour
         UpdateCorruptionObject();
 
         //When the player presses Q, reset the corruption
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(CorruptionResetKey))
         {
             ResetCorruption();
         }

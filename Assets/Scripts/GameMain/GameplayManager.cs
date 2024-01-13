@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameplayManager : MonoBehaviour
 {    
@@ -39,17 +40,26 @@ public class GameplayManager : MonoBehaviour
     [SerializeField] Image fadeImage;
     float fadeDuration = 7f;
 
+    [SerializeField] private GameObject TutorialTextObj;
+
     private void Awake()
     {
-        //TODO
-        //change the "Press E to interact" to be the correct letter for the interaction & E icon
-        //change the "Press Q to Reset the Memory" to be the correct letter for the corruption reset
+        KeyCode[] PlayersKeyBindings = GlobalSManager.GetKeyBindings();
+        if(PlayersKeyBindings != null )
+        {
+            TutorialTextObj.GetComponent<TextMeshPro>().text = "Press " + PlayersKeyBindings[4].ToString() + " to interact"; //4 for interact key
+        }
 
+        
         //TODO inside keybindings
         //check if the key pressed in inside playerbindings array already, and if so, swap them.
 
         //TODO
         //add all rebinding buttons in menu for all other keys
+
+        //fix binding display text & waiting for input objects to be correct
+
+        //and fix UI to look better
     }
 
     void Start()

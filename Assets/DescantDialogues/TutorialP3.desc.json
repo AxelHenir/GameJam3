@@ -12,7 +12,7 @@
 			"Type": "Choice",
 			"ID": 0,
 			"Position": {
-				"x": 3633.33349609375,
+				"x": 3633.333251953125,
 				"y": 210.0
 			},
 			"ActorName": "",
@@ -104,7 +104,7 @@
 			"Type": "Response",
 			"ID": 5,
 			"Position": {
-				"x": 4237.3330078125,
+				"x": 4237.33349609375,
 				"y": -280.66668701171877
 			},
 			"ActorName": "T",
@@ -118,14 +118,14 @@
 			"Type": "Response",
 			"ID": 6,
 			"Position": {
-				"x": 4813.3330078125,
+				"x": 4813.33349609375,
 				"y": -236.66665649414063
 			},
 			"ActorName": "T",
 			"NodeComponents": [
 				
 			],
-			"Response": "The memories are fragile and each movement within them causes a bit of corruption. If the corruption meter is full, you’ll need to reset the memory. You can reset the memory by <b>pressing Q</b>."
+			"Response": "The memories are fragile and each movement within them causes a bit of corruption. If the corruption meter is full, you’ll need to reset the memory. You'll learn how to reset the memory when it happens."
 		},
 		{
 			"Name": "ResponseNode",
@@ -174,7 +174,7 @@
 			"Type": "Response",
 			"ID": 10,
 			"Position": {
-				"x": 4813.3330078125,
+				"x": 4813.33349609375,
 				"y": 112.66666412353516
 			},
 			"ActorName": "T",
@@ -202,7 +202,7 @@
 			"Type": "Response",
 			"ID": 12,
 			"Position": {
-				"x": 4237.3330078125,
+				"x": 4237.33349609375,
 				"y": 379.33331298828127
 			},
 			"ActorName": "T",
@@ -216,7 +216,7 @@
 			"Type": "Response",
 			"ID": 13,
 			"Position": {
-				"x": 4237.3330078125,
+				"x": 4237.33349609375,
 				"y": 76.66666412353516
 			},
 			"ActorName": "T",
@@ -230,7 +230,7 @@
 			"Type": "Response",
 			"ID": 14,
 			"Position": {
-				"x": 791.3333740234375,
+				"x": 791.3333129882813,
 				"y": 90.0
 			},
 			"ActorName": "T",
@@ -244,7 +244,7 @@
 			"Type": "Response",
 			"ID": 15,
 			"Position": {
-				"x": 4237.3330078125,
+				"x": 4237.33349609375,
 				"y": 825.3333740234375
 			},
 			"ActorName": "T",
@@ -286,7 +286,7 @@
 			"Type": "Response",
 			"ID": 18,
 			"Position": {
-				"x": 6577.3330078125,
+				"x": 6577.33349609375,
 				"y": 112.66666412353516
 			},
 			"ActorName": "",
@@ -314,7 +314,7 @@
 			"Type": "Response",
 			"ID": 20,
 			"Position": {
-				"x": 5541.3330078125,
+				"x": 5541.33349609375,
 				"y": 512.6666870117188
 			},
 			"ActorName": "T",
@@ -356,7 +356,7 @@
 			"Type": "Response",
 			"ID": 23,
 			"Position": {
-				"x": 5525.3330078125,
+				"x": 5525.33349609375,
 				"y": 857.3333740234375
 			},
 			"ActorName": "T",

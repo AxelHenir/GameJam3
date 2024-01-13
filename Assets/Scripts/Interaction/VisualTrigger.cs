@@ -61,13 +61,13 @@ public class VisualTrigger : MonoBehaviour
         //dialogueAudioController = GameObject.Find("BGSoundsDialogue").GetComponent<AudioController>();
 
         KeyCode[] PlayersKeyBindings = GlobalSManager.GetKeyBindings();
-        if(PlayersKeyBindings[4] != InteractKey)
+        if(PlayersKeyBindings != null && PlayersKeyBindings[4] != InteractKey)
         {
             
             InteractKey = PlayersKeyBindings[4]; //4 for interact key
 
             //change letter for EIcon
-            //EIconObject ;
+            EIconObject.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = InteractKey.ToString();
         }
 
     }
