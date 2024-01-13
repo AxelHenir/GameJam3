@@ -16,6 +16,7 @@ public class VisualTrigger : MonoBehaviour
     private GameObject ObjectThatIsInteractedWith;
     public AudioController dialogueAudioController;
 
+    private KeyCode InteractKey = KeyCode.E;
     [SerializeField] GameObject ui; //conversation UI that holds descant script
     [SerializeField] TextAsset thisDialogueScript;
     public AudioClip soundToPlay;
@@ -58,7 +59,17 @@ public class VisualTrigger : MonoBehaviour
 
         //get audio controller
         //dialogueAudioController = GameObject.Find("BGSoundsDialogue").GetComponent<AudioController>();
-        
+
+        KeyCode[] PlayersKeyBindings = GlobalSManager.GetKeyBindings();
+        if(PlayersKeyBindings[4] != InteractKey)
+        {
+            
+            InteractKey = PlayersKeyBindings[4]; //4 for interact key
+
+            //change letter for EIcon
+            //EIconObject ;
+        }
+
     }
 
 
@@ -149,7 +160,7 @@ public class VisualTrigger : MonoBehaviour
                     EIconObject.SetActive(false);
                 }
 
-                if (Input.GetKeyDown(KeyCode.E)) //interaction happens
+                if (Input.GetKeyDown(InteractKey)) //interaction happens
                 {                    
                     if (gameObject != null && Physics.Raycast(ray, out hit)) //Physics.Raycast(ray, out hit)
                     {

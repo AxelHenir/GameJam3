@@ -13,6 +13,7 @@ public static class GlobalSManager
     private static List<CharacterEntry> CorrectlyGuessedEntries;
 
     private static float mouseLookSensitivity = 2f; //default: 2.0f
+    private static KeyCode[] PlayerKeyBindings;
 
     public static string GetLastScene()
     {
@@ -82,6 +83,16 @@ public static class GlobalSManager
     public static void SetMouseLookSensitivity(float sensitivity)
     {
         mouseLookSensitivity = sensitivity;
+    }
+
+    public static KeyCode[] GetKeyBindings()
+    {
+        return PlayerKeyBindings;
+    }
+
+    public static void SetKeyBindings(KeyCode[] newKeybindings)
+    {
+        PlayerKeyBindings = newKeybindings;
     }
 }
     public class GlobalSceneManager : MonoBehaviour

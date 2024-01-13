@@ -151,6 +151,12 @@ public class FirstPersonController : MonoBehaviour
         jointOriginalPos = joint.localPosition;
         mouseSensitivity = GlobalSManager.GetMouseLookSensitivity(); //get the sensitivity from the settings
 
+        KeyCode[] PlayersKeyBindings = GlobalSManager.GetKeyBindings();
+        if (PlayersKeyBindings[6] != zoomKey)
+            zoomKey = PlayersKeyBindings[6]; //6 for zoom key
+        if (PlayersKeyBindings[5] != sprintKey)
+            sprintKey = PlayersKeyBindings[5]; //5 for sprint key
+
         if (!unlimitedSprint)
         {
             sprintRemaining = sprintDuration;

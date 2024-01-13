@@ -39,6 +39,19 @@ public class GameplayManager : MonoBehaviour
     [SerializeField] Image fadeImage;
     float fadeDuration = 7f;
 
+    private void Awake()
+    {
+        //TODO
+        //change the "Press E to interact" to be the correct letter for the interaction & E icon
+        //change the "Press Q to Reset the Memory" to be the correct letter for the corruption reset
+
+        //TODO inside keybindings
+        //check if the key pressed in inside playerbindings array already, and if so, swap them.
+
+        //TODO
+        //add all rebinding buttons in menu for all other keys
+    }
+
     void Start()
     {
         numberOfReboots = 0;
@@ -175,6 +188,4 @@ public class GameplayManager : MonoBehaviour
         //load game after fade is done
         SceneManager.LoadScene("Gameplay");
     }
-
-    
 }

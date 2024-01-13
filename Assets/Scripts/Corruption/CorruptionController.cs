@@ -46,6 +46,7 @@ public class CorruptionController : MonoBehaviour
     // Reference to the CorruptionStatusBar script
     //public CorruptionStatusBar CorruptionStatusBar;
 
+    private KeyCode CorruptionResetKey = KeyCode.Q;
     //The current level of corruption
     public float corruptionLevel;
 
@@ -60,6 +61,14 @@ public class CorruptionController : MonoBehaviour
     //bool isResetting;
 
     [SerializeField] CorruptionPlayer corruptionForPlayer;
+
+    private void Awake()
+    {
+        KeyCode[] PlayersKeyBindings = GlobalSManager.GetKeyBindings();
+        if (PlayersKeyBindings[8] != CorruptionResetKey)
+            CorruptionResetKey = PlayersKeyBindings[8]; //8 for corruption reset key
+
+    }
 
     // Start is called before the first frame update
     void Start()

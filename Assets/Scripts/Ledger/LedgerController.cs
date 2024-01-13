@@ -18,6 +18,15 @@ public class LedgerController : MonoBehaviour
 
     private AudioHandlerMech audioHandler;
 
+    private KeyCode LedgerKey = KeyCode.Tab;
+
+    private void Awake()
+    {
+        KeyCode[] PlayersKeyBindings = GlobalSManager.GetKeyBindings();
+        if (PlayersKeyBindings[7] != LedgerKey)
+            LedgerKey = PlayersKeyBindings[7]; //7 for ledger key binding
+    }
+
     void Start()
     {
         // Ledger begins closed
@@ -31,7 +40,7 @@ public class LedgerController : MonoBehaviour
     void Update()
     {
         // Check if the TAB key is pressed
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(LedgerKey))
         {
             // If so, toggle the ledger
             toggleLedger();
