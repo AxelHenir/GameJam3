@@ -50,14 +50,14 @@ public class GameplayManager : MonoBehaviour
             TutorialTextObj.GetComponent<TextMeshPro>().text = "Press " + PlayersKeyBindings[4].ToString() + " to interact"; //4 for interact key
         }
 
-        
-        //TODO inside keybindings
-        //check if the key pressed in inside playerbindings array already, and if so, swap them.
+
 
         //TODO
         //add all rebinding buttons in menu for all other keys
 
-        //fix binding display text & waiting for input objects to be correct
+        //fix binding display text & waiting for input objects to be correct (potentially get the objects as parameters)
+
+        //add InputManager to be able to do: InputManager.SetAxis(axisName, newPositiveKey, newNegativeKey);
 
         //and fix UI to look better
     }

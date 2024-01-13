@@ -8,9 +8,13 @@ public class KeyRebindings : MonoBehaviour
 
     //variable for input reference
     //[SerializeField] private FirstPersonController playerController;
-    [SerializeField] private TextMeshProUGUI bindingDisplayNameText;
-    [SerializeField] private GameObject startRebindObject;
-    [SerializeField] private GameObject waitingForInputObject;
+    [SerializeField] private TextMeshProUGUI bindingDisplayNameTextInteract;
+    [SerializeField] private GameObject startRebindInteractObj;
+    [SerializeField] private GameObject waitingForInputInteractObj;
+
+    [SerializeField] private TextMeshProUGUI bindingDisplayNameTextCorruption;
+    [SerializeField] private GameObject startRebindCorruptObj;
+    [SerializeField] private GameObject waitingForInputCorruptObj;
 
     //private InputActionRebindingExtensions.RebindingOperation rebindingOperation;
     private KeyCode rebindingKey;
@@ -70,8 +74,7 @@ public class KeyRebindings : MonoBehaviour
     public void StartRebinding(string keyType)
     {
         Debug.Log("StartRebinding");
-        startRebindObject.SetActive(false);
-        waitingForInputObject.SetActive(true);
+        
 
         isRebound = false;
         isCancelled = false;
@@ -80,6 +83,9 @@ public class KeyRebindings : MonoBehaviour
         //check which key is being rebound
         if (keyType == "Interact")
         {
+            startRebindInteractObj.SetActive(false);
+            waitingForInputInteractObj.SetActive(true);
+
             KeyType = "Interact";
             rebindingKey = newInteractKey;
             Debug.Log("initial key: "+newInteractKey.ToString());
@@ -87,6 +93,9 @@ public class KeyRebindings : MonoBehaviour
         }
         else if(keyType == "Corruption")
         {
+            startRebindCorruptObj.SetActive(false);
+            waitingForInputCorruptObj.SetActive(true);
+
             KeyType = "Corruption";
             rebindingKey = newCorruptionResetKey;
             Debug.Log("initial key: " + newCorruptionResetKey.ToString());
@@ -108,10 +117,11 @@ public class KeyRebindings : MonoBehaviour
             //store the new key in the variable
             //replace the text with the new key
 
+            //get the new key
             for (int i = 0; i < values.Length; i++)
             {
                 //if the key is true and the key is not the same as the current key, store the key in temp
-                if (keys[i] && rebindingKey != (KeyCode)values[i])
+                if (keys[i] && rebindingKey != (KeyCode)values[i]) //second condition is redundant bc otherwise it would be cancelled but just in case
                 {
                     rebindingKey = (KeyCode)values[i];
 
@@ -123,30 +133,49 @@ public class KeyRebindings : MonoBehaviour
 
             //--rebinding happens--
 
+            //at this point in time,
+            //the rebindingKey variable now contains the value of the new key, and "new__Key" still has the old key,
+            //the new key and the old key are not equal to each other
+
             if (KeyType == "Interact")
             {
+                Debug.Log("rebindingKey: "+rebindingKey.ToString()+"\nnewInteractKey: "+newInteractKey.ToString());
+                //we want to check if the new key is already existing elsewhere in the playerbindings
+                CheckIfNewKeyExistsAndSwap(rebindingKey, newInteractKey);
+
+                //rebind to the new key:
                 newInteractKey = rebindingKey;
                 playerKeybindings[4] = newInteractKey;
-                Debug.Log("new interact key: " + newInteractKey.ToString());
+                Debug.Log("new interact key: " + newInteractKey.ToString());                
+
+                startRebindInteractObj.SetActive(true);
+                waitingForInputInteractObj.SetActive(false);
             }
             else if (KeyType == "Corruption")
             {
+                //we want to check if the new key is already existing elsewhere in the playerbindings
+                CheckIfNewKeyExistsAndSwap(rebindingKey, newCorruptionResetKey);
+
+                //rebind to the new key:
                 newCorruptionResetKey = rebindingKey;
                 playerKeybindings[8] = newCorruptionResetKey;
                 Debug.Log("new corruption key: " + newCorruptionResetKey.ToString());
+
+                startRebindCorruptObj.SetActive(true);
+                waitingForInputCorruptObj.SetActive(false);
             }
 
             //send the new key to GlobalManager
             // do InputManager.SetAxis(axisName, newPositiveKey, newNegativeKey);
             //set keybinding
             GlobalSManager.SetKeyBindings(playerKeybindings);
-            //InputManager.SetAxis(axisName, newPositiveKey, newNegativeKey);
+            //InputManager.SetAxis(axisName, newPositiveKey, newNegativeKey); 
 
             //display new key
-            bindingDisplayNameText.text = rebindingKey.ToString();
+            bindingDisplayNameTextInteract.text = newInteractKey.ToString();
 
-            startRebindObject.SetActive(true);
-            waitingForInputObject.SetActive(false);
+            //display new key
+            bindingDisplayNameTextCorruption.text = newCorruptionResetKey.ToString();
 
             isRebound = true;
         }    
@@ -161,8 +190,11 @@ public class KeyRebindings : MonoBehaviour
             isWaitingOnInput = false;
 
             rebindingKey = KeyCode.Mouse0;
-            startRebindObject.SetActive(true);
-            waitingForInputObject.SetActive(false);
+
+            startRebindInteractObj.SetActive(true);
+            waitingForInputInteractObj.SetActive(false);
+            startRebindCorruptObj.SetActive(true);
+            waitingForInputCorruptObj.SetActive(false);
 
             isCancelled = true;
         }                
@@ -202,6 +234,65 @@ public class KeyRebindings : MonoBehaviour
                     return;
                 }                
             }            
+        }
+    }
+
+    private void CheckIfNewKeyExistsAndSwap(KeyCode tempNewKey, KeyCode tempOldKey)
+    {
+        Debug.Log("Check if need to swap");
+        //we want to check if the new key is already existing elsewhere in the playerbindings
+        for (int i = 0; i < playerKeybindings.Length; i++)
+        {
+            //Debug.Log("playerbindings[" + i + "]: " + playerKeybindings[i].ToString()+"\nrebindingKey: " + rebindingKey.ToString() + "\nnewInteractKey: " + newInteractKey.ToString());
+            if (playerKeybindings[i] == tempNewKey)
+            {
+                Debug.Log("yes swap");
+                playerKeybindings[i] = tempOldKey;                
+                //Debug.Log("new, playerbindings[" + i + "]: " + playerKeybindings[i].ToString());
+                //don't forget to set it to the according variable too since we use it to display
+                SetKeyByPlayerBindingIndex(i, tempOldKey); 
+                return;
+            }
+        }
+    }
+
+    private void SetKeyByPlayerBindingIndex(int i, KeyCode newKeyValue)
+    {
+        if(i == 0)
+        {
+            newHorPositiveKey = newKeyValue;
+        }
+        else if(i == 1)
+        {
+            newHorNegativeKey = newKeyValue;
+        }
+        else if (i == 2)
+        {
+            newVertPositiveKey = newKeyValue;
+        }
+        else if (i == 3)
+        {
+            newVertNegativeKey = newKeyValue;
+        }
+        else if (i == 4)
+        {
+            newInteractKey = newKeyValue;
+        }
+        else if (i == 5)
+        {
+            newSprintKey = newKeyValue;
+        }
+        else if (i == 6)
+        {
+            newZoomKey = newKeyValue;
+        }
+        else if (i == 7)
+        {
+            newLedgerKey = newKeyValue;
+        }
+        else if (i == 8)
+        {
+            newCorruptionResetKey = newKeyValue;
         }
     }
 }
