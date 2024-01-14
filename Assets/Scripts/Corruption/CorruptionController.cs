@@ -89,7 +89,7 @@ public class CorruptionController : MonoBehaviour
         HospitalTutorialText.SetActive(false);
         AuntsHouseTutorialText.SetActive(false);
 
-        corruptionThreshold = 60.0f;
+        corruptionThreshold = 35.0f;
 
         UpdatePlayerCorruptionStatus();
     }

@@ -56,11 +56,11 @@ public class KeyRebindings : MonoBehaviour
 
     //--------------------    
 
-    private string horAxisName = "Horizontal";
+    //private string horAxisName = "Horizontal";
     private KeyCode newHorPositiveKey = KeyCode.D;
     private KeyCode newHorNegativeKey = KeyCode.A;
 
-    private string vertAxisName = "Vertical";
+    //private string vertAxisName = "Vertical";
     private KeyCode newVertPositiveKey = KeyCode.W;
     private KeyCode newVertNegativeKey = KeyCode.S;
 
