@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <u>Corruption Shader</u> from MKToon
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
   m_sharedMaterial: {fileID: 1682274065094062295, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
@@ -7720,7 +7720,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <u>Font</u> from amorphous.itch.io/beholden
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
   m_sharedMaterial: {fileID: 1682274065094062295, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
@@ -9227,7 +9227,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1479.3, y: 169.8}
+  m_SizeDelta: {x: 1479.3, y: 184.6}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1198254486
 MonoBehaviour:
@@ -11891,8 +11891,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -71.85}
-  m_SizeDelta: {x: 300, y: 143.7}
+  m_AnchoredPosition: {x: 150, y: -92.3}
+  m_SizeDelta: {x: 300, y: 184.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1521467005
 MonoBehaviour:
@@ -11914,7 +11914,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<u>Assets Referenced</u>: Character Faces, Hospital Bed From Sketchfab'
+  m_text: '<u>Art Used as References</u>: <br>Sketchfab for Character Faces, Hospital
+    Bed. Artstation for Windows, Trolley, IV Drip.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
   m_sharedMaterial: {fileID: 1682274065094062295, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
@@ -13666,7 +13667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -169.8}
+  m_AnchoredPosition: {x: 0, y: -184.6}
   m_SizeDelta: {x: 1479.3, y: 159}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1769392992
@@ -13752,8 +13753,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <u>Sounds</u> from freesound.org, Pro Sound Collection, and Siovan's personal
-    recordings.
+  m_text: <u>Sounds</u> from freesound.org under CC0, Siovan's personal recordings.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
   m_sharedMaterial: {fileID: 1682274065094062295, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
@@ -14078,7 +14078,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 30, y: 32}
-  m_SizeDelta: {x: 300, y: 52}
+  m_SizeDelta: {x: 281.07, y: 52}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1818063587
 MonoBehaviour:
@@ -14231,7 +14231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <u>Trolley, IVDrip, Stool and Cabinet Assets</u> from Artstation.
+  m_text: <u>Font</u> from amorphous.itch.io/beholden under SIL Open Font License.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
   m_sharedMaterial: {fileID: 1682274065094062295, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
@@ -14753,7 +14753,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <u>Descant Dialogue System</u>.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
   m_sharedMaterial: {fileID: 1682274065094062295, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
@@ -15575,7 +15575,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: <u>Descant Dialogue System</u>.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
   m_sharedMaterial: {fileID: 1682274065094062295, guid: 4012bcee9f22a6b4cb525cfe1f47644a, type: 2}
